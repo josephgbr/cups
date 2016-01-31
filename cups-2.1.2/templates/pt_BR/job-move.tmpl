@@ -3,11 +3,11 @@
 <INPUT TYPE="HIDDEN" NAME="OP" VALUE="{op}">
 {job_id?<INPUT TYPE="HIDDEN" NAME="JOB_ID" VALUE="{job_id}">:}
 
-<H2 CLASS="title">{job_id?Move Job {job_id}:Move All Jobs}</H2>
+<H2 CLASS="title">{job_id?Mover trabalho {job_id}:Mover todos trabalhos}</H2>
 
 <TABLE>
 <TR>
-<TH CLASS="label">New Destination:</TH>
+<TH CLASS="label">Novo destino:</TH>
 <TD>
 <SELECT NAME="JOB_PRINTER_URI" SIZE="10">
 {[job_printer_uri]<OPTION VALUE="{job_printer_uri}">{job_printer_name}}
@@ -16,7 +16,7 @@
 </TR>
 <TR>
 <TD></TD>
-<TD><INPUT TYPE="SUBMIT" VALUE="{job_id?Move Job:Move Jobs}"></TD>
+<TD><INPUT TYPE="SUBMIT" VALUE="{job_id?Mover trabalho:Mover trabalhos}"></TD>
 </TR>
 </TABLE>
 

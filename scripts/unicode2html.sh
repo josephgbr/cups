@@ -19,9 +19,9 @@
 # Note to myself: http://erikasarti.net/html/acentuacao-caracteres-especiais/
 
 infile=$1
-bkpfile="$infile~"
 
-cp -a $infile $bkpfile
+#bkpfile="$infile~"
+#cp -a $infile $bkpfile
 
 if [ ! -r $infile ]; then
   echo "Failed reading the HTML file. Exiting..."
@@ -32,6 +32,8 @@ if [ ! -w $infile ]; then
   echo "HTML file $infile is not writable. Exiting..."
   exit 1
 fi
+
+echo -n "Converting $infile ... "
 
 # letter a
 sed -i 's/á/\&aacute;/g' $infile
@@ -63,3 +65,5 @@ sed -i 's/Ú/\&Uacute;/g' $infile
 # letra c-cedilha
 sed -i 's/ç/\&ccedil;/g' $infile
 sed -i 's/Ç/\&Ccedil;/g' $infile
+
+echo "done"

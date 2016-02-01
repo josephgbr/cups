@@ -4,22 +4,22 @@
 <INPUT TYPE="HIDDEN" NAME="PRINTER_NAME" VALUE="{printer_name}">
 {IS_CLASS?<INPUT TYPE="HIDDEN" NAME="IS_CLASS" VALUE="{IS_CLASS}">:}
 
-<H2 CLASS="title">Allowed Users For {printer_name}</H2>
+<H2 CLASS="title">Usuários permitidos para {printer_name}</H2>
 
 <TABLE>
 <TR>
-<TH CLASS="label">Users:</TH>
+<TH CLASS="label">Usuários:</TH>
 <TD>
 <INPUT TYPE='TEXT' NAME='users' SIZE='60' VALUE='{?requesting_user_name_allowed}{?requesting_user_name_denied}'>
 <BR>
-<INPUT TYPE='RADIO' NAME='type' VALUE='requesting-user-name-allowed' {requesting_user_name_allowed?checked:}>Allow these users to print
-<INPUT TYPE='RADIO' NAME='type' VALUE='requesting-user-name-denied' {requesting_user_name_denied?checked:}>Prevent these users from printing
+<INPUT TYPE='RADIO' NAME='type' VALUE='requesting-user-name-allowed' {requesting_user_name_allowed?checked:}>Permitir que estes usuários imprimam
+<INPUT TYPE='RADIO' NAME='type' VALUE='requesting-user-name-denied' {requesting_user_name_denied?checked:}>Impedir que estes usuários imprimam
 </TD>
 </TR>
 <TR>
 <TD></TD>
 <TD>
-<INPUT TYPE="SUBMIT" VALUE="Set Allowed Users">
+<INPUT TYPE="SUBMIT" VALUE="Definir usuários permitidos">
 </TD>
 </TR>
 </TABLE>

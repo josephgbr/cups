@@ -13,42 +13,41 @@ function select_printers() {
 <INPUT TYPE="HIDDEN" NAME="org.cups.sid" VALUE="{$org.cups.sid}">
 <INPUT TYPE="HIDDEN" NAME="OP" VALUE="export-samba">
 
-<H2 CLASS="title">Export Printers to Samba</H2>
+<H2 CLASS="title">Exportar impressoras para o Samba</H2>
 
-{error?<P>Unable to export printers to Samba\:</P>
+{error?<P>Não foi possível exportar impressoras para o Samba\:</P>
 <BLOCKQUOTE>{error}</BLOCKQUOTE>
-<P>Consult the <A HREF="/admin/log/error_log"
-TARGET="_blank">error_log</A> file for more information.</P>:
-<P>This page allows you to export printers to Samba so that
-Windows clients can access them through the <VAR>Network
-Neighborhood</VAR> or <VAR>Network Places</VAR> icons on their
-desktop. You must previously install the Windows PostScript
-printer drivers as described in the <A
-HREF="/help/man-cupsaddsmb.html"
-TARGET="_blank">cupsaddsmb(8)</A> man page.</P>}
+<P>>Consulte o arquivo <A HREF="/admin/log/error_log"
+TARGET="_blank">error_log</A> para mais informações.</P>:
+<P>Essa página permite que você exporte impressoras para o Samba
+para que clientes Windows possam acessá-las através dos ícones de
+<VAR>Ambiente de Rede</VAR> ou <VAR>Locais de Rede</VAR> nas suas
+áreas de trabalho. Você deve primeiro instalar os drivers de
+impressora PostScript do Windows como descrito na página de manual do
+<A HREF="/help/man-cupsaddsmb.html" TARGET="_blank">cupsaddsmb(8)</A>.</P>}
 
 <TABLE>
 <TR>
-<TH CLASS="label">Printers:</TH>
+<TH CLASS="label">Impressoras:</TH>
 <TD>
 <SELECT NAME="EXPORT_NAME" SIZE="10" MULTIPLE>
 {[printer_name]<OPTION VALUE="{printer_name}"{export_all? SELECTED:{printer_export? SELECTED:}}>{printer_name}}
 </SELECT><BR>
 <INPUT TYPE="CHECKBOX" NAME="EXPORT_ALL"{export_all? CHECKED:}
-onChange="select_printers()"> Export All Printers
+onChange="select_printers()"> Exportar todas as impressoras
 </TD>
 </TR>
 <TR>
-<TH CLASS="label">Samba Username:</TH>
-<TD><INPUT TYPE="TEXT" NAME="USERNAME" VALUE="{?USERNAME}"> (required)</TD>
+<TH CLASS="label">Nome do usuário do Samba:</TH>
+<TD><INPUT TYPE="TEXT" NAME="USERNAME" VALUE="{?USERNAME}"> (obrigatório)</TD>
 </TR>
 <TR>
-<TH CLASS="label">Samba Password:</TH>
-<TD><INPUT TYPE="PASSWORD" NAME="PASSWORD" VALUE=""> (required)</TD>
+<TH CLASS="label">Senha do Samba:</TH>
+<TD><INPUT TYPE="PASSWORD" NAME="PASSWORD" VALUE=""> (obrigatório)</TD>
 </TR>
 <TR>
 <TD></TD>
-<TD><INPUT TYPE="SUBMIT" VALUE="Export Printers to Samba"></TD>
+<TD><INPUT TYPE="SUBMIT" VALUE="Exportar impressoras para o Samba"></TD>
 </TR>
 </TABLE>
 

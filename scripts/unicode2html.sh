@@ -33,6 +33,13 @@ if [ ! -w $infile ]; then
   exit 1
 fi
 
+# converts file to utf-8 if file is iso-8859, otherwise conversion fails
+if [ ! ISO-8859 == *"$(file $infile)"* ]; then
+    tmp=$(mktemp)
+    iconv --from-code=iso-8859-1 --to-code=utf-8 $infile > $tmp
+    [ $? -eq 0 ] && mv $tmp $infile
+fi
+
 echo -n "Converting $infile ... "
 
 # letter a

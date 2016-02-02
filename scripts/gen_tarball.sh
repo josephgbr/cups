@@ -128,7 +128,7 @@ fi
 
 # locale (PO file) - was it translated already?
 if [ -r locale/cups_$locale.po ]; then
-    sourcefiles="$sourcefiles doc/$locale/index.html.in"
+    sourcefiles="$sourcefiles locale/cups_$locale.po"
 else
     verbose "no cups_$locale.po found inside folder $inputdir/$locale. Ignoring."
 fi

@@ -4824,7 +4824,7 @@ msgstr "Borda maior (retrato)"
 
 #: cups/http-support.c:1725
 msgid "Looking for printer..."
-msgstr "Procurando impressora..."
+msgstr "Procurando por impressora..."
 
 #: ppdc/sample.c:260
 msgid "Manual Feed"

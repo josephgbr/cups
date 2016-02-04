@@ -64,7 +64,7 @@
 
     :<P><B>Configura&ccedil;&otilde;es do servidor:</B></P>
 
-    <P><A HREF="/admin/?ADVANCEDSETTINGS=YES">Advanced <SMALL>&#x25b6;</SMALL></A><BR>
+    <P><A HREF="/admin/?ADVANCEDSETTINGS=YES">Avan&ccedil;ado <SMALL>&#x25b6;</SMALL></A><BR>
     <INPUT TYPE="HIDDEN" NAME="OP" VALUE="config-server">
     <INPUT TYPE="CHECKBOX" NAME="SHARE_PRINTERS" {?share_printers}> Compartilhar impressoras conectadas a este sistema<BR>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT TYPE="CHECKBOX" NAME="REMOTE_ANY" {?remote_any}> Permitir impress&atilde;o a partir da Internet<BR>
@@ -88,7 +88,7 @@
   </P>
 
   {notify_subscription_id?<TABLE CLASS="list" SUMMARY="Inscri&ccedil;&otilde;es RSS">
-  <THEAD><TR><TH>Name</TH><TH>Events</TH><TH>Nome da fila</TH></TR></THEAD>
+  <THEAD><TR><TH>Nome</TH><TH>Eventos</TH><TH>Nome da fila</TH></TR></THEAD>
   <TBODY>{[notify_subscription_id]
   <TR><TD><A HREF="{notify_recipient_uri}">{notify_recipient_name}</A><BR>
   <FORM ACTION="/admin/" METHOD="POST"><INPUT TYPE="HIDDEN" NAME="org.cups.sid" VALUE="{$org.cups.sid}"><INPUT TYPE="HIDDEN" NAME="OP" VALUE="cancel-subscription"><INPUT TYPE="HIDDEN" NAME="notify_subscription_id" VALUE="{notify_subscription_id}"><INPUT TYPE="SUBMIT" VALUE="Cancelar inscri&ccedil;&atilde;o RSS"></FORM>&nbsp;</TD><TD>{notify_events}</TD><TD NOWRAP>&nbsp;{notify_printer_name?{notify_printer_name}:Todas as filas}</TD></TR>}

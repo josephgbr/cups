@@ -16,6 +16,32 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+###########################################
+# Define initial values of some variables
+
+initialdir=`pwd` # store initial directory before any `cd`
+verbose=0  # set initial verbose value
+
+###########################################
+# Define some required functions
+
+help() {
+    echo -e "Usage: $(basename $0) [options]"
+    echo -e "Generate tarball with your translation of CUPS to be sent to the CUPS Dev Team.\n"
+    echo -e "Options:\n"
+    echo -e "   -i <inputdir>    CUPS source code directory containing all the files,\n" \
+            "                      including translated files. (default: current dir)"
+    echo -e "   -o <outputfile>  tarball name that will store the translation files.\n"  \
+            "                      (default: <locale>.tar.gz)"
+    echo -e "   -l <locale>      set locale with a language code, like e.g. pt_BR.\n"   \
+            "                      (default: value of \$LANG environment variable)"
+    echo -e "   -v               enable verbosity, display more information."
+    echo -e "   -h               show help and quit."
+    echo -e ""
+    echo -e "See source code and report bugs in: https://github.com/josephgbr/cups-pt_BR"
+    exit 2
+}
+
 die() {
     echo "Error: $1" > /dev/stderr
     cd "$initialdir"
@@ -26,45 +52,24 @@ verbose() {
     [[ $verbose -eq 1 ]] && echo "Verbose: $1" 2>&1 
 }
 
-initialdir=`pwd`
-
-tarbin="$(which tar)"
-[ -x $tarbin ] || die "unable to find required tar binary."
-verbose "using tar binary $tarbin"
+###########################################
+# Check provided (or not) options, values, directory/file contents
 
 while getopts 'i|o|l|v|h' OPTION; do
     case $OPTION in
-        i)
-            [ ! -z "$OPTARG" ] || die "option -i requires a directory an argument."
+        i)  [ ! -z "$OPTARG" ] || die "option -i requires a directory an argument."
             [ -d "$OPTARG" ] || die "unable to find directory containing translated files."
             inputdir=$OPTARG
         ;;
-        o)
-            [ ! -z "$OPTARG" ] || die "option -o requires a filename as an argument."
+        o)  [ ! -z "$OPTARG" ] || die "option -o requires a filename as an argument."
             outputfile="$OPTARG"
         ;;
-        l)
-            [ ! -z "$OPTARG" ] || die "option -l requires a language code as an argument."
+        l)  [ ! -z "$OPTARG" ] || die "option -l requires a language code as an argument."
             locale=$OPTARGS
         ;;
-        v)
-            verbose=1
+        v)  verbose=1
         ;;
-        h)
-            echo -e "Usage: $(basename $0) [options]"
-            echo -e "Generate tarball with your translation of CUPS to be sent to the CUPS Dev Team.\n"
-            echo -e "Options:\n"
-            echo -e "   -i <inputdir>    CUPS source code directory containing all the files,\n" \
-                    "                      including translated files. (default: current dir)"
-            echo -e "   -o <outputfile>  tarball name that will store the translation files.\n"  \
-                    "                      (default: <locale>.tar.gz)"
-            echo -e "   -l <locale>      set locale with a language code, like e.g. pt_BR.\n"   \
-                    "                      (default: value of \$LANG environment variable)"
-            echo -e "   -v               enable verbosity, display more information."
-            echo -e "   -h               show help and quit."
-            echo -e ""
-            echo -e "See source code and report bugs in: https://github.com/josephgbr/cups-pt_BR"
-            exit 2
+        h)  help
         ;;
         *) die "unknown option $OPTION"
         ;;
@@ -72,8 +77,10 @@ while getopts 'i|o|l|v|h' OPTION; do
 done
 shift $(($OPTIND - 1))
 
-# use default, if not done already
-[ -z "$verbose" ] && verbose=0
+# are we able to use tar?
+tarbin="$(which tar)"
+[ -x $tarbin ] || die "unable to find required tar binary."
+verbose "using tar binary $tarbin"
 
 # is the inputdir the correct folder? If not provided, try using current folder
 if [ -z "$inputdir" ]; then
@@ -145,6 +152,9 @@ else
     verbose "templates folder for locate $locate not found. Ignoring."
 fi
 
+###########################################
+# Run compression with tar
+
 if [ $verbose -eq 1 ]; then
     taropts="-cvf"
 else
@@ -155,4 +165,5 @@ verbose "compressing source files..."
 $tarbin $taropts $outputfile $sourcefiles
 [ $? -eq 0 ] || die "failure while compressing source files with tar"
 
+# go back to initial directory
 cd "$initialdir"

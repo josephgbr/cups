@@ -17,73 +17,126 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# syntax of the value is ll_CC, where 'll' is language code and 'CC' is country
-locale=pt_BR
+###########################################
+# Define initial values of some variables
+
+initialdir=`pwd` # store initial directory before any `cd`
+verbose=0  # set initial verbose value
+
+###########################################
+# Define some required functions
+
+help() {
+    echo -e "Usage: $(basename $0) [options]"
+    echo -e "Compare source<->pt_BR tmpl files, and store in a text file.\n"
+    echo -e "Options:\n"
+    echo -e "   -i <inputdir>    CUPS source code directory containing both source\n" \
+            "                      and translated templates. (default: current dir)"
+    echo -e "   -o <outputfile>  tarball name that will store the translation files.\n"  \
+            "                      (default: review.txt)"
+    echo -e "   -l <locale>      set locale with a language code, like e.g. pt_BR.\n"   \
+            "                      (default: value of \$LANG environment variable)"
+    echo -e "   -v               enable verbosity, display more information."
+    echo -e "   -h               show help and quit."
+    echo -e ""
+    echo -e "See source code and report bugs in: https://github.com/josephgbr/cups-pt_BR"
+    exit 2
+}
+
+die() {
+    echo "Error: $1" > /dev/stderr
+    cd "$initialdir"
+    exit 1
+}
+
+verbose() {
+    [[ $verbose -eq 1 ]] && echo "Verbose: $1" 2>&1 
+}
+
+###########################################
+# Check provided (or not) options, values, directory/file contents
+
+while getopts 'i|o|l|v|h' OPTION; do
+    case $OPTION in
+        i)  [ ! -z "$OPTARG" ] || die "option -i requires a directory an argument."
+            [ -d "$OPTARG" ] || die "unable to find directory containing translated files."
+            inputdir="$OPTARG"
+        ;;
+        o)  [ ! -z "$OPTARG" ] || die "option -o requires a filename as an argument."
+            outputfile="$OPTARG"
+        ;;
+        l)  [ ! -z "$OPTARG" ] || die "option -l requires a language code as an argument."
+            locale=$OPTARGS
+        ;;
+        v)  verbose=1
+        ;;
+        h)  help
+        ;;
+        *) die "unknown option $OPTION"
+        ;;
+    esac
+done
+shift $(($OPTIND - 1))
+
+# if locale not set, use system's locale
+if [ -z $locale ]; then
+   locale=${LANG/.*/}
+   [ ! $locale == C ] || die "unable to get locale as it was not provided and \$LANG value is C."
+   verbose "getting locale from \$LANG."
+fi
+verbose "using locale $locale."
 
 # name of file that will store the comparison result of tmpl files
 # p.s.: will be stored in templates folder!
-outfile=review.txt
+# use default, if not done already
+[ -z "$outputfile" ] && outputfile="review.txt"
+verbose "using outputfile $outputfile."
+
+cd "$inputdir"
 
 # Make sure what is the current work dir and where are the '.tmpl' files'.
 case $(basename $(pwd)) in
-   cups-?.?.?)   srctmpldir="templates" ;;   # for 3-digit versions e.g. 2.1.2
-   cups-?.?)     srctmpldir="templates" ;;   # for 2-digit versions e.g. 2.2
-   templates)    srctmpldir="." ;;
-   *) # are we inside a locale folder, e.g. templates/pt_BR ?
-      if [[ $(basename $(dirname $(pwd))) == templates ]]; then
-        srctmpldir=".."
-      else
-        echo "Unable to find templates/ folder." && exit 1
-      fi
-      ;;
+   cups-?.?.?)  srctmpldir="templates" ;;   # for 3-digit versions e.g. 2.1.2
+   cups-?.?)    srctmpldir="templates" ;;   # for 2-digit versions e.g. 2.2
+   templates)   srctmpldir="." ;;
+   $locale)     srctmpldir=".." ;;
+   *)           die "unable to find templates/ folder inside inputdir \"$inputdir\"." ;;
 esac
 
-
 # Get list of template files and bail out if there is none.
-tmpllist=$(ls $srctmpldir/*.tmpl)
-if [[ -z $tmpllist ]]; then
-    echo "Unable to find templates inside the templates/ folder. Aborting..."
-    exit 1
-fi
+tmpllist="$(ls $srctmpldir/*.tmpl)"
+[ -z "$tmpllist" ] || die "unable to find templates inside the templates/ folder."
 
 
 # Set dsttmpldir with the template translation folder and check it out
 dsttmpldir=$srctmpldir/$locale
-if [[ ! -d $dsttmpldir ]]; then
-    echo "Unable to find template translation folder $dsttmpldir. Exiting..."
-    exit 1
-fi
-if [[ $(find $dsttmpldir -maxdepth 0 -empty) == $dsttmpldir ]]; then
-    echo "The template translation folder $dsttmpldir is empty. No reason to go further. Exiting..."
-    exit 1
-fi
+[ ! -d $dsttmpldir ] || die "Unable to find template translation folder $dsttmpldir."
+[ ! $(find $dsttmpldir -maxdepth 0 -empty) == $dsttmpldir ] || \
+    die "template translation folder $dsttmpldir is empty. No reason to go further."
 
 
 # Set output file to templates/ and verify if it can be created.
-outfile=$srctmpldir/$outfile
-rm $outfile
-touch $outfile
-if [[ $? -ne 0 ]]; then
-    echo "Output file $outfile is not writable. Aborting..."
-    exit 1
-fi
+outputfile="$srctmpldir/$outputfile"
+rm "$outputfile"
+touch "$outputfile"
+[ $? -eq 0 ] || die "output file $outputfile is not writable."
 
 
 failedfiles=
-echo "Comparison of Templates generated by gen_diff.sh in $(date)" >> $outfile
+echo "Comparison of Templates generated by gen_diff.sh in $(date)" >> $outputfile
 for tmplfile in $tmpllist; do
     if ! [[ -e $dsttmpldir/$(basename $tmplfile) ]]; then
         failedfiles="$failedfiles $(basename $tmplfile)" # store failed
     else
-        echo -e "\n=========================================\n" >> $outfile
-        echo -e "$tmplfile\n\n" >> $outfile
-        diff -Naur $tmplfile $dsttmpldir/$(basename $tmplfile) >> $outfile
-        echo -e "\n" >> $outfile
+        echo -e "\n=========================================\n" >> $outputfile
+        echo -e "$tmplfile\n\n" >> $outputfile
+        diff -Naur $tmplfile $dsttmpldir/$(basename $tmplfile) >> $outputfile
+        echo -e "\n" >> $outputfile
     fi
 done
 
 # Show which tmpl comparison failed, if any
-if [[ -n $failedfiles ]]; then
+[ -n $failedfiles ] && \
     echo "The following files doesn't exist in template translation folder, so comparison failed for them:"
     echo $failedfiles
 fi

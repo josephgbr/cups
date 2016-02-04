@@ -1,7 +1,7 @@
 {#job_id=0?:
 <TABLE CLASS="list" SUMMARY="Job List">
 <THEAD>
-<TR><TH><A HREF="{THISURL}?QUERY={?QUERY}&amp;WHICH_JOBS={?WHICH_JOBS}&amp;FIRST={FIRST}&amp;ORDER={ORDER=dec?asc:dec}">{ORDER=dec?<SMALL>&#x25b2;</SMALL> ID <SMALL>&#x25b2;</SMALL>:<SMALL>&#x25bc;</SMALL> ID <SMALL>&#x25bc;</SMALL>}</A></TH><TH>Nome</TH><TH>Usu&Atilde;¡rio</TH><TH>Tamanho</TH><TH>P&Atilde;¡ginas</TH><TH>Estado</TH><TH>Controle</TH></TR>
+<TR><TH><A HREF="{THISURL}?QUERY={?QUERY}&amp;WHICH_JOBS={?WHICH_JOBS}&amp;FIRST={FIRST}&amp;ORDER={ORDER=dec?asc:dec}">{ORDER=dec?<SMALL>&#x25b2;</SMALL> ID <SMALL>&#x25b2;</SMALL>:<SMALL>&#x25bc;</SMALL> ID <SMALL>&#x25bc;</SMALL>}</A></TH><TH>Nome</TH><TH>Usu&Atilde;&Acirc;¡rio</TH><TH>Tamanho</TH><TH>P&Atilde;&Acirc;¡ginas</TH><TH>Estado</TH><TH>Controle</TH></TR>
 </THEAD>
 <TBODY>
 {[job_id]
@@ -13,7 +13,7 @@
 <TD>{job_media_sheets_completed=0?Desconhecido:{?job_media_sheets_completed}}&nbsp;</TD>
 <TD>{job_state=3?Pendente desde<BR>{time_at_creation}:{job_state=4?Retido desde<BR>{time_at_creation}:
 {job_state=5?Processando desde<BR>{time_at_processing}:{job_state=6?parado:
-{job_state=7?Cancelado em<BR>{time_at_completed}:{job_state=8?Abortado:Conclu&Atilde;­do em<BR>{time_at_completed}}}}}}}&nbsp;{job_printer_state_message?<BR>
+{job_state=7?Cancelado em<BR>{time_at_completed}:{job_state=8?Abortado:Conclu&iacute;do em<BR>{time_at_completed}}}}}}}&nbsp;{job_printer_state_message?<BR>
 <EM>"{job_printer_state_message}"</EM>:}</TD>
 <TD>
 {job_preserved>0?{job_state>5?

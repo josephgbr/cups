@@ -39,7 +39,7 @@ help() {
     echo -e "   -v               enable verbosity, display more information."
     echo -e "   -h               show help and quit."
     echo -e ""
-    echo -e "See source code and report bugs in: https://github.com/josephgbr/cups-pt_BR"
+    echo -e "See source code and report bugs in: https://github.com/rffontenelle/cups-pt_BR"
     exit 2
 }
 

@@ -7,16 +7,18 @@ Esta é uma tradução extraoficial do guia do tradutor do CUPS, visando facilit
 *Atenção: os procedimentos abaixo precisam do [translate-toolkit](http://toolkit.translatehouse.org/).*
 
 1. Baixe o guia oficial de https://www.cups.org/doc/translation.html
+
 2. Extraia as mensagens do guia para um modelo de catálogo de mensagens (.pot) Gettext:
 ```
 html2po --input="Translating and Customizing CUPS.html" --pot --output=translation.pot
 ```
 3. Crie/Atualize o catálogo de mensagens (.po):
-   1. Caso o catálodo de mensagens (.po) não exista, crie-o usando:
+
+ 3.1. Caso o catálodo de mensagens (.po) não exista, crie-o usando:
 ```
  msginit --locale=pt_BR --input=translation.pot --output=translation.po
 ```
-   2. Caso o catálogo de mensagens já exista, atualize-o usando:
+ 3.2. Caso o catálogo de mensagens já exista, atualize-o usando:
 ```
  msgmerge --previous --lang=pt_BR translation.po translation.pot > temp
  mv temp translation.po

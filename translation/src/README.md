@@ -30,7 +30,7 @@ html2po --input="Translating and Customizing CUPS.html" --pot --output=translati
 ```
 6. Opcionalmente, pode-se criar uma versão markdown a partir do HTML traduzido, para melhor visualização no GitHub. Para isto, [html2text](http://alir3z4.github.io/html2text/) pode ser usado:
 ```
- html2text translation.html > translation.md
+ html2text --body-width=0 translation.html > translation.md
 ```
 7. Coloque translation.md no diretório anterior (`translation/`) como README.md
 

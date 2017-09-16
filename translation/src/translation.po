@@ -2,14 +2,15 @@
 # Copyright (C) 2017 Apple Inc
 # This file is distributed under the same license as the original page.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2017.
+#. extracted from translation-en.md
 msgid ""
 msgstr ""
 "Project-Id-Version: Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 08:33-0200\n"
-"PO-Revision-Date: 2017-09-16 06:59-0200\n"
+"POT-Creation-Date: 2017-09-16 17:09-0200\n"
+"PO-Revision-Date: 2017-09-16 14:43-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Brazilian Portuguese <traducao-cups-pt-br@googlegroups.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,17 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 1.0.0-beta1\n"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.head.title%3A4-2
-msgctxt "Translating and Customizing CUPS.html+html.head.title:4-2"
-msgid "Translating and Customizing CUPS"
-msgstr "Traduzindo e Personalizando o CUPS"
+#: translation-en.md:2
+msgid "# Translating and Customizing CUPS"
+msgstr "# Traduzindo e Personalizando o CUPS"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h1%3A9-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h1:9-1"
-msgid "Translating and Customizing CUPS"
-msgstr "Traduzindo e Personalizando o CUPS"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A11-1
+#: translation-en.md:4
 msgid ""
 "Thanks to its extensive use of templates, images, and message catalogs, CUPS "
 "can be easily translated (or customized!) to suit your needs. This help file "
@@ -39,193 +34,179 @@ msgstr ""
 "necessidades. Este arquivo de ajuda irá guiá-lo através dos arquivos de "
 "localização CUPS para que você possa aproveitar ao máximo."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A17-1
-msgid "Getting Started"
-msgstr "Primeiros passos"
+#: translation-en.md:6
+msgid "## Getting Started"
+msgstr "## Primeiros passos"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A19-1
+#: translation-en.md:8
 msgid ""
-"Start by downloading the CUPS source code from <a href=\"http://www.cups.org/"
-"software.php\" target=\"_blank\">www.cups.org</a>. After you extract the "
-"files from the source archive, you will want to copy the following files and "
-"directories:"
+"Start by downloading the CUPS source code from [www.cups.org](http://www."
+"cups.org/software.php). After you extract the files from the source archive, "
+"you will want to copy the following files and directories:"
 msgstr ""
-"Comece baixando o código-fonte CUPS de <a href=\"http://www.cups.org/"
-"software.php\" target=\"_blank\">www.cups.org</a>. Depois de extrair os "
-"arquivos do pacote fonte, você vai querer copiar os seguintes arquivos e "
-"diretórios:"
+"Comece baixando o código-fonte CUPS de [www.cups.org](http://www.cups.org/"
+"software.php). Depois de extrair os arquivos do pacote fonte, você vai "
+"querer copiar os seguintes arquivos e diretórios:"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A25-2
+#: translation-en.md:13
 msgid ""
-"<var>desktop/cups.desktop</var> - the GNOME/KDE desktop file pointing to the "
-"CUPS web interface"
+"  * desktop/cups.desktop \\- the GNOME/KDE desktop file pointing to the CUPS "
+"web interface\n"
+"  * doc/index.html \\- the web interface home page\n"
+"  * locale/cups.pot \\- the message catalog\n"
+"  * templates/*.tmpl \\- the web interface template files"
 msgstr ""
-"<var>desktop/cups.desktop</var> - o arquivo desktop do GNOME/KDE apontando "
-"para a interface web do CUPS"
+"  * desktop/cups.desktop \\- o arquivo desktop do GNOME/KDE apontando para a "
+"interface web do CUPS\n"
+"  * doc/index.html \\- a página inicial da interface web\n"
+"  * locale/cups.pot \\- o catálogo de mensagens\n"
+"  * templates/*.tmpl \\- os arquivos modelos da interface web"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A28-2
-msgid "<var>doc/index.html</var> - the web interface home page"
-msgstr "<var>doc/index.html</var> - a página inicial da interface web"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A31-2
-msgid "<var>locale/cups.pot</var> - the message catalog"
-msgstr "<var>locale/cups.pot</var> - o catálogo de mensagens"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A33-2
-msgid "<var>templates/*.tmpl</var> - the web interface template files"
-msgstr "<var>templates/*.tmpl</var> - os arquivos modelos da interface web"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A38-1
+#: translation-en.md:17
 msgid ""
 "With the exception of the message catalogs and desktop file, localization "
-"files are placed in subdirectories under the <var>doc</var> and "
-"<var>templates</var> using the locale name. Locale names are either <var>ll</"
-"var> or <var>ll_CC</var>, where \"ll\" is the 2-letter language code and \"CC"
-"\" is the 2-letter country code. <em>CUPS does not currently use or support "
-"the newer <var>ll-region</var> syntax for locale names.</em>"
+"files are placed in subdirectories under the doc and templates using the "
+"locale name. Locale names are either ll or ll_CC, where \"ll\" is the 2-"
+"letter language code and \"CC\" is the 2-letter country code. _CUPS does not "
+"currently use or support the newer ll-region syntax for locale names._"
 msgstr ""
 "Com exceção dos catálogos de mensagens e do arquivo desktop, os arquivos de "
-"localização são colocados em subdiretórios nos <var>doc</var> e "
-"<var>templates</var> usando o nome da localidade. Os nomes das localidades "
-"são <var>ll</var> ou <var>ll_CC</var>, sendo \"ll\" o código de idioma de 2 "
-"letras e \"CC\" o código de país de 2 letras. <em>CUPS atualmente não usa "
-"nem oferece suporte à nova sintaxe <var>ll-região</var> para nomes de "
-"localidade.</em>"
+"localização são colocados em subdiretórios nos doc e templates usando o nome "
+"da localidade. Os nomes das localidades são ll ou ll_CC, sendo \"ll\" o "
+"código de idioma de 2 letras e \"CC\" o código de país de 2 letras. _CUPS "
+"atualmente não usa nem oferece suporte à nova sintaxe ll-região para nomes "
+"de localidade_."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A46-1
+#: translation-en.md:19
 msgid "All non-image files must be encoded using the UTF-8 character set."
 msgstr ""
 "Todos os arquivos não imagem devem ser codificados usando o conjunto de "
 "caracteres UTF-8."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A50-1
-msgid "Submitting a Translation for CUPS"
-msgstr "Enviando uma tradução para o CUPS"
+#: translation-en.md:21
+msgid "## Submitting a Translation for CUPS"
+msgstr "## Enviando uma tradução para o CUPS"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A52-1
+#: translation-en.md:23
 msgid ""
 "To submit a translation for inclusion in CUPS, translate the desktop file, "
-"all of the template files, the <var>index.html.in</var> file, and the "
-"message catalog. Place these files in the correct subdirectories in the CUPS "
-"source code archive and run the following command to create an archive with "
-"your files:"
+"all of the template files, the index.html.in file, and the message catalog. "
+"Place these files in the correct subdirectories in the CUPS source code "
+"archive and run the following command to create an archive with your files:"
 msgstr ""
 "Para enviar uma tradução para inclusão no CUPS, traduza o arquivo desktop, "
-"todos os arquivos de modelos, o arquivo <var>index.html.in</var> e o "
-"catálogo de mensagens. Coloque esses arquivos nos subdiretórios corretos no "
-"arquivo de código-fonte do CUPS e execute o seguinte comando para criar um "
-"arquivo com seus arquivos:"
+"todos os arquivos de modelos, o arquivo index.html.in e o catálogo de "
+"mensagens. Coloque esses arquivos nos subdiretórios corretos no arquivo de "
+"código-fonte do CUPS e execute o seguinte comando para criar um arquivo com "
+"seus arquivos:"
 
-# Nova linha e tab adicionados para compensar falha de formatação do html2po
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A58-1
+#: translation-en.md:27
 msgid ""
-"tar cvf <i>ll_CC</i>.tar.gz desktop/cups.desktop doc/<i>ll_CC</i> \\ locale/"
-"cups_<i>ll_CC</i>.po templates/<i>ll_CC</i>"
+"    tar cvf _ll_CC_.tar.gz desktop/cups.desktop doc/_ll_CC_ \\\n"
+"        locale/cups__ll_CC_.po templates/_ll_CC_"
 msgstr ""
-"tar cvf <i>ll_CC</i>.tar.gz desktop/cups.desktop doc/<i>ll_CC</i> \\\n"
-"\tlocale/cups_<i>ll_CC</i>.po templates/<i>ll_CC</i>"
+"    tar cvf _ll_CC_.tar.gz desktop/cups.desktop doc/_ll_CC_ \\\n"
+"        locale/cups__ll_CC_.po templates/_ll_CC_"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A62-1
+#: translation-en.md:30
 msgid ""
 "Replace \"ll_CC\" with the locale name for your translation. Once you have "
-"created the archive, go to the <a href=\"http://www.cups.org/str.php\" "
-"target=\"_blank\">CUPS Bugs & Features</a> page and submit a bug report, "
-"attaching the translation to the report."
+"created the archive, go to the [CUPS Bugs &amp; Features](http://www.cups."
+"org/str.php) page and submit a bug report, attaching the translation to the "
+"report."
 msgstr ""
 "Substitua \"ll_CC\" pelo nome da localidade para sua tradução. Depois de "
-"criar o arquivo, vá para a página <a href=\"http://www.cups.org/str.php\" "
-"target=\"_blank\">Bugs & Recursos do CUPS</a> e envie um relatório de erro, "
-"anexando a tradução ao relatório."
+"criar o arquivo, vá para a página [Bugs &amp; Recursos do CUPS](http://www."
+"cups.org/str.php) e envie um relatório de erro, anexando a tradução ao "
+"relatório."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A68-1
-msgid "The Desktop File"
-msgstr "O arquivo desktop"
+#: translation-en.md:32
+msgid "## The Desktop File"
+msgstr "## O arquivo desktop"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A70-1
+#: translation-en.md:34
 msgid ""
-"The <var>desktop/cups.desktop</var> file provides a link to the CUPS web "
-"interface from desktop environments such as GNOME and KDE. To translate this "
-"file, add two lines to the bottom with the <tt>Name</tt> and <tt>Comment</"
-"tt> keys:"
+"The desktop/cups.desktop file provides a link to the CUPS web interface from "
+"desktop environments such as GNOME and KDE. To translate this file, add two "
+"lines to the bottom with the `Name` and `Comment` keys:"
 msgstr ""
-"O arquivo <var>desktop/cups.desktop</var> fornece um link para a interface "
-"web do CUPS a partir de ambientes de desktop, como o GNOME e o KDE. Para "
-"traduzir este arquivo, adicione duas linhas na parte inferior com as chaves "
-"<tt>Name</tt> e <tt>Comment</tt>:"
+"O arquivo desktop/cups.desktop fornece um link para a interface web do CUPS "
+"a partir de ambientes de desktop, como o GNOME e o KDE. Para traduzir este "
+"arquivo, adicione duas linhas na parte inferior com as chaves `Name` e "
+"`Comment`:"
 
-# Nova linha e tab adicionados para compensar falha de formatação do html2po
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A75-1
+#: translation-en.md:38
 msgid ""
-"Name[<i>ll_CC</i>]=<i>Translation of \"Manage Printing\"</i> "
-"Comment[<i>ll_CC</i>]=<i>Translation of \"CUPS Web Interface\"</i>"
+"    Name[_ll_CC_]=_Translation of \"Manage Printing\"_\n"
+"    Comment[_ll_CC_]=_Translation of \"CUPS Web Interface\"_"
 msgstr ""
-"Name[<i>ll_CC</i>]=<i>Tradução de \"Manage Printing\"</i>\n"
-"Comment[<i>ll_CC</i>]=<i>Tradução de \"CUPS Web Interface\"</i>"
+"    Name[_ll_CC_]=_Tradução de \"Manage Printing\"_\n"
+"    Comment[_ll_CC_]=_Tradução de \"CUPS Web Interface\"_"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A80-1
-msgid "The Home Page"
-msgstr "A página inicial"
+#: translation-en.md:41
+msgid "## The Home Page"
+msgstr "## A página inicial"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A82-1
+#: translation-en.md:43
 msgid ""
-"The <var>index.html</var> file is a complete HTML file that is displayed "
-"when the user visits \"http://localhost:631/\". Edit the existing <var>doc/"
-"index.html</var> and save it in the <var>doc/ll_CC</var> subdirectory so "
-"that the makefile can install it. Run \"make install\" in the <var>doc</var> "
-"subdirectory to test the new home page."
+"The index.html file is a complete HTML file that is displayed when the user "
+"visits \"http://localhost:631/\". Edit the existing doc/index.html and save "
+"it in the doc/ll_CC subdirectory so that the makefile can install it. Run "
+"\"make install\" in the doc subdirectory to test the new home page."
 msgstr ""
-"O arquivo <var>index.html</var> é um arquivo HTML completo que é exibido "
-"quando o usuário visita \"http://localhost:631/\". Edite o <var>doc/index."
-"html</var> existente e guarde-o no subdiretório <var>doc/ll_CC</var> para "
-"que o Makefile possa instalá-lo. Execute \"make install\" no subdiretório "
-"<var>doc</var> para testar a nova página inicial."
+"O arquivo index.html é um arquivo HTML completo que é exibido quando o "
+"usuário visita \"http://localhost:631/\". Edite o doc/index.html existente e "
+"guarde-o no subdiretório doc/ll_CC para que o Makefile possa instalá-lo. "
+"Execute \"make install\" no subdiretório doc para testar a nova página "
+"inicial."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A90-1
-msgid "Message Catalogs"
-msgstr "Catálogos de mensagens"
+#: translation-en.md:45
+msgid "## Message Catalogs"
+msgstr "## Catálogos de mensagens"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A92-1
+#: translation-en.md:47
 msgid ""
 "CUPS message catalogs are GNU gettext \".po\" text files that provide a list "
 "of localized message strings for the CUPS software. Message catalogs are "
-"named <var>cups_ll.po</var> or <var>cups_ll_CC.po</var>, where \"ll\" is the "
-"standard 2-letter abbreviation for the language and \"CC\" is the standard 2-"
-"letter abbreviation for the country."
+"named cups_ll.po or cups_ll_CC.po, where \"ll\" is the standard 2-letter "
+"abbreviation for the language and \"CC\" is the standard 2-letter "
+"abbreviation for the country."
 msgstr ""
 "Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext \".po\" "
 "que fornecem uma lista de cadeias de mensagens localizadas para o software "
-"CUPS. Os catálogos de mensagens são denominados <var>cups_ll.po</var> ou "
-"<var>cups_ll_CC.po</var>, sendo \"ll\" a abreviatura padrão de 2 letras para "
-"o idioma e \"CC\" é o padrão de 2 letras abreviatura para o país."
+"CUPS. Os catálogos de mensagens são denominados cups_ll.po ou cups_ll_CC.po, "
+"sendo \"ll\" a abreviatura padrão de 2 letras para o idioma e \"CC\" é o "
+"padrão de 2 letras abreviatura para o país."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A99-1
+#: translation-en.md:49
 msgid ""
-"When translating a new message catalog, copy the <var>cups.pot</var> message "
-"catalog file in the <var>locale</var> subdirectory of the CUPS source code. "
-"For example, to start translating the message catalog to Canadian French, "
-"you would type the following commands:"
+"When translating a new message catalog, copy the cups.pot message catalog "
+"file in the locale subdirectory of the CUPS source code. For example, to "
+"start translating the message catalog to Canadian French, you would type the "
+"following commands:"
 msgstr ""
 "Ao traduzir um novo catálogo de mensagens, copie o arquivo de catálogo de "
-"mensagens <var>cups.pot</var> no subdiretório <var>locale</var> do código-"
-"fonte do CUPS. Por exemplo, para começar a traduzir o catálogo de mensagens "
-"para francês canadense, digite os seguintes comandos:"
+"mensagens cups.pot no subdiretório locale do código-fonte do CUPS. Por "
+"exemplo, para começar a traduzir o catálogo de mensagens para francês "
+"canadense, digite os seguintes comandos:"
 
-# Nova linha adicionada para compensar falha de formatação do html2po
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A105-1
-msgid "cd locale cp cups.pot cups_fr_CA.po"
-msgstr ""
-"cd locale\n"
-"cp cups.pot cups_fr_CA.po"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A109-1
+#: translation-en.md:53
 msgid ""
-"Alternatively, you can copy the existing <var>cups_fr.po</var> message "
-"catalog and then make any necessary changes."
+"    cd locale\n"
+"    cp cups.pot cups_fr_CA.po"
 msgstr ""
-"Alternativamente, você pode copiar o catálogo de mensagens <var>cups_fr.po</"
-"var> existente e então fazer quaisquer alterações necessárias."
+"    cd locale\n"
+"    cp cups.pot cups_fr_CA.po"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A112-1
+#: translation-en.md:56
+msgid ""
+"Alternatively, you can copy the existing cups_fr.po message catalog and then "
+"make any necessary changes."
+msgstr ""
+"Alternativamente, você pode copiar o catálogo de mensagens cups_fr.po "
+"existente e então fazer quaisquer alterações necessárias."
+
+#: translation-en.md:58
 msgid ""
 "Once you have make your copy of the file, edit it using your favorite text "
 "editor or translation program to translate the text to the desired language."
@@ -234,37 +215,33 @@ msgstr ""
 "texto favorito ou programa de tradução para traduzir o texto para o idioma "
 "desejado."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A116-1
+#: translation-en.md:60
+msgid "Then validate your translation using the locale/checkpo utility:"
+msgstr "Em seguida, valide sua tradução usando o utilitário locale/checkpo:"
+
+#: translation-en.md:64
 msgid ""
-"Then validate your translation using the <var>locale/checkpo</var> utility:"
+"    cd locale\n"
+"    ./checkpo cups_ll_CC.po"
 msgstr ""
-"Em seguida, valide sua tradução usando o utilitário <var>locale/checkpo</"
-"var>:"
+"    cd locale\n"
+"    ./checkpo cups_ll_CC.po"
 
-# Nova linha adicionada para compensar falha de formatação do html2po
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A118-1
-msgid "cd locale ./checkpo cups_ll_CC.po"
-msgstr ""
-"cd locale\n"
-"./checkpo cups_ll_CC.po"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A122-1
+#: translation-en.md:67
 msgid ""
 "After fixing any errors in your translation, add your locale to the "
-"<code>LANGUAGES</code> variable in the <var>Makedefs</var> file and run the "
-"\"make install\" command in the <var>locale</var> subdirectory to test the "
-"translation."
+"`LANGUAGES` variable in the Makedefs file and run the \"make install\" "
+"command in the locale subdirectory to test the translation."
 msgstr ""
 "Depois de corrigir quaisquer erros na sua tradução, adicione a sua "
-"localidade à variável <code>LANGUAGES</code> no arquivo <var>Makedefs</var> "
-"e execute o comando \"make install\" no subdiretório <var>locale</var> para "
-"testar a tradução."
+"localidade à variável `LANGUAGES` no arquivo Makedefs e execute o comando "
+"\"make install\" no subdiretório locale para testar a tradução."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h2%3A128-1
-msgid "Template Files"
-msgstr "Arquivos modelos"
+#: translation-en.md:69
+msgid "## Template Files"
+msgstr "## Arquivos modelos"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A130-1
+#: translation-en.md:71
 msgid ""
 "The CUPS scheduler provides a web interface that can be used to do many "
 "common printing and administration tasks. The built-in web server supports "
@@ -278,722 +255,359 @@ msgstr ""
 "subdiretórios para cada localidade, p.ex. \"fr\" para francês, \"de\" para "
 "alemão, \"fr_ca\" para francês no Canadá, e assim por diante."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A136-1
+#: translation-en.md:73
 msgid ""
 "Template files are HTML files with special formatting characters in them "
 "that allow substitution of variables and arrays. The CUPS CGI programs "
-"(<code>admin.cgi</code>, <code>classes.cgi</code>, <code>help.cgi</code>, "
-"<code>jobs.cgi</code>, and <code>printers.cgi</code>) use these template "
-"file to provide dynamic content for the web interface. Template files are "
-"installed in the <var>/usr/share/cups/templates</var> directory by default. "
-"Table 2 lists the various template files and their purpose."
+"(`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi`, and `printers.cgi`) use "
+"these template file to provide dynamic content for the web interface. "
+"Template files are installed in the /usr/share/cups/templates directory by "
+"default. Table 2 lists the various template files and their purpose."
 msgstr ""
 "Os arquivos de modelos são arquivos HTML com caracteres de formatação "
 "especial neles que permitem a substituição de variáveis e arrays. Os "
-"programas CGI do CUPS (<code>admin.cgi</code>, <code>classes.cgi</code>, "
-"<code>help.cgi</code>, <code>jobs.cgi</code> e <code>printers.cgi</code>) "
-"usam esses arquivos de modelo para fornecer conteúdo dinâmico para a "
-"interface da web. Os arquivos de modelo são instalados no diretório <var>/"
-"usr/share/cups/templates</var> por padrão. A tabela 2 lista os vários "
+"programas CGI do CUPS (`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi` e "
+"`printers.cgi`) usam esses arquivos de modelo para fornecer conteúdo "
+"dinâmico para a interface da web. Os arquivos de modelo são instalados no "
+"diretório /usr/share/cups/templates por padrão. A tabela 2 lista os vários "
 "arquivos de modelo e sua finalidade."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A146-1
+#: translation-en.md:75
 msgid ""
-"Translated versions of the template files should be saved in the "
-"<var>templates/ll_CC</var> subdirectory. For example, Canadian French "
-"template files should be saved in the <var>templates/fr_CA</var> "
-"subdirectory. After you have translated all of the templates, add the locale "
-"to the <code>LANGUAGES</code> variable in the <var>Makedefs</var> file and "
-"run \"make install\" in the <var>templates</var> subdirectory to test the "
+"Translated versions of the template files should be saved in the templates/"
+"ll_CC subdirectory. For example, Canadian French template files should be "
+"saved in the templates/fr_CA subdirectory. After you have translated all of "
+"the templates, add the locale to the `LANGUAGES` variable in the Makedefs "
+"file and run \"make install\" in the templates subdirectory to test the "
 "translation."
 msgstr ""
 "As versões traduzidas dos arquivos de modelo devem ser salvas no "
-"subdiretório <var>templates/ll_CC</var>. Por exemplo, os arquivos de modelo "
-"canadense francês devem ser salvos no subdiretório <var>templates/fr_CA</"
-"var>. Depois de ter traduzido todos os modelos, adicione a localidade à "
-"variável <code>LANGUAGES</code> no <var>Makedefs</var> e execute \"make "
-"install\" nos <var>templates</var> subdiretório para testar a tradução."
+"subdiretório templates/ll_CC. Por exemplo, os arquivos de modelo canadense "
+"francês devem ser salvos no subdiretório templates/fr_CA. Depois de ter "
+"traduzido todos os modelos, adicione a localidade à variável `LANGUAGES` no "
+"Makedefs e execute \"make install\" nos templates subdiretório para testar a "
+"tradução."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A155-1
-msgid "Web Interface Template Files"
-msgstr "Arquivos modelos da interface web"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A156-1
-msgid "Table 2: Web Interface Template Files"
-msgstr "Tabela 2: Arquivos modelos da interface web"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A159-2
-msgid "Filename"
-msgstr "Nome de arquivo"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A160-2
-msgid "Purpose"
-msgstr "Propósito"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A165-2
-msgid "add-class.tmpl"
-msgstr "add-class.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A166-2
-msgid "This is the initial form that is shown to add a new printer class."
-msgstr ""
-"Essa é a forma inicial que é mostrada para adicionar uma nova classe de "
-"impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A170-2
-msgid "add-printer.tmpl"
-msgstr "add-printer.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A171-2
-msgid "This is the initial form that is shown to add a new printer."
-msgstr ""
-"Essa é a forma inicial que é mostrada para adicionar uma nova impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A175-2
-msgid "add-rss-subscription.tmpl"
-msgstr "add-rss-subscription.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A176-2
-msgid "This is the form that is shown to add a new RSS subscription."
-msgstr ""
-"Essa é a nova forma que é mostrada para adicionar uma nova inscrição RSS."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A179-2
-msgid "admin.tmpl"
-msgstr "admin.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A180-2
-msgid "This is the main administration page."
-msgstr "Essa é a página principal de administração."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A183-2
-msgid "choose-device.tmpl"
-msgstr "choose-device.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A184-2
-msgid "This is the form that shows the list of available devices."
-msgstr "Essa é a forma que mostra a lista de dispositivos disponíveis."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A188-2
-msgid "choose-make.tmpl"
-msgstr "choose-make.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A189-2
-msgid "This is the form that shows the list of available manufacturers."
-msgstr "Essa é a forma que mostra a lista de fabricantes disponíveis."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A193-2
-msgid "choose-model.tmpl"
-msgstr "choose-model.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A194-2
+#: translation-en.md:145
 msgid ""
-"This is the form that shows the list of available printer models/drivers."
-msgstr "Essa é a forma que mostra a lista de modelos/drivers disponíveis."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A198-2
-msgid "choose-serial.tmpl"
-msgstr "choose-serial.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A199-2
-msgid ""
-"This is the form that allows the user to choose a serial port and any "
-"options."
+"Table 2: Web Interface Template Files Filename | Purpose  \n"
+"---|---  \n"
+"add-class.tmpl | This is the initial form that is shown to add a new printer "
+"class.  \n"
+"add-printer.tmpl | This is the initial form that is shown to add a new "
+"printer.  \n"
+"add-rss-subscription.tmpl | This is the form that is shown to add a new RSS "
+"subscription.  \n"
+"admin.tmpl | This is the main administration page.  \n"
+"choose-device.tmpl | This is the form that shows the list of available "
+"devices.  \n"
+"choose-make.tmpl | This is the form that shows the list of available "
+"manufacturers.  \n"
+"choose-model.tmpl | This is the form that shows the list of available "
+"printer models/drivers.  \n"
+"choose-serial.tmpl | This is the form that allows the user to choose a "
+"serial port and any options.  \n"
+"choose-uri.tmpl | This is the form that allows the user to enter a device "
+"URI for network printers.  \n"
+"class-added.tmpl | This template shows the \"class added\" message.  \n"
+"class-confirm.tmpl | This is the template used to confirm the deletion of a "
+"class.  \n"
+"class-deleted.tmpl | This template shows the \"class deleted\" message.  \n"
+"class-jobs-header.tmpl | This template shows the \"jobs\" header for jobs in "
+"a class.  \n"
+"class-modified.tmpl | This template shows the \"class modified\" message.  \n"
+"classes.tmpl | This template shows one or more printer classes.  \n"
+"classes-header.tmpl | This template shows the \"showing N of M classes\" "
+"header in the class list.  \n"
+"edit-config.tmpl | This is the cupsd.conf editor page.  \n"
+"error.tmpl | This template displays a generic error message.  \n"
+"error-op.tmpl | This is the \"unknown operation\" error page.  \n"
+"header.tmpl | This template is used as the standard header on all dynamic "
+"content.  \n"
+"help-header.tmpl | This is the top part of the help page.  \n"
+"help-printable.tmpl | This is the standard page header for the printable "
+"version of help files.  \n"
+"job-cancel.tmpl | This template shows \"job canceled\".  \n"
+"job-hold.tmpl | This template shows \"job held\".  \n"
+"job-move.tmpl | This template shows the move-job form.  \n"
+"job-moved.tmpl | This template shows \"job moved\".  \n"
+"job-release.tmpl | This template shows \"job released\".  \n"
+"job-restart.tmpl | This template shows \"job reprinted\".  \n"
+"jobs.tmpl | This template is used to list the print jobs on a server, class, "
+"or printer.  \n"
+"jobs-header.tmpl | This template shows the \"showing N or M jobs\" header in "
+"the jobs list.  \n"
+"list-available-printers.tmpl | This template shows a list of new printers "
+"that have been found.  \n"
+"maintenance.tmpl | This template shows \"maintenance commands sent\".  \n"
+"modify-class.tmpl | This template is used as the first form when modifying a "
+"class.  \n"
+"modify-printer.tmpl | This template is used as the first form when modifying "
+"a printer.  \n"
+"norestart.tmpl | This template shows \"server not restarted because no "
+"changes were made to the configuration\".  \n"
+"option-boolean.tmpl | This template is used to select a boolean PPD "
+"option.  \n"
+"option-conflict.tmpl | This template shows the conflicting options.  \n"
+"option-header.tmpl | This template is used to start a PPD option group.  \n"
+"option-pickmany.tmpl | This template is used to select a multi-valued PPD "
+"option.  \n"
+"option-pickone.tmpl | This template is used to select a single-valued PPD "
+"option.  \n"
+"option-trailer.tmpl | This template is used to end a PPD option group.  \n"
+"pager.tmpl | This template shows the previous/next pager bar.  \n"
+"printer-accept.tmpl | This template shows \"printer now accepting jobs\".  \n"
+"printer-added.tmpl | This template shows \"printer added\".  \n"
+"printer-configured.tmpl | This template shows \"printer configured\".  \n"
+"printer-confirm.tmpl | This template asks the user to confirm the deletion "
+"of a printer.  \n"
+"printer-default.tmpl | This template shows \"default printer set\".  \n"
+"printer-deleted.tmpl | This template shows \"printer deleted\".  \n"
+"printer-jobs-header.tmpl | This templates shows the \"jobs\" header for jobs "
+"on a printer.  \n"
+"printer-modified.tmpl | This template shows \"printer modified\".  \n"
+"printer-purge.tmpl | This template shows \"printer has been purged of all "
+"jobs\".  \n"
+"printer-reject.tmpl | This template shows \"printer now rejecting jobs\".  \n"
+"printer-start.tmpl | This template shows \"printer started\".  \n"
+"printer-stop.tmpl | This template shows \"printer stopped\".  \n"
+"printers.tmpl | This template is used to list information on one or more "
+"printers.  \n"
+"printers-header.tmpl | This template shows the \"showing printer N of M\" "
+"header in the printers list.  \n"
+"restart.tmpl | This template shows \"server restarting\".  \n"
+"samba-export.tmpl | This template shows the export printers to Samba "
+"form.  \n"
+"samba-exported.tmpl | This template shows \"printers exported to Samba\".  \n"
+"search.tmpl | This template shows the search form.  \n"
+"set-printer-options-header.tmpl | This template shows the first part of the "
+"set printer options form.  \n"
+"set-printer-options-trailer.tmpl | This template shows the last part of the "
+"set printer options form.  \n"
+"subscription-added.tmpl | This template shows \"subscription ... added\".  \n"
+"subscription-canceled.tmpl | This template shows \"subscription #NNN canceled"
+"\".  \n"
+"test-page.tmpl | This template shows \"test page printed\".  \n"
+"trailer.tmpl | This template is used as the standard trailer on all dynamic "
+"content.  \n"
+"users.tmpl | This template shows the set allowed users form.  "
 msgstr ""
-"Essa é a forma que permite que o usuário escolha uma porta serial e "
-"quaisquer opções."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A203-2
-msgid "choose-uri.tmpl"
-msgstr "choose-uri.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A204-2
-msgid ""
-"This is the form that allows the user to enter a device URI for network "
-"printers."
-msgstr ""
-"Essa é a forma que permite que o usuário insira a URI de um dispositivo para "
-"impressoras de rede."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A208-2
-msgid "class-added.tmpl"
-msgstr "class-added.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A209-2
-msgid "This template shows the \"class added\" message."
-msgstr "Esse modelo mostra a mensagem \"class added\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A212-2
-msgid "class-confirm.tmpl"
-msgstr "class-confirm.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A213-2
-msgid "This is the template used to confirm the deletion of a class."
-msgstr "Esse é o modelo usado para confirmar a exclusão de uma classe."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A217-2
-msgid "class-deleted.tmpl"
-msgstr "class-deleted.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A218-2
-msgid "This template shows the \"class deleted\" message."
-msgstr "Esse modelo mostra a mensagem \"class deleted\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A221-2
-msgid "class-jobs-header.tmpl"
-msgstr "class-jobs-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A222-2
-msgid "This template shows the \"jobs\" header for jobs in a class."
-msgstr "Esse modelo mostra o cabeçalho \"jobs\" para trabalhos em uma classe."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A226-2
-msgid "class-modified.tmpl"
-msgstr "class-modified.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A227-2
-msgid "This template shows the \"class modified\" message."
-msgstr "Esse modelo mostra a mensagem \"class modified\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A230-2
-msgid "classes.tmpl"
-msgstr "classes.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A231-2
-msgid "This template shows one or more printer classes."
-msgstr "Esse modelo mostra uma ou mais classes de impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A234-2
-msgid "classes-header.tmpl"
-msgstr "classes-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A235-2
-msgid ""
-"This template shows the \"showing N of M classes\" header in the class list."
-msgstr ""
-"Esse modelo mostra o cabeçalho \"showing N of M classes\" na lista de "
-"classes."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A239-2
-msgid "edit-config.tmpl"
-msgstr "edit-config.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A240-2
-msgid "This is the cupsd.conf editor page."
-msgstr "Essa é a página do editor do cupsd.conf"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A243-2
-msgid "error.tmpl"
-msgstr "error.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A244-2
-msgid "This template displays a generic error message."
-msgstr "Esse modelo exibe uma mensagem de erro genérico."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A247-2
-msgid "error-op.tmpl"
-msgstr "error-op.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A248-2
-msgid "This is the \"unknown operation\" error page."
-msgstr "Essa é a página de erro \"operação desconhecida\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A251-2
-msgid "header.tmpl"
-msgstr "header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A252-2
-msgid "This template is used as the standard header on all dynamic content."
-msgstr ""
-"Esse modelo é usado como o cabeçalho padrão em todos os conteúdos dinâmicos."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A256-2
-msgid "help-header.tmpl"
-msgstr "help-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A257-2
-msgid "This is the top part of the help page."
-msgstr "Essa é a parte superior da página de ajuda."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A260-2
-msgid "help-printable.tmpl"
-msgstr "help-printable.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A261-2
-msgid ""
-"This is the standard page header for the printable version of help files."
-msgstr ""
-"Essa é o cabeçalho da página padrão para a versão imprimível dos arquivos de "
-"ajuda."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A265-2
-msgid "job-cancel.tmpl"
-msgstr "job-cancel.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A266-2
-msgid "This template shows \"job canceled\"."
-msgstr "Esse modelo mostra \"job canceled\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A269-2
-msgid "job-hold.tmpl"
-msgstr "job-hold.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A270-2
-msgid "This template shows \"job held\"."
-msgstr "Esse modelo mostra \"job held\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A273-2
-msgid "job-move.tmpl"
-msgstr "job-move.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A274-2
-msgid "This template shows the move-job form."
-msgstr "Essa mensagem mostra a forma de movimento de trabalho."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A277-2
-msgid "job-moved.tmpl"
-msgstr "job-moved.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A278-2
-msgid "This template shows \"job moved\"."
-msgstr "Esse modelo mostra \"job moved\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A281-2
-msgid "job-release.tmpl"
-msgstr "job-release.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A282-2
-msgid "This template shows \"job released\"."
-msgstr "Esse modelo mostra \"job released\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A285-2
-msgid "job-restart.tmpl"
-msgstr "job-restart.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A286-2
-msgid "This template shows \"job reprinted\"."
-msgstr "Esse modelo mostra \"job reprinted\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A289-2
-msgid "jobs.tmpl"
-msgstr "jobs.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A290-2
-msgid ""
-"This template is used to list the print jobs on a server, class, or printer."
-msgstr ""
-"Esse modelo é usado para listas os trabalhos de impressão em um servidor, "
-"classe ou impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A294-2
-msgid "jobs-header.tmpl"
-msgstr "jobs-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A295-2
-msgid ""
-"This template shows the \"showing N or M jobs\" header in the jobs list."
-msgstr ""
-"Esse modelo mostra o cabeçalho \"mostrando N ou M trabalhos\" na lista de "
-"trabalhos."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A299-2
-msgid "list-available-printers.tmpl"
-msgstr "list-available-printers.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A300-2
-msgid "This template shows a list of new printers that have been found."
-msgstr ""
-"Esse modelo mostra uma lista de novas impressoras que foram localizadas."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A303-2
-msgid "maintenance.tmpl"
-msgstr "maintenance.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A304-2
-msgid "This template shows \"maintenance commands sent\"."
-msgstr "Esse modelo mostra \"maintenance commands sent\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A307-2
-msgid "modify-class.tmpl"
-msgstr "modify-class.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A308-2
-msgid "This template is used as the first form when modifying a class."
-msgstr "Esse modelo é usado como a primeira forma ao modificar uma classe."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A312-2
-msgid "modify-printer.tmpl"
-msgstr "modify-printer.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A313-2
-msgid "This template is used as the first form when modifying a printer."
-msgstr "Esse modelo é usado como a primeira forma ao modificar uma impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A317-2
-msgid "norestart.tmpl"
-msgstr "norestart.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A318-2
-msgid ""
-"This template shows \"server not restarted because no changes were made to "
-"the configuration\"."
-msgstr ""
-"Esse modelo mostra \"server not restarted because no changes were made to "
-"the configuration\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A322-2
-msgid "option-boolean.tmpl"
-msgstr "option-boolean.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A323-2
-msgid "This template is used to select a boolean PPD option."
-msgstr "Esse modelo é usado para selecionar uma opção booleana de PPD."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A326-2
-msgid "option-conflict.tmpl"
-msgstr "option-conflict.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A327-2
-msgid "This template shows the conflicting options."
-msgstr "Esse modelo mostra as opções conflitantes."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A330-2
-msgid "option-header.tmpl"
-msgstr "option-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A331-2
-msgid "This template is used to start a PPD option group."
-msgstr "Esse modelo é usado para inciar um grupo de opções PPD."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A334-2
-msgid "option-pickmany.tmpl"
-msgstr "option-pickmany.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A335-2
-msgid "This template is used to select a multi-valued PPD option."
-msgstr "Esse modelo é usado para selecionar uma opção multivalorada de PPD."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A338-2
-msgid "option-pickone.tmpl"
-msgstr "option-pickone.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A339-2
-msgid "This template is used to select a single-valued PPD option."
-msgstr "Esse modelo é usado para selecionar uma opção univalorada de PPD."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A342-2
-msgid "option-trailer.tmpl"
-msgstr "option-trailer.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A343-2
-msgid "This template is used to end a PPD option group."
-msgstr "Esse modelo é usado para terminar um grupo de opções PPD."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A346-2
-msgid "pager.tmpl"
-msgstr "pager.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A347-2
-msgid "This template shows the previous/next pager bar."
-msgstr "Esse modelo mostra a barra de paginador anterior/seguinte."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A350-2
-msgid "printer-accept.tmpl"
-msgstr "printer-accept.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A351-2
-msgid "This template shows \"printer now accepting jobs\"."
-msgstr "Esse modelo mostra \"printer now accepting jobs\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A354-2
-msgid "printer-added.tmpl"
-msgstr "printer-added.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A355-2
-msgid "This template shows \"printer added\"."
-msgstr "Esse modelo mostra \"printer added\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A358-2
-msgid "printer-configured.tmpl"
-msgstr "printer-configured.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A359-2
-msgid "This template shows \"printer configured\"."
-msgstr "Esse modelo mostra \"printer configured\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A362-2
-msgid "printer-confirm.tmpl"
-msgstr "printer-confirm.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A363-2
-msgid "This template asks the user to confirm the deletion of a printer."
-msgstr "Esse modelo pede que o usuário confirme a exclusão de uma impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A367-2
-msgid "printer-default.tmpl"
-msgstr "printer-default.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A368-2
-msgid "This template shows \"default printer set\"."
-msgstr "Esse modelo mostra \"default printer set\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A371-2
-msgid "printer-deleted.tmpl"
-msgstr "printer-deleted.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A372-2
-msgid "This template shows \"printer deleted\"."
-msgstr "Esse modelo mostra \"printer deleted\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A375-2
-msgid "printer-jobs-header.tmpl"
-msgstr "printer-jobs-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A376-2
-msgid "This templates shows the \"jobs\" header for jobs on a printer."
-msgstr ""
-"Esse modelo mostra o cabeçalho \"jobs\" para trabalhos em uma impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A380-2
-msgid "printer-modified.tmpl"
-msgstr "printer-modified.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A381-2
-msgid "This template shows \"printer modified\"."
-msgstr "Esse modelo mostra \"printer modified\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A384-2
-msgid "printer-purge.tmpl"
-msgstr "printer-purge.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A385-2
-msgid "This template shows \"printer has been purged of all jobs\"."
-msgstr "Esse modelo mostra \"printer has been purged of all jobs\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A388-2
-msgid "printer-reject.tmpl"
-msgstr "printer-reject.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A389-2
-msgid "This template shows \"printer now rejecting jobs\"."
-msgstr "Esse modelo mostra \"printer now rejecting jobs\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A392-2
-msgid "printer-start.tmpl"
-msgstr "printer-start.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A393-2
-msgid "This template shows \"printer started\"."
-msgstr "Esse modelo mostra \"printer started\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A396-2
-msgid "printer-stop.tmpl"
-msgstr "printer-stop.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A397-2
-msgid "This template shows \"printer stopped\"."
-msgstr "Esse modelo mostra \"printer stopped\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A400-2
-msgid "printers.tmpl"
-msgstr "printers.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A401-2
-msgid "This template is used to list information on one or more printers."
-msgstr ""
-"Esse modelo é usado para listar informações em uma ou mais impressoras."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A405-2
-msgid "printers-header.tmpl"
-msgstr "printers-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A406-2
-msgid ""
-"This template shows the \"showing printer N of M\" header in the printers "
-"list."
-msgstr ""
-"Esse modelo mostra o cabeçalho \"showing printer N of M\" na lista de "
-"impressoras."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A410-2
-msgid "restart.tmpl"
-msgstr "restart.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A411-2
-msgid "This template shows \"server restarting\"."
-msgstr "Esse modelo mostra \"server restarting\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A414-2
-msgid "samba-export.tmpl"
-msgstr "samba-export.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A415-2
-msgid "This template shows the export printers to Samba form."
-msgstr "Esse modelo mostra as impressoras de exportação para forma do Samba."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A418-2
-msgid "samba-exported.tmpl"
-msgstr "samba-exported.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A419-2
-msgid "This template shows \"printers exported to Samba\"."
-msgstr "Esse modelo mostra \"printers exported to Samba\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A422-2
-msgid "search.tmpl"
-msgstr "search.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A423-2
-msgid "This template shows the search form."
-msgstr "Essa mensagem mostra o formulário de pesquisa."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A426-2
-msgid "set-printer-options-header.tmpl"
-msgstr "set-printer-options-header.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A427-2
-msgid "This template shows the first part of the set printer options form."
-msgstr ""
-"Esse modelo mostra a primeira parte do formulário de opções de impressoras "
-"definidas."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A431-2
-msgid "set-printer-options-trailer.tmpl"
-msgstr "set-printer-options-trailer.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A432-2
-msgid "This template shows the last part of the set printer options form."
-msgstr ""
-"Esse modelo mostra a última parte do formulário de opções de impressoras "
-"definidas."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A436-2
-msgid "subscription-added.tmpl"
-msgstr "subscription-added.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A437-2
-msgid "This template shows \"subscription ... added\"."
-msgstr "Esse modelo mostra \"subscription ... added\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A440-2
-msgid "subscription-canceled.tmpl"
-msgstr "subscription-canceled.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A441-2
-msgid "This template shows \"subscription #NNN canceled\"."
-msgstr "Esse modelo mostra \"subscription #NNN canceled\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A444-2
-msgid "test-page.tmpl"
-msgstr "test-page.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A445-2
-msgid "This template shows \"test page printed\"."
-msgstr "Esse modelo mostra \"test page printed\"."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A448-2
-msgid "trailer.tmpl"
-msgstr "trailer.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A449-2
-msgid "This template is used as the standard trailer on all dynamic content."
-msgstr ""
-"Esse modelo é usado como o trailer padrão em todos os conteúdos dinâmicos."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A453-2
-msgid "users.tmpl"
-msgstr "users.tmpl"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A454-2
-msgid "This template shows the set allowed users form."
-msgstr "Essa mensagem mostra o formulário de usuários permitidos definidos."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h3%3A459-1
-msgid "Inserting Attributes and Values"
-msgstr "Inserindo de atributos e valores"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A461-1
+"Tabela 2: Arquivos modelos da interface web Nome de arquivo | Propósito\n"
+"---|---\n"
+"add-class.tmpl | Essa é a forma inicial que é mostrada para adicionar uma "
+"nova classe de impressora.\n"
+"add-printer.tmpl | Essa é a forma inicial que é mostrada para adicionar uma "
+"nova impressora.\n"
+"add-rss-subscription.tmpl | Essa é a nova forma que é mostrada para "
+"adicionar uma nova inscrição RSS.\n"
+"admin.tmpl | Essa é a página principal de administração.\n"
+"choose-device.tmpl | Essa é a forma que mostra a lista de dispositivos "
+"disponíveis.\n"
+"choose-make.tmpl | Essa é a forma que mostra a lista de fabricantes "
+"disponíveis.\n"
+"choose-model.tmpl | Essa é a forma que mostra a lista de modelos/drivers "
+"disponíveis.\n"
+"choose-serial.tmpl | Essa é a forma que permite que o usuário escolha uma "
+"porta serial e quaisquer opções.\n"
+"choose-uri.tmpl | Essa é a forma que permite que o usuário insira a URI de "
+"um dispositivo para impressoras de rede.\n"
+"class-added.tmpl | Esse modelo mostra a mensagem \"class added\".\n"
+"class-confirm.tmpl | Esse é o modelo usado para confirmar a exclusão de uma "
+"classe.\n"
+"class-deleted.tmpl | Esse modelo mostra a mensagem \"class deleted\".\n"
+"class-jobs-header.tmpl | Esse modelo mostra o cabeçalho \"jobs\" para "
+"trabalhos em uma classe.\n"
+"class-modified.tmpl | Esse modelo mostra a mensagem \"class modified\".\n"
+"classes.tmpl | Esse modelo mostra uma ou mais classes de impressora.\n"
+"classes-header.tmpl | Esse modelo mostra o cabeçalho \"showing N of M classes"
+"\" na lista de classes.\n"
+"edit-config.tmpl | Essa é a página do editor do cupsd.conf\n"
+"error.tmpl | Esse modelo exibe uma mensagem de erro genérico.\n"
+"error-op.tmpl | Essa é a página de erro \"operação desconhecida\".\n"
+"header.tmpl | Esse modelo é usado como o cabeçalho padrão em todos os "
+"conteúdos dinâmicos.\n"
+"help-header.tmpl | Essa é a parte superior da página de ajuda.\n"
+"help-printable.tmpl | Essa é o cabeçalho da página padrão para a versão "
+"imprimível dos arquivos de ajuda.\n"
+"job-cancel.tmpl | Esse modelo mostra \"job canceled\".\n"
+"job-hold.tmpl | Esse modelo mostra \"job held\".\n"
+"job-move.tmpl | Essa mensagem mostra a forma de movimento de trabalho.\n"
+"job-moved.tmpl | Esse modelo mostra \"job moved\".\n"
+"job-release.tmpl | Esse modelo mostra \"job released\".\n"
+"job-restart.tmpl | Esse modelo mostra \"job reprinted\".\n"
+"jobs.tmpl | Esse modelo é usado para listas os trabalhos de impressão em um "
+"servidor, classe ou impressora.\n"
+"jobs-header.tmpl | Esse modelo mostra o cabeçalho \"mostrando N ou M "
+"trabalhos\" na lista de trabalhos.\n"
+"list-available-printers.tmpl | Esse modelo mostra uma lista de novas "
+"impressoras que foram localizadas.\n"
+"maintenance.tmpl | Esse modelo mostra \"maintenance commands sent\".\n"
+"modify-class.tmpl | Esse modelo é usado como a primeira forma ao modificar "
+"uma classe.\n"
+"modify-printer.tmpl | Esse modelo é usado como a primeira forma ao modificar "
+"uma impressora.\n"
+"norestart.tmpl | Esse modelo mostra \"server not restarted because no "
+"changes were made to the configuration\".\n"
+"option-boolean.tmpl | Esse modelo é usado para selecionar uma opção booleana "
+"de PPD.\n"
+"option-conflict.tmpl | Esse modelo mostra as opções conflitantes.\n"
+"option-header.tmpl | Esse modelo é usado para inciar um grupo de opções "
+"PPD.\n"
+"option-pickmany.tmpl | Esse modelo é usado para selecionar uma opção "
+"multivalorada de PPD.\n"
+"option-pickone.tmpl | Esse modelo é usado para selecionar uma opção "
+"univalorada de PPD.\n"
+"option-trailer.tmpl | Esse modelo é usado para terminar um grupo de opções "
+"PPD.\n"
+"pager.tmpl | Esse modelo mostra a barra de paginador anterior/seguinte.\n"
+"printer-accept.tmpl | Esse modelo mostra \"printer now accepting jobs\".\n"
+"printer-added.tmpl | Esse modelo mostra \"printer added\".\n"
+"printer-configured.tmpl | Esse modelo mostra \"printer configured\".\n"
+"printer-confirm.tmpl | Esse modelo pede que o usuário confirme a exclusão de "
+"uma impressora.\n"
+"printer-default.tmpl | Esse modelo mostra \"default printer set\".\n"
+"printer-deleted.tmpl | Esse modelo mostra \"printer deleted\".\n"
+"printer-jobs-header.tmpl | Esse modelo mostra o cabeçalho \"jobs\" para "
+"trabalhos em uma impressora.\n"
+"printer-modified.tmpl | Esse modelo mostra \"printer modified\".\n"
+"printer-purge.tmpl | Esse modelo mostra \"printer has been purged of all jobs"
+"\".\n"
+"printer-reject.tmpl | Esse modelo mostra \"printer now rejecting jobs\".\n"
+"printer-start.tmpl | Esse modelo mostra \"printer started\".\n"
+"printer-stop.tmpl | Esse modelo mostra \"printer stopped\".\n"
+"printers.tmpl | Esse modelo é usado para listar informações em uma ou mais "
+"impressoras.\n"
+"printers-header.tmpl | Esse modelo mostra o cabeçalho \"showing printer N of "
+"M\" na lista de impressoras.\n"
+"restart.tmpl | Esse modelo mostra \"server restarting\".\n"
+"samba-export.tmpl | Esse modelo mostra as impressoras de exportação para "
+"forma do Samba.\n"
+"samba-exported.tmpl | Esse modelo mostra \"printers exported to Samba\".\n"
+"search.tmpl | Essa mensagem mostra o formulário de pesquisa.\n"
+"set-printer-options-header.tmpl | Esse modelo mostra a primeira parte do "
+"formulário de opções de impressoras definidas.\n"
+"set-printer-options-trailer.tmpl | Esse modelo mostra a última parte do "
+"formulário de opções de impressoras definidas.\n"
+"subscription-added.tmpl | Esse modelo mostra \"subscription ... added\".\n"
+"subscription-canceled.tmpl | Esse modelo mostra \"subscription #NNN canceled"
+"\".\n"
+"test-page.tmpl | Esse modelo mostra \"test page printed\".\n"
+"trailer.tmpl | Esse modelo é usado como o trailer padrão em todos os "
+"conteúdos dinâmicos.\n"
+"users.tmpl | Essa mensagem mostra o formulário de usuários permitidos "
+"definidos."
+
+#: translation-en.md:147
+msgid "### Inserting Attributes and Values"
+msgstr "### Inserindo de atributos e valores"
+
+#: translation-en.md:149
 msgid ""
 "Template files consist of HTML with variable substitutions for named inside "
 "curly braces \"{name}\". Variable names are generally the IPP attribute "
 "names with the hyphen (\"-\") replaced by the underscore (\"_\") character. "
-"For example, the <tt>job-printer-uri</tt> attribute is renamed to "
-"<tt>job_printer_uri</tt>."
+"For example, the `job-printer-uri` attribute is renamed to `job_printer_uri`."
 msgstr ""
 "Os arquivos de modelo consistem em HTML com substituições variáveis para o "
 "nome dentro de chaves \"{name}\". Nomes de variáveis geralmente são os nomes "
 "de atributo IPP com o hífen (\"-\") substituído pelo caractere de sublinhado "
-"(\"_\"). Por exemplo, o atributo <tt>job-printer-uri</tt> é renomeado para "
-"<tt>job_printer_uri</tt>."
+"(\"_\"). Por exemplo, o atributo `job-printer-uri` é renomeado para "
+"`job_printer_uri`."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A468-1
+#: translation-en.md:151
 msgid ""
 "Curley braces (\"{\" and \"}\") to indicate substitutions, and the backslash "
 "(\"\\\") character for quoting. To insert any of these special characters as-"
-"is you need to use the HTML <code>&name;</code> mechanism or prefix each "
-"special character with the backslash (\"\\\".)"
+"is you need to use the HTML `&name;` mechanism or prefix each special "
+"character with the backslash (\"\\\".)"
 msgstr ""
 "Chaves (\"{\" e \"}\") para indicar substituições e o caractere de barra "
 "invertida (\"\\\") para colocar entre aspas. Para inserir qualquer um desses "
-"caracteres especiais, pois é necessário usar o mecanismo HTML <code>&name;</"
-"code> ou prefixar cada caractere especial com a barra invertida (\"\\\")."
+"caracteres especiais, pois é necessário usar o mecanismo HTML `&name;` ou "
+"prefixar cada caractere especial com a barra invertida (\"\\\")."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A474-1
+#: translation-en.md:153
 msgid ""
-"You substitute the value of a variable using <code>{NAME}</code> in your "
-"template file. If the variable is undefined then the <code>{NAME}</code> "
-"string is output as-is."
+"You substitute the value of a variable using `{NAME}` in your template file. "
+"If the variable is undefined then the `{NAME}` string is output as-is."
 msgstr ""
-"Você substitui o valor de uma variável usando <code>{NAME}</code> no seu "
-"arquivo de modelo. Se a variável estiver indefinida, a string <code>{NAME}</"
-"code> será emitida como está."
+"Você substitui o valor de uma variável usando `{NAME}` no seu arquivo de "
+"modelo. Se a variável estiver indefinida, a string `{NAME}` será emitida "
+"como está."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A479-1
+#: translation-en.md:155
 msgid ""
-"To substitute an empty string if the variable is undefined, use <code>{?NAME}"
-"</code> instead."
+"To substitute an empty string if the variable is undefined, use `{?NAME}` "
+"instead."
 msgstr ""
-"Para substituir uma string vazia se a variável estiver indefinida, use "
-"<code>{?NAME}</code>."
+"Para substituir uma string vazia se a variável estiver indefinida, use `{?"
+"NAME}`."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h3%3A482-1
-msgid "Array Substitutions"
-msgstr "Substituições de matriz"
+#: translation-en.md:157
+msgid "### Array Substitutions"
+msgstr "### Substituições de matriz"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A484-1
+#: translation-en.md:159
 msgid ""
-"The number of array elements can be inserted using <code>{#NAME}</code>. If "
-"the array is undefined then 0 is output. The current array element (starting "
-"at 1) is inserted with <code>{#}</code>."
+"The number of array elements can be inserted using `{#NAME}`. If the array "
+"is undefined then 0 is output. The current array element (starting at 1) is "
+"inserted with `{#}`."
 msgstr ""
-"O número de elementos da matriz pode ser inserido usando <code>{#NAME}</ "
-"code>. Se a matriz estiver indefinida, então será emitido 0. O elemento de "
-"matriz atual (começando em 1) é inserido com <code>{#}</code>."
+"O número de elementos da matriz pode ser inserido usando `{#NAME}`. Se a "
+"matriz estiver indefinida, então será emitido 0. O elemento de matriz atual "
+"(começando em 1) é inserido com `{#}`."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A489-1
+#: translation-en.md:161
 msgid ""
-"Arrays are handled using <code>{[NAME]</code> at the beginning of a section "
-"and <code>}</code> at the end. The information between the closing bracket "
-"(\"]\") and closing brace (\"}\") is repeated for as many elements as are in "
-"the named array. For example, the following template will display a list of "
-"each job in the <code>job_id</code> array:"
+"Arrays are handled using `{[NAME]` at the beginning of a section and `}` at "
+"the end. The information between the closing bracket (\"]\") and closing "
+"brace (\"}\") is repeated for as many elements as are in the named array. "
+"For example, the following template will display a list of each job in the "
+"`job_id` array:"
 msgstr ""
-"As matrizes são tratadas usando <code>{[NAME]</code> no início de uma seção "
-"e <code>}</code> no final. A informação entre o colchete de fechamento "
-"(\"]\") e a chave de fechamento (\"}\") é repetida para tantos elementos "
-"quanto disponíveis na matriz designada. Por exemplo, o seguinte modelo "
-"exibirá uma lista de cada trabalho na matriz <code>job_id</code>:"
+"As matrizes são tratadas usando `{[NAME]` no início de uma seção e `}` no "
+"final. A informação entre o colchete de fechamento (\"]\") e a chave de "
+"fechamento (\"}\") é repetida para tantos elementos quanto disponíveis na "
+"matriz designada. Por exemplo, o seguinte modelo exibirá uma lista de cada "
+"trabalho na matriz `job_id`:"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A496-1
+#: translation-en.md:169
 msgid ""
-"<TR> <TH>Job ID</TH> <TH>Destination</TH> <TH>Title</TH> </TR> {[job_id] "
-"<TR> <TD>{?job_id}</TD> <TD>{?job_printer_name}</TD> <TD>{?job_name}</TD> </"
-"TR> }"
+"    <TABLE>\n"
+"    <TR>\n"
+"    \t<TH>Job ID</TH>\n"
+"    \t<TH>Destination</TH>\n"
+"    \t<TH>Title</TH>\n"
+"    </TR>"
 msgstr ""
-"<TR> <TH>Job ID</TH> <TH>Destino</TH> <TH>Título</TH> </TR> {[job_id] <TR> "
-"<TD>{?job_id}</TD> <TD>{?job_printer_name}</TD> <TD>{?job_name}</TD> </TR> }"
+"    <TABLE>\n"
+"    <TR>\n"
+"    \t<TH>ID do trabalho</TH>\n"
+"    \t<TH>Destino</TH>\n"
+"    \t<TH>Título</TH>\n"
+"    </TR>"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A513-1
+#: translation-en.md:178
+msgid ""
+"    {[job_id]\n"
+"    <TR>\n"
+"    \t<TD>{?job_id}</TD>\n"
+"    \t<TD>{?job_printer_name}</TD>\n"
+"    \t<TD>{?job_name}</TD>\n"
+"    </TR>\n"
+"    }\n"
+"    </TABLE>"
+msgstr ""
+"    {[job_id]\n"
+"    <TR>\n"
+"    \t<TD>{?job_id}</TD>\n"
+"    \t<TD>{?job_printer_name}</TD>\n"
+"    \t<TD>{?job_name}</TD>\n"
+"    </TR>\n"
+"    }\n"
+"    </TABLE>"
+
+#: translation-en.md:181
 msgid ""
 "Arrays can be nested, however all elements within the curly braces (\"{\" "
 "and \"}\") are indexed using the innermost array."
@@ -1001,11 +615,11 @@ msgstr ""
 "Matrizes podem ser aninhadas, porém todos os elementos dentro das chaves "
 "(\"{\" and \"}\") são indexadas usando a matriz mais interna."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h3%3A516-1
-msgid "Conditional Tests"
-msgstr "Testes condicionais"
+#: translation-en.md:183
+msgid "### Conditional Tests"
+msgstr "### Testes condicionais"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A518-1
+#: translation-en.md:185
 msgid ""
 "Templates can also test variables against specific values and conditionally "
 "include text in the template. The format is:"
@@ -1013,647 +627,305 @@ msgstr ""
 "Os modelos também podem testar variáveis em relação a valores específicos e "
 "incluir condicionalmente texto no modelo. O formato é:"
 
-# Novas linhas adicionadas para compensar falha de formatação do html2po
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.pre%3A521-1
+#: translation-en.md:192
 msgid ""
-"{<i>variable</i>?<i>true</i>:<i>false</i>} {<i>variable</i>=<i>value</i>?"
-"<i>true</i>:<i>false</i>} {<i>variable</i>!<i>value</i>?<i>true</i>:"
-"<i>false</i>} {<i>variable</i><<i>value</i>?<i>true</i>:<i>false</i>} "
-"{<i>variable</i>><i>value</i>?<i>true</i>:<i>false</i>}"
+"    {_variable_?_true_:_false_}\n"
+"    {_variable_=_value_?_true_:_false_}\n"
+"    {_variable_!_value_?_true_:_false_}\n"
+"    {_variable_<_value_?_true_:_false_}\n"
+"    {_variable_>_value_?_true_:_false_}"
 msgstr ""
-"{<i>variável</i>?<i>verdadeiro</i>:<i>falso</i>}\n"
-"{<i>variável</i>=<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}\n"
-"{<i>variável</i>!<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}\n"
-"{<i>variável</i><<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}\n"
-"{<i>variável</i>><i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}"
+"    {_variable_?_true_:_false_}\n"
+"    {_variable_=_value_?_true_:_false_}\n"
+"    {_variable_!_value_?_true_:_false_}\n"
+"    {_variable_<_value_?_true_:_false_}\n"
+"    {_variable_>_value_?_true_:_false_}"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A528-1
+#: translation-en.md:195
 msgid ""
-"where <var>true</var> is the text that is included if the condition is true "
-"and <var>false</var> is the text that is included if the condition is false. "
-"A value of <code>#</code> is replaced with the current element number "
-"(starting at 1.) The character after the variable name specifies the "
-"condition to test. Table 3 shows the available test conditions."
+"where true is the text that is included if the condition is true and false "
+"is the text that is included if the condition is false. A value of `#` is "
+"replaced with the current element number (starting at 1.) The character "
+"after the variable name specifies the condition to test. Table 3 shows the "
+"available test conditions."
 msgstr ""
-"sendo <var>verdadeiro</var> o texto que é incluído se a condição for "
-"verdadeira e <var>falso</var> o texto que é incluído se a condição for "
-"falsa. Um valor de <code>#</code> é substituído com o número de elemento "
-"atual (iniciando com 1). O caractere após o nome da variável especifica a "
-"condição para testar. A Tabela 3 mostra as configurações de teste "
-"disponíveis."
+"sendo verdadeiro o texto que é incluído se a condição for verdadeira e falso "
+"o texto que é incluído se a condição for falsa. Um valor de `#` é "
+"substituído com o número de elemento atual (iniciando com 1). O caractere "
+"após o nome da variável especifica a condição para testar. A Tabela 3 mostra "
+"as configurações de teste disponíveis."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A535-1
-msgid "Template Substitution Conditions"
-msgstr "Condições de substituição de modelo"
+#: translation-en.md:203
+msgid ""
+"Table 3: Template Substitution Conditions Char | Condition  \n"
+"---|---  \n"
+"? | True if variable exists.  \n"
+"= | True if variable is equal to value.  \n"
+"! | True if variable is not equal to value.  \n"
+"&lt; | True if variable is less than value.  \n"
+"&gt; | True if variable is greater than value.  "
+msgstr ""
+"Tabela 3: Condições de substituição de modelo Caractere | Condição\n"
+"---|---\n"
+"? | Verdadeiro se variável existir.\n"
+"= | Verdadeiro se variável for igual a valor.\n"
+"! | Verdadeiro se variável não for igual a valor.\n"
+"&lt; | Verdadeiro se variável for menor que valor.\n"
+"&gt; | Verdadeiro se variável for maior que valor."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A536-1
-msgid "Table 3: Template Substitution Conditions"
-msgstr "Tabela 3: Condições de substituição de modelo"
+#: translation-en.md:205
+msgid "### CGI Programs"
+msgstr "### Programas CGI"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.th%3A538-2
-msgid "Char"
-msgstr "Caractere"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.th%3A539-2
-msgid "Condition"
-msgstr "Condição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A542-2
-msgid "?"
-msgstr "?"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A543-2
-msgid "True if <var>variable</var> exists."
-msgstr "Verdadeiro se <var>variável</var> existir."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A546-2
-msgid "="
-msgstr "="
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A547-2
-msgid "True if <var>variable</var> is equal to <var>value</var>."
-msgstr "Verdadeiro se <var>variável</var> for igual a <var>valor</var>."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A550-2
-msgid "!"
-msgstr "!"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A551-2
-msgid "True if <var>variable</var> is not equal to <var>value</var>."
-msgstr "Verdadeiro se <var>variável</var> não for igual a <var>valor</var>."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A554-2
-msgid "<"
-msgstr "<"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A555-2
-msgid "True if <var>variable</var> is less than <var>value</var>."
-msgstr "Verdadeiro se <var>variável</var> for menor que <var>valor</var>."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A558-2
-msgid ">"
-msgstr ">"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A559-2
-msgid "True if <var>variable</var> is greater than <var>value</var>."
-msgstr "Verdadeiro se <var>variável</var> for maior que <var>valor</var>."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h3%3A563-1
-msgid "CGI Programs"
-msgstr "Programas CGI"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A565-1
+#: translation-en.md:207
 msgid "CUPS uses five CGI programs to manage the dynamic web interfaces:"
 msgstr ""
 "CUPS usa cinco programas CGI para gerenciar as interfaces web dinâmicas:"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A570-2
-msgctxt "Translating and Customizing CUPS.html+html.body.ul.li:570-2"
-msgid "admin.cgi"
-msgstr "admin.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A571-2
-msgctxt "Translating and Customizing CUPS.html+html.body.ul.li:571-2"
-msgid "classes.cgi"
-msgstr "classes.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A572-2
-msgctxt "Translating and Customizing CUPS.html+html.body.ul.li:572-2"
-msgid "help.cgi"
-msgstr "help.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A573-2
-msgctxt "Translating and Customizing CUPS.html+html.body.ul.li:573-2"
-msgid "jobs.cgi"
-msgstr "jobs.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.ul.li%3A574-2
-msgctxt "Translating and Customizing CUPS.html+html.body.ul.li:574-2"
-msgid "printers.cgi"
-msgstr "printers.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A578-1
+#: translation-en.md:213
 msgid ""
-"Each CGI program accepts standard form variables such as <code>OP</code> for "
-"the operation to perform, <code>PRINTER_NAME</code> for the printer or class "
-"name to operate on, <code>QUERY</code> for any search words, <code>FIRST</"
-"code> for the first class, job, or printer to display, and <code>ORDER</"
-"code> to control the order that classes, jobs, or printers are displayed."
+"  * `admin.cgi`\n"
+"  * `classes.cgi`\n"
+"  * `help.cgi`\n"
+"  * `jobs.cgi`\n"
+"  * `printers.cgi`"
 msgstr ""
-"Cada programa CGI aceita variáveis padrão de formulário, como <code>OP</"
-"code> para executar a operação, <code>PRINTER_NAME</code> para a impressora "
-"ou o nome da classe para operar, <code>QUERY</code> para qualquer palavra de "
-"pesquisa, <code>FIRST</code> para a primeira classe, trabalho ou impressora "
-"para exibição e <code>ORDER</code> para controlar a ordem em que as classes, "
-"trabalhos ou impressoras são exibidas."
+"  * `admin.cgi`\n"
+"  * `classes.cgi`\n"
+"  * `help.cgi`\n"
+"  * `jobs.cgi`\n"
+"  * `printers.cgi`"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A586-1
+#: translation-en.md:217
 msgid ""
-"In addition, the <code>classes.cgi</code>, <code>jobs.cgi</code>, and "
-"<code>printers.cgi</code> programs support a <code>WHICH_JOBS</code> "
-"variable to control which jobs are displayed. Table 4 lists the supported "
-"values."
+"Each CGI program accepts standard form variables such as `OP` for the "
+"operation to perform, `PRINTER_NAME` for the printer or class name to "
+"operate on, `QUERY` for any search words, `FIRST` for the first class, job, "
+"or printer to display, and `ORDER` to control the order that classes, jobs, "
+"or printers are displayed."
 msgstr ""
-"Além disso, os programas <code>classes.cgi</code>, <code>jobs.cgi</code> e "
-"<code>printers.cgi</code> oferecem suporte a uma variável <code>WHICH_JOBS</"
-"code> para controle de quais trabalhos são exibidos. A Tabela 4 lista os "
-"valores aos quais há suporte."
+"Cada programa CGI aceita variáveis padrão de formulário, como `OP` para "
+"executar a operação, `PRINTER_NAME` para a impressora ou o nome da classe "
+"para operar, `QUERY` para qualquer palavra de pesquisa, `FIRST` para a "
+"primeira classe, trabalho ou impressora para exibição e `ORDER` para "
+"controlar a ordem em que as classes, trabalhos ou impressoras são exibidas."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A591-1
-msgid "WHICH_JOBS Values"
-msgstr "Valores de WHICH_JOBS"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A592-1
-msgid "Table 4: WHICH_JOBS Values"
-msgstr "Tabela 4: Valores de WHICH_JOBS"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A595-2
-msgid "WHICH_JOBS Value"
-msgstr "Valor de WHICH_JOBS"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A596-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:596-2"
-msgid "Description"
-msgstr "Descrição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A600-2
-msgid "all"
-msgstr "all"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A601-2
-msgid "Show all jobs"
-msgstr "Mostra todos os trabalhos"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A604-2
-msgid "completed"
-msgstr "completed"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A605-2
-msgid "Show completed jobs"
-msgstr "Mostra trabalhos finalizados"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A608-2
-msgid "not-completed"
-msgstr "not-completed"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A609-2
-msgid "Show active jobs"
-msgstr "Mostra trabalhos ativos"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h4%3A613-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h4:613-1"
-msgid "admin.cgi"
-msgstr "admin.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A615-1
+#: translation-en.md:219
 msgid ""
-"The <code>admin.cgi</code> program handles all of the printer and class "
-"administration functions and is run for all direct accesses to the <var>/"
-"admin</var> resource. For most operations it uses the <code>PRINTER_NAME</"
-"code> and <code>OP</code> form variables to specify the action requested. "
-"Table 5 shows the supported <code>OP</code> values."
+"In addition, the `classes.cgi`, `jobs.cgi`, and `printers.cgi` programs "
+"support a `WHICH_JOBS` variable to control which jobs are displayed. Table 4 "
+"lists the supported values."
 msgstr ""
-"O programa <code>admin.cgi</code> lida com todas as funções de administração "
-"de impressora e classe e é executado para todos os acessos diretos ao "
-"recurso <var>/admin</var>. Para a maioria das operações, usa as variáveis de "
-"formulário <code>PRINTER_NAME</code> e <code>OP</code> para especificar a "
-"ação solicitada. A Tabela 5 mostra os valores aos quais <code>OP</ code> "
-"possui suporte."
+"Além disso, os programas `classes.cgi`, `jobs.cgi` e `printers.cgi` oferecem "
+"suporte a uma variável `WHICH_JOBS` para controle de quais trabalhos são "
+"exibidos. A Tabela 4 lista os valores aos quais há suporte."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A622-1
-msgid "admin.cgi OP Values"
-msgstr "Valores de OP do admin.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A623-1
-msgid "Table 5: admin.cgi OP Values"
-msgstr "Tabela 5: Valores de OP do admin.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A626-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:626-2"
-msgid "OP Value"
-msgstr "Valor OP"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A627-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:627-2"
-msgid "Description"
-msgstr "Descrição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A632-2
-msgid "accept-jobs"
-msgstr "accept-jobs"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A633-2
-msgid "Accepts jobs on the named destination."
-msgstr "Aceita trabalhos na destino dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A636-2
-msgid "add-class"
-msgstr "add-class"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A637-2
-msgid "Adds a new printer class."
-msgstr "Adiciona uma nova classe de impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A640-2
-msgid "add-printer"
-msgstr "add-printer"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A641-2
-msgid "Adds a new printer."
-msgstr "Adiciona uma nova impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A644-2
-msgid "config-server"
-msgstr "config-server"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A645-2
-msgid "Configures the server."
-msgstr "Configura o servidor."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A648-2
-msgid "delete-class"
-msgstr "delete-class"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A649-2
+#: translation-en.md:225
 msgid ""
-"Deletes a printer class. The form variable <code>CONFIRM</code> may be set "
-"to any value to bypass the confirmation page."
+"Table 4: WHICH_JOBS Values WHICH_JOBS Value | Description  \n"
+"---|---  \n"
+"all | Show all jobs  \n"
+"completed | Show completed jobs  \n"
+"not-completed | Show active jobs  "
 msgstr ""
-"Exclui uma classe de impressora. A variável de formulário <code>CONFIRM</"
-"code> pode ser configurada para qualquer valor para ignorar a página de "
-"confirmação."
+"\n"
+"Tabela 4: Valores de WHICH_JOBS Valor de WHICH_JOBS | Descrição\n"
+"---|---\n"
+"all | Mostra todos os trabalhos\n"
+"completed | Mostra trabalhos finalizados\n"
+"not-completed | Mostra trabalhos ativos"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A653-2
-msgid "delete-printer"
-msgstr "delete-printer"
+#: translation-en.md:227
+msgid "#### admin.cgi"
+msgstr "#### admin.cgi"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A654-2
+#: translation-en.md:229
 msgid ""
-"Deletes a printer. The form variable <code>CONFIRM</code> may be set to any "
-"value to bypass the confirmation page."
+"The `admin.cgi` program handles all of the printer and class administration "
+"functions and is run for all direct accesses to the /admin resource. For "
+"most operations it uses the `PRINTER_NAME` and `OP` form variables to "
+"specify the action requested. Table 5 shows the supported `OP` values."
 msgstr ""
-"Exclui uma impressora. A variável de formulário <code>CONFIRM</code> pode "
-"ser configurada para qualquer valor para ignorar a página de confirmação."
+"O programa `admin.cgi` lida com todas as funções de administração de "
+"impressora e classe e é executado para todos os acessos diretos ao recurso /"
+"admin. Para a maioria das operações, usa as variáveis de formulário "
+"`PRINTER_NAME` e `OP` para especificar a ação solicitada. A Tabela 5 mostra "
+"os valores aos quais `OP` possui suporte."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A658-2
-msgid "export-samba"
-msgstr "export-samba"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A659-2
-msgid "Exports printers to Samba."
-msgstr "Exporta impressoras para o Samba."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A662-2
-msgid "find-new-printers"
-msgstr "find-new-printers"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A663-2
-msgid "Find new printers that have not yet been added."
-msgstr "Localiza novas impressoras que ainda não foram adicionadas."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A666-2
-msgid "modify-class"
-msgstr "modify-class"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A667-2
-msgid "Modifies a printer class."
-msgstr "Modifica uma classe de impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A670-2
-msgid "modify-printer"
-msgstr "modify-printer"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A671-2
-msgid "Modifies a printer."
-msgstr "Modifica uma impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A674-2
-msgid "purge-jobs"
-msgstr "purge-jobs"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A675-2
-msgid "Purges all jobs on the named destination."
-msgstr "Apaga todos os trabalhos no destino dado."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A678-2
-msgid "redirect"
-msgstr "redirect"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A679-2
+#: translation-en.md:253
 msgid ""
-"Redirects the web browser to the location referenced by the URL form "
-"variable."
+"Table 5: admin.cgi OP Values OP Value | Description  \n"
+"---|---  \n"
+"accept-jobs | Accepts jobs on the named destination.  \n"
+"add-class | Adds a new printer class.  \n"
+"add-printer | Adds a new printer.  \n"
+"config-server | Configures the server.  \n"
+"delete-class | Deletes a printer class. The form variable `CONFIRM` may be "
+"set to any value to bypass the confirmation page.  \n"
+"delete-printer | Deletes a printer. The form variable `CONFIRM` may be set "
+"to any value to bypass the confirmation page.  \n"
+"export-samba | Exports printers to Samba.  \n"
+"find-new-printers | Find new printers that have not yet been added.  \n"
+"modify-class | Modifies a printer class.  \n"
+"modify-printer | Modifies a printer.  \n"
+"purge-jobs | Purges all jobs on the named destination.  \n"
+"redirect | Redirects the web browser to the location referenced by the URL "
+"form variable.  \n"
+"reject-jobs | Rejects new jobs on the named destination.  \n"
+"set-allowed-users | Sets the allowed users for a destination.  \n"
+"set-as-default | Sets the default destination.  \n"
+"set-printer-options | Sets the default options for a printer.  \n"
+"set-sharing | Sets the printer-is-shared attribute for a destination.  \n"
+"start-class | Starts the named class.  \n"
+"start-printer | Starts the named printer.  \n"
+"stop-class | Stops the named class.  \n"
+"stop-printer | Stops the named printer.  "
 msgstr ""
-"Redireciona o navegador web para a localização referenciada pela variável de "
-"formulário URL."
+"Tabela 5: Valores de OP do admin.cgi Valor OP | Descrição\n"
+"---|---\n"
+"accept-jobs | Aceita trabalhos na destino dada.\n"
+"add-class | Adiciona uma nova classe de impressora.\n"
+"add-printer | Adiciona uma nova impressora.\n"
+"config-server | Configura o servidor.\n"
+"delete-class | Exclui uma classe de impressora. A variável de formulário "
+"`CONFIRM` pode ser configurada para qualquer valor para ignorar a página de "
+"confirmação.\n"
+"delete-printer | Exclui uma impressora. A variável de formulário `CONFIRM` "
+"pode ser configurada para qualquer valor para ignorar a página de "
+"confirmação.\n"
+"export-samba | Exporta impressoras para o Samba.\n"
+"find-new-printers | Localiza novas impressoras que ainda não foram "
+"adicionadas.\n"
+"modify-class | Modifica uma classe de impressora.\n"
+"modify-printer | Modifica uma impressora.\n"
+"purge-jobs | Apaga todos os trabalhos no destino dado.\n"
+"redirect | Redireciona o navegador web para a localização referenciada pela "
+"variável de formulário URL.\n"
+"reject-jobs | Rejeita trabalhos na destino dada.\n"
+"set-allowed-users | Define os usuários permitidos para um destino.\n"
+"set-as-default | Define o destino padrão\n"
+"set-printer-options | Define as opções padrões para uma impressora.\n"
+"set-sharing | Define o atributo printer-is-shared para um destino.\n"
+"start-class | Inicia uma classe dada.\n"
+"start-printer | Inicia uma impressora dada.\n"
+"stop-class | Interrompe uma classe dada.\n"
+"stop-printer | Interrompe uma impressora dada."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A683-2
-msgid "reject-jobs"
-msgstr "reject-jobs"
+#: translation-en.md:255
+msgid "#### classes.cgi"
+msgstr "#### classes.cgi"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A684-2
-msgid "Rejects new jobs on the named destination."
-msgstr "Rejeita trabalhos na destino dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A687-2
-msgid "set-allowed-users"
-msgstr "set-allowed-users"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A688-2
-msgid "Sets the allowed users for a destination."
-msgstr "Define os usuários permitidos para um destino."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A691-2
-msgid "set-as-default"
-msgstr "set-as-default"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A692-2
-msgid "Sets the default destination."
-msgstr "Define o destino padrão"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A695-2
-msgid "set-printer-options"
-msgstr "set-printer-options"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A696-2
-msgid "Sets the default options for a printer."
-msgstr "Define as opções padrões para uma impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A699-2
-msgid "set-sharing"
-msgstr "set-sharing"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A700-2
-msgid "Sets the printer-is-shared attribute for a destination."
-msgstr "Define o atributo printer-is-shared para um destino."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A703-2
-msgid "start-class"
-msgstr "start-class"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A704-2
-msgid "Starts the named class."
-msgstr "Inicia uma classe dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A707-2
-msgid "start-printer"
-msgstr "start-printer"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A708-2
-msgid "Starts the named printer."
-msgstr "Inicia uma impressora dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A711-2
-msgid "stop-class"
-msgstr "stop-class"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A712-2
-msgid "Stops the named class."
-msgstr "Interrompe uma classe dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A715-2
-msgid "stop-printer"
-msgstr "stop-printer"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A716-2
-msgid "Stops the named printer."
-msgstr "Interrompe uma impressora dada."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h4%3A721-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h4:721-1"
-msgid "classes.cgi"
-msgstr "classes.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A723-1
+#: translation-en.md:257
 msgid ""
-"The <code>classes.cgi</code> program is responsible for listing class "
-"information, including jobs destined for that class. It is for all direct "
-"accesses to the <var>/classes</var> resource and supports the optional form "
-"variables <code>OP</code> and <code>WHICH_JOBS</code>. If no form variables "
-"are supplied then the CGI lists all or a specific class and the active jobs "
-"on each class. Table 6 shows the supported <code>OP</code> values."
+"The `classes.cgi` program is responsible for listing class information, "
+"including jobs destined for that class. It is for all direct accesses to "
+"the /classes resource and supports the optional form variables `OP` and "
+"`WHICH_JOBS`. If no form variables are supplied then the CGI lists all or a "
+"specific class and the active jobs on each class. Table 6 shows the "
+"supported `OP` values."
 msgstr ""
-"O programa <code>classes.cgi</code> é responsável pela listagem de "
-"informações de classe, incluindo trabalhos destinados a essa classe. É para "
-"todos os acessos diretos ao recurso <var>/classes</var> e oferece suporte às "
-"variáveis de formulário opcionais <code>OP</code> e <code>WHICH_JOBS</code>. "
-"Se nenhuma variável de formulário for fornecida, o CGI listará toda ou uma "
-"classe específica e os trabalhos ativos em cada classe. A Tabela 6 mostra os "
-"valores aos quais <code>OP</code> possui suporte."
+"O programa `classes.cgi` é responsável pela listagem de informações de "
+"classe, incluindo trabalhos destinados a essa classe. É para todos os "
+"acessos diretos ao recurso /classes e oferece suporte às variáveis de "
+"formulário opcionais `OP` e `WHICH_JOBS`. Se nenhuma variável de formulário "
+"for fornecida, o CGI listará toda ou uma classe específica e os trabalhos "
+"ativos em cada classe. A Tabela 6 mostra os valores aos quais `OP` possui "
+"suporte."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A732-1
-msgid "classes.cgi OP Values"
-msgstr "Valores de OP do classes.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A733-1
-msgid "Table 6: classes.cgi OP Values"
-msgstr "Tabela 6: Valores de OP do classes.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A736-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:736-2"
-msgid "OP Value"
-msgstr "Valores OP"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A737-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:737-2"
-msgid "Description"
-msgstr "Descrição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A742-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.tbody.tr.td:742-2"
-msgid "move-jobs"
-msgstr "move-jobs"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A743-2
-msgid "Moves the jobs on this class to another destination."
-msgstr "Move os trabalhos nesta classe para outro destino."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A746-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.tbody.tr.td:746-2"
-msgid "print-test-page"
-msgstr "print-test-page"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A747-2
-msgid "Prints the standard PostScript test page."
-msgstr "Imprime a página de teste PostScript padrão."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h4%3A753-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h4:753-1"
-msgid "help.cgi"
-msgstr "help.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A755-1
+#: translation-en.md:262
 msgid ""
-"The <code>help.cgi</code> program handles all of the on-line help functions "
-"and is run for all direct accesses to the <var>/help</var> resource."
+"Table 6: classes.cgi OP Values OP Value | Description  \n"
+"---|---  \n"
+"move-jobs | Moves the jobs on this class to another destination.  \n"
+"print-test-page | Prints the standard PostScript test page.  "
 msgstr ""
-"O programa <code>help.cgi</code> lida com todas as funções de ajuda on-line "
-"e é executado para todos os acessos diretos ao recurso <var>/help</var>."
+"Tabela 6: Valores de OP do classes.cgi Valor OP | Descrição\n"
+"---|---\n"
+"move-jobs | Move os trabalhos nesta classe para outro destino.\n"
+"print-test-page | Imprime a página de teste PostScript padrão."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h4%3A760-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h4:760-1"
-msgid "jobs.cgi"
-msgstr "jobs.cgi"
+#: translation-en.md:264
+msgid "#### help.cgi"
+msgstr "#### help.cgi"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A762-1
+#: translation-en.md:266
 msgid ""
-"The <code>jobs.cgi</code> program handles all of the job functions and is "
-"run for all direct accesses to the <var>/jobs</var> resource. For most "
-"operations it uses the <code>JOB_ID</code>, <code>OP</code>, and "
-"<code>WHICH_JOBS</code> form variables to specify the action requested. "
-"Table 7 shows the supported <code>OP</code> values."
+"The `help.cgi` program handles all of the on-line help functions and is run "
+"for all direct accesses to the /help resource."
 msgstr ""
-"O programa <code>jobs.cgi</code> lida com todas as funções do trabalho e é "
-"executado para todos os acessos diretos ao recurso <var>/jobs</var>. Para a "
-"maioria das operações, usa as variáveis <code>JOB_ID</code>, <code>OP</code> "
-"e <code>WHICH_JOBS</code> para especificar a ação solicitada. A Tabela 7 "
-"mostra os valores aos quais <code>OP</code> possui suporte."
+"O programa `help.cgi` lida com todas as funções de ajuda on-line e é "
+"executado para todos os acessos diretos ao recurso /help."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A769-1
-msgid "jobs.cgi OP Values"
-msgstr "Valores de OP do jobs.cgi"
+#: translation-en.md:268
+msgid "#### jobs.cgi"
+msgstr "#### jobs.cgi"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A770-1
-msgid "Table 7: jobs.cgi OP Values"
-msgstr "Tabela 7: Valores de OP do jobs.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A773-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:773-2"
-msgid "OP Value"
-msgstr "Valor OP"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A774-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:774-2"
-msgid "Description"
-msgstr "Descrição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A779-2
-msgid "cancel-job"
-msgstr "cancel-job"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A780-2
-msgid "Cancels a job."
-msgstr "Cancela um trabalho."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A783-2
-msgid "hold-job"
-msgstr "hold-job"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A784-2
-msgid "Holds a job indefinitely."
-msgstr "Retém um trabalho indefinidamente."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A787-2
-msgid "move-job"
-msgstr "move-job"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A788-2
-msgid "Moves a job to another destination."
-msgstr "Move um trabalho para outro destino."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A791-2
-msgid "release-job"
-msgstr "release-job"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A792-2
-msgid "Releases a job for printing."
-msgstr "Libera um trabalho para impressão."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A795-2
-msgid "restart-job"
-msgstr "restart-job"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A796-2
-msgid "Restarts/reprints a stopped, canceled, completed, or aborted print job."
-msgstr ""
-"Reinicia/reimprime um trabalho de impressão parado, cancelado, finalizado ou "
-"abortado."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.h4%3A803-1
-msgctxt "Translating and Customizing CUPS.html+html.body.h4:803-1"
-msgid "printers.cgi"
-msgstr "printers.cgi"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.p%3A805-1
+#: translation-en.md:270
 msgid ""
-"The <code>printers.cgi</code> program is responsible for listing printer "
-"information, including jobs destined for that printer. It is for all direct "
-"accesses to the <var>/printers</var> resource and supports the optional form "
-"variables <code>OP</code> and <code>WHICH_JOBS</code>. If no form variables "
-"are supplied then the CGI lists all printers or a specific printer and the "
-"active jobs on that printer. Table 8 shows the supported <code>OP</code> "
-"values."
+"The `jobs.cgi` program handles all of the job functions and is run for all "
+"direct accesses to the /jobs resource. For most operations it uses the "
+"`JOB_ID`, `OP`, and `WHICH_JOBS` form variables to specify the action "
+"requested. Table 7 shows the supported `OP` values."
 msgstr ""
-"O programa <code>printers.cgi</code> é responsável pela listagem de "
-"informações de impressora, incluindo trabalhos destinados a essa impressora. "
-"É para todos os acessos diretos ao recurso <var>/printers</var> e oferece "
-"suporte às variáveis de formulário opcionais <code>OP</code> e "
-"<code>WHICH_JOBS</code>. Se nenhuma variável de formulário for fornecida, o "
-"CGI listará todas as impressoras ou uma impressora específica e os trabalhos "
-"ativos naquela impressora. A Tabela 8 mostra os valores aos quais <code>OP</"
-"code> possui suporte."
+"O programa `jobs.cgi` lida com todas as funções do trabalho e é executado "
+"para todos os acessos diretos ao recurso /jobs. Para a maioria das "
+"operações, usa as variáveis `JOB_ID`, `OP` e `WHICH_JOBS` para especificar a "
+"ação solicitada. A Tabela 7 mostra os valores aos quais `OP` possui suporte."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table%3A814-1
-msgid "printers.cgi OP Values"
-msgstr "Valores de OP do printers.cgi"
+#: translation-en.md:278
+msgid ""
+"Table 7: jobs.cgi OP Values OP Value | Description  \n"
+"---|---  \n"
+"cancel-job | Cancels a job.  \n"
+"hold-job | Holds a job indefinitely.  \n"
+"move-job | Moves a job to another destination.  \n"
+"release-job | Releases a job for printing.  \n"
+"restart-job | Restarts/reprints a stopped, canceled, completed, or aborted "
+"print job.  "
+msgstr ""
+"Tabela 7: Valores de OP do jobs.cgi Valor OP | Descrição\n"
+"---|---\n"
+"cancel-job | Cancela um trabalho.\n"
+"hold-job | Retém um trabalho indefinidamente.\n"
+"move-job | Move um trabalho para outro destino.\n"
+"release-job | Libera um trabalho para impressão.\n"
+"restart-job | Reinicia/reimprime um trabalho de impressão parado, cancelado, "
+"finalizado ou abortado."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.caption%3A815-1
-msgid "Table 8: printers.cgi OP Values"
-msgstr "Tabela 8: Valores de OP do printers.cgi"
+#: translation-en.md:280
+msgid "#### printers.cgi"
+msgstr "#### printers.cgi"
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A818-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:818-2"
-msgid "OP Value"
-msgstr "Valor OP"
+#: translation-en.md:282
+msgid ""
+"The `printers.cgi` program is responsible for listing printer information, "
+"including jobs destined for that printer. It is for all direct accesses to "
+"the /printers resource and supports the optional form variables `OP` and "
+"`WHICH_JOBS`. If no form variables are supplied then the CGI lists all "
+"printers or a specific printer and the active jobs on that printer. Table 8 "
+"shows the supported `OP` values."
+msgstr ""
+"O programa `printers.cgi` é responsável pela listagem de informações de "
+"impressora, incluindo trabalhos destinados a essa impressora. É para todos "
+"os acessos diretos ao recurso /printers e oferece suporte às variáveis de "
+"formulário opcionais `OP` e `WHICH_JOBS`. Se nenhuma variável de formulário "
+"for fornecida, o CGI listará todas as impressoras ou uma impressora "
+"específica e os trabalhos ativos naquela impressora. A Tabela 8 mostra os "
+"valores aos quais `OP` possui suporte."
 
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.thead.tr.th%3A819-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.thead.tr.th:819-2"
-msgid "Description"
-msgstr "Descrição"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A824-2
-msgid "clean-print-heads"
-msgstr "clean-print-heads"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A825-2
-msgid "Clean the print heads."
-msgstr "Limpa as cabeças de impressão."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A828-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.tbody.tr.td:828-2"
-msgid "move-jobs"
-msgstr "move-jobs"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A829-2
-msgid "Move all jobs to a different destination."
-msgstr "Move todos os trabalhos para um destino diferente."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A832-2
-msgid "print-self-test-page"
-msgstr "print-self-test-page"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A833-2
-msgid "Print a printer self-test page."
-msgstr "Imprime uma página de autoteste da impressora."
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A836-2
-msgctxt ""
-"Translating and Customizing CUPS.html+html.body.div.table.tbody.tr.td:836-2"
-msgid "print-test-page"
-msgstr "print-test-page"
-
-#: Translating+and+Customizing+CUPS.html%2Bhtml.body.div.table.tbody.tr.td%3A837-2
-msgid "Print a PostScript test page."
-msgstr "Imprime uma página de teste PostScript."
+#: translation-en.md:288
+msgid ""
+"Table 8: printers.cgi OP Values OP Value | Description  \n"
+"---|---  \n"
+"clean-print-heads | Clean the print heads.  \n"
+"move-jobs | Move all jobs to a different destination.  \n"
+"print-self-test-page | Print a printer self-test page.  \n"
+"print-test-page | Print a PostScript test page."
+msgstr ""
+"\n"
+"Tabela 8: Valores de OP do printers.cgi Valor OP | Descrição\n"
+"---|---\n"
+"clean-print-heads | Limpa as cabeças de impressão.\n"
+"move-jobs | Move todos os trabalhos para um destino diferente.\n"
+"print-self-test-page | Imprime uma página de autoteste da impressora.\n"
+"print-test-page | Imprime uma página de teste PostScript."

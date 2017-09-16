@@ -8,9 +8,13 @@ Esta é uma tradução extraoficial do guia do tradutor do CUPS, visando facilit
 
 1. Baixe o guia oficial de https://www.cups.org/doc/translation.html
 
+2. Converta o HTML para texto Markdown usando [html2text](http://alir3z4.github.io/html2text/):
+```
+html2text --body-width=0 "Translating and Customizing CUPS.html" > translation-en.md
+```
 2. Extraia as mensagens do guia para um modelo de catálogo de mensagens (.pot) Gettext:
 ```
-html2po --input="Translating and Customizing CUPS.html" --pot --output=translation.pot
+txt2po --input=translation-en.md --pot --output=translation.pot
 ```
 3. Crie/Atualize o catálogo de mensagens (.po):
 
@@ -26,12 +30,6 @@ html2po --input="Translating and Customizing CUPS.html" --pot --output=translati
 4. Traduza/Atualize a tradução do arquivo `translation.po` usando seu editor de arquivo PO favorito.
 5. Após terminar a tradução, converta o catálogo de mensagens em HTML traduzido usando:
 ```
- po2html --template="Translating and Customizing CUPS.html" --input=translation.po --output=translation.html
-```
-6. Opcionalmente, pode-se criar uma versão markdown a partir do HTML traduzido, para melhor visualização no GitHub. Para isto, [html2text](http://alir3z4.github.io/html2text/) pode ser usado:
-```
- html2text --body-width=0 translation.html > translation.md
+po2txt --template=translation-en.md --input=translation.po --output=translation.md
 ```
 7. Coloque translation.md no diretório anterior (`translation/`) como README.md
-
-*Atenção: Há possibilidade de ocorrerem erros de formatação nas conversões entre HTML e PO, mas que podem ser corrigidos manualmente comparando o original com o traduzido.*

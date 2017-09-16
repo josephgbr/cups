@@ -1,15 +1,18 @@
 # cups-pt_BR
 
-Here you will find history and progress of translation of CUPS (https://www.cups.org) for Brazilian Portuguese (pt_BR).
+*Here you will find history and progress of translation of CUPS (https://www.cups.org) for Brazilian Portuguese (pt_BR).*
 
 Aqui você encontra hsitórico e progresso da tradução do CUPS (https://www.cups.org) para português brasileiro (pt_BR). Após concluído, essa tradução é enviada para a Equipe de Desenvolvimento do CUPS para se armazenar no código-fonte e a próxima versão estará traduzido.
 
 ### Organização de diretórios:
 
-* translation - Guia não-oficial do tradutor do CUPS em português
-                https://github.com/rffontenelle/cups-pt_BR/tree/master/translation
+* *cups-VERSION* - Diretório de codigo-fonte do CUPS da versão VERSION. Haverá pelo menos dois diretórios: um diretório contendo uma versão anterior usada para efeito de comparação e outro diretório no qual se realizará tradução a ser finalizada e submetida aos desenvolvedores.
 
-* scripts     - scripts auxiliares para facilitar as tarefas de tradução
+* *old-versions* - Tarballs contendo os arquivos de traduzidos em português de versões anteriores do CUPS
+
+* *translation*  - Guia do tradutor do CUPS traduzido para português, incluindo, dentro do subdiretório `src`, procedimentos para atualizar e outros arquivos fontes.
+
+* *scripts*      - scripts auxiliares para facilitar as tarefas de tradução
 
 ### Como posso ajudar
 

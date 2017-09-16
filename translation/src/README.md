@@ -20,6 +20,6 @@ Atenção: os procedimentos abaixo precisam do [translate-toolkit](http://toolki
  po2html --template="Translating and Customizing CUPS.html" --input=translation.po --output=translation.html
 6. Opcionalmente, pode-se criar uma versão markdown a partir do HTML traduzido, para melhor visualização no GitHub. Para isto, [html2text](http://alir3z4.github.io/html2text/) pode ser usado:
  html2text translation.html > translation.md
-7. Coloque translation.md no diretório anterior (`translation/`)
+7. Coloque translation.md no diretório anterior (`translation/`) como README.md
 
 *Atenção*: Há possibilidade de ocorrerem erros de formatação nas conversões entre HTML e PO, mas que podem ser corrigidos manualmente comparando o original com o traduzido.

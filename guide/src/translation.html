@@ -1,0 +1,688 @@
+
+<!-- saved from url=(0041)https://www.cups.org/doc/translation.html -->
+<html><!-- SECTION: Getting Started --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Traduzindo e Personalizando o CUPS</title>
+	<link rel="STYLESHEET" type="text/css" href="./Translating and Customizing CUPS_files/cups-printable.css">
+<meta name="wikEdStartupFlag"><script id="wikEdGetGlobalScript0">var globalObj = {};globalObj.hookNumber = 1;globalObj.scriptId = 'wikEdGetGlobalScript0';globalObj.wikEdGetGlobals = {};if (typeof skin != 'undefined') {  globalObj.wikEdGetGlobals['skin'] = skin;}if (typeof wgServer != 'undefined') {  globalObj.wikEdGetGlobals['wgServer'] = wgServer;}if (typeof wgTitle != 'undefined') {  globalObj.wikEdGetGlobals['wgTitle'] = wgTitle;}if (typeof wgCanonicalNamespace != 'undefined') {  globalObj.wikEdGetGlobals['wgCanonicalNamespace'] = wgCanonicalNamespace;}if (typeof wgArticlePath != 'undefined') {  globalObj.wikEdGetGlobals['wgArticlePath'] = wgArticlePath;}if (typeof wgScript != 'undefined') {  globalObj.wikEdGetGlobals['wgScript'] = wgScript;}if (typeof wgScriptPath != 'undefined') {  globalObj.wikEdGetGlobals['wgScriptPath'] = wgScriptPath;}if (typeof wgUserName != 'undefined') {  globalObj.wikEdGetGlobals['wgUserName'] = wgUserName;}if (typeof wgCurRevisionId != 'undefined') {  globalObj.wikEdGetGlobals['wgCurRevisionId'] = wgCurRevisionId;}if (typeof wgContentLanguage != 'undefined') {  globalObj.wikEdGetGlobals['wgContentLanguage'] = wgContentLanguage;}if (typeof wgUserLanguage != 'undefined') {  globalObj.wikEdGetGlobals['wgUserLanguage'] = wgUserLanguage;}if (typeof wgEnableAPI != 'undefined') {  globalObj.wikEdGetGlobals['wgEnableAPI'] = wgEnableAPI;}if (typeof wgPageName != 'undefined') {  globalObj.wikEdGetGlobals['wgPageName'] = wgPageName;}if (typeof wgNamespaceIds != 'undefined') {  globalObj.wikEdGetGlobals['wgNamespaceIds'] = wgNamespaceIds;}if (typeof wgFormattedNamespaces != 'undefined') {  globalObj.wikEdGetGlobals['wgFormattedNamespaces'] = wgFormattedNamespaces;}if (typeof wgUseAutomaticEditSummaries != 'undefined') {  globalObj.wikEdGetGlobals['wgUseAutomaticEditSummaries'] = wgUseAutomaticEditSummaries;}if (typeof wgVersion != 'undefined') {  globalObj.wikEdGetGlobals['wgVersion'] = wgVersion;}if (typeof wgPageContentModel != 'undefined') {  globalObj.wikEdGetGlobals['wgPageContentModel'] = wgPageContentModel;}if (typeof wikEdConfig != 'undefined') {  globalObj.wikEdGetGlobals['wikEdConfig'] = wikEdConfig;}if (typeof wikEdText != 'undefined') {  globalObj.wikEdGetGlobals['wikEdText'] = wikEdText;}var globalObjStr = 'wikEd:' + JSON.stringify(globalObj);window.postMessage(globalObjStr, 'https://www.cups.org');</script><meta name="wikEdDiffStartupFlag"><script id="wikEdGetGlobalScript1">var globalObj = {};globalObj.hookNumber = 3;globalObj.scriptId = 'wikEdGetGlobalScript1';globalObj.wikEdGetGlobals = {};if (typeof wgServer != 'undefined') {  globalObj.wikEdGetGlobals['wgServer'] = wgServer;}if (typeof wgArticlePath != 'undefined') {  globalObj.wikEdGetGlobals['wgArticlePath'] = wgArticlePath;}if (typeof wgScriptPath != 'undefined') {  globalObj.wikEdGetGlobals['wgScriptPath'] = wgScriptPath;}if (typeof wgCurRevisionId != 'undefined') {  globalObj.wikEdGetGlobals['wgCurRevisionId'] = wgCurRevisionId;}if (typeof wikEdTypeofLocalStorage != 'undefined') {  globalObj.wikEdGetGlobals['wikEdTypeofLocalStorage'] = wikEdTypeofLocalStorage;}if (typeof wgPageName != 'undefined') {  globalObj.wikEdGetGlobals['wgPageName'] = wgPageName;}if (typeof wikEdConfig != 'undefined') {  globalObj.wikEdGetGlobals['wikEdConfig'] = wikEdConfig;}var globalObjStr = 'wikEd:' + JSON.stringify(globalObj);window.postMessage(globalObjStr, 'https://www.cups.org');</script><meta name="wikEdSetupFlag"><meta name="wikEdDiffSetupFlag"></head>
+<body>
+
+<h1 class="title">Traduzindo e Personalizando o CUPS</h1>
+
+<p>Graças ao uso extensivo de modelos, imagens e catálogos de mensagens, o CUPS pode ser facilmente traduzido (ou personalizado!) para atender às suas necessidades. Este arquivo de ajuda irá guiá-lo através dos arquivos de localização CUPS para que você possa aproveitar ao máximo.</p>
+
+
+<h2 class="title"><a name="INTRO">Primeiros passos</a></h2>
+
+<p>Comece baixando o código-fonte CUPS de <a href="http://www.cups.org/software.php" target="_blank">www.cups.org</a>. Depois de extrair os arquivos do pacote fonte, você vai querer copiar os seguintes arquivos e diretórios:</p>
+
+<ul>
+
+	<li><var>desktop/cups.desktop</var> - o arquivo desktop do GNOME/KDE apontando para a interface web do CUPS</li>
+
+	<li><var>doc/index.html</var> - a página inicial da interface web</li>
+
+	<li><var>locale/cups.pot</var> - o catálogo de mensagens</li>
+
+	<li><var>templates/*.tmpl</var> - os arquivos modelos da interface web</li>
+	
+</ul>
+
+<p>Com exceção dos catálogos de mensagens e do arquivo desktop, os arquivos de localização são colocados em subdiretórios nos <var>doc</var> e <var>templates</var> usando o nome da localidade. Os nomes das localidades são <var>ll</var> ou <var>ll_CC</var>, sendo "ll" o código de idioma de 2 letras e "CC" o código de país de 2 letras. <em>CUPS atualmente não usa nem oferece suporte à nova sintaxe <var>ll-região</var> para nomes de localidade.</em></p>
+
+<p>Todos os arquivos não imagem devem ser codificados usando o conjunto de caracteres UTF-8.</p>
+
+
+<h2 class="title"><a name="SUBMIT">Enviando uma tradução para o CUPS</a></h2>
+
+<p>Para enviar uma tradução para inclusão no CUPS, traduza o arquivo desktop, todos os arquivos de modelos, o arquivo <var>index.html.in</var> e o catálogo de mensagens. Coloque esses arquivos nos subdiretórios corretos no arquivo de código-fonte do CUPS e execute o seguinte comando para criar um arquivo com seus arquivos:</p>
+
+<pre class="command">tar cvf <i>ll_CC</i>.tar.gz desktop/cups.desktop doc/<i>ll_CC</i> \
+	locale/cups_<i>ll_CC</i>.po templates/<i>ll_CC</i>
+</pre>
+
+<p>Substitua "ll_CC" pelo nome da localidade para sua tradução. Depois de criar o arquivo, vá para a página <a href="http://www.cups.org/str.php" target="_blank">Bugs & Recursos do CUPS</a> e envie um relatório de erro, anexando a tradução ao relatório.</p>
+
+
+<h2 class="title"><a name="DESKTOP">O arquivo desktop</a></h2>
+
+<p>O arquivo <var>desktop/cups.desktop</var> fornece um link para a interface web do CUPS a partir de ambientes de desktop, como o GNOME e o KDE. Para traduzir este arquivo, adicione duas linhas na parte inferior com as chaves <tt>Name</tt> e <tt>Comment</tt>:</p>
+
+<pre class="command">Name[<i>ll_CC</i>]=<i>Tradução de "Manage Printing"</i>
+Comment[<i>ll_CC</i>]=<i>Tradução de "CUPS Web Interface"</i>
+</pre>
+
+
+<h2 class="title"><a name="HOMEPAGE">A página inicial</a></h2>
+
+<p>O arquivo <var>index.html</var> é um arquivo HTML completo que é exibido quando o usuário visita "http://localhost:631/". Edite o <var>doc/index.html</var> existente e guarde-o no subdiretório <var>doc/ll_CC</var> para que o Makefile possa instalá-lo. Execute "make install" no subdiretório <var>doc</var> para testar a nova página inicial.</p>
+
+
+<h2 class="title"><a name="CATALOGS">Catálogos de mensagens</a></h2>
+
+<p>Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext ".po" que fornecem uma lista de cadeias de mensagens localizadas para o software CUPS. Os catálogos de mensagens são denominados <var>cups_ll.po</var> ou <var>cups_ll_CC.po</var>, sendo "ll" a abreviatura padrão de 2 letras para o idioma e "CC" é o padrão de 2 letras abreviatura para o país.</p>
+
+<p>Ao traduzir um novo catálogo de mensagens, copie o arquivo de catálogo de mensagens <var>cups.pot</var> no subdiretório <var>locale</var> do código-fonte do CUPS. Por exemplo, para começar a traduzir o catálogo de mensagens para francês canadense, digite os seguintes comandos:</p>
+
+<pre class="command">cd locale
+cp cups.pot cups_fr_CA.po
+</pre>
+
+<p>Alternativamente, você pode copiar o catálogo de mensagens <var>cups_fr.po</var> existente e então fazer quaisquer alterações necessárias.</p>
+
+<p>Depois de ter feito a sua cópia do arquivo, edite-o usando seu editor de texto favorito ou programa de tradução para traduzir o texto para o idioma desejado.</p>
+
+<p>Em seguida, valide sua tradução usando o utilitário <var>locale/checkpo</var>:</p>
+
+<pre class="command">cd locale
+./checkpo cups_ll_CC.po
+</pre>
+
+<p>Depois de corrigir quaisquer erros na sua tradução, adicione a sua localidade à variável <code>LANGUAGES</code> no arquivo <var>Makedefs</var> e execute o comando "make install" no subdiretório <var>locale</var> para testar a tradução.</p>
+
+
+<h2 class="title"><a name="TEMPLATES">Arquivos modelos</a></h2>
+
+<p>O agendador CUPS fornece uma interface web que pode ser usada para fazer muitas tarefas comuns de impressão e administração. O servidor web incorporado oferece suporte a localização de páginas web através do uso de subdiretórios para cada localidade, p.ex. "fr" para francês, "de" para alemão, "fr_ca" para francês no Canadá, e assim por diante.</p>
+
+<p>Os arquivos de modelos são arquivos HTML com caracteres de formatação especial neles que permitem a substituição de variáveis e arrays. Os programas CGI do CUPS (<code>admin.cgi</code>, <code>classes.cgi</code>, <code>help.cgi</code>, <code>jobs.cgi</code> e <code>printers.cgi</code>) usam esses arquivos de modelo para fornecer conteúdo dinâmico para a interface da web. Os arquivos de modelo são instalados no diretório <var>/usr/share/cups/templates</var> por padrão. A tabela 2 lista os vários arquivos de modelo e sua finalidade.</p>
+
+<p>As versões traduzidas dos arquivos de modelo devem ser salvas no subdiretório <var>templates/ll_CC</var>. Por exemplo, os arquivos de modelo canadense francês devem ser salvos no subdiretório <var>templates/fr_CA</var>. Depois de ter traduzido todos os modelos, adicione a localidade à variável <code>LANGUAGES</code> no <var>Makedefs</var> e execute "make install" nos <var>templates</var> subdiretório para testar a tradução.</p>
+
+<div class="table"><table summary="Web Interface Template Files">
+<caption>Tabela 2: Arquivos modelos da interface web</caption>
+<thead>
+<tr>
+	<th>Nome de arquivo</th>
+	<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>add-class.tmpl</td>
+	<td>Essa é a forma inicial que é mostrada para adicionar uma nova classe de impressora.</td>
+</tr>
+<tr>
+	<td>add-printer.tmpl</td>
+	<td>Essa é a forma inicial que é mostrada para adicionar uma nova impressora.</td>
+</tr>
+<tr>
+	<td>add-rss-subscription.tmpl</td>
+	<td>Essa é a nova forma que é mostrada para adicionar uma nova inscrição RSS.</td>
+</tr>
+<tr>
+	<td>admin.tmpl</td>
+	<td>Essa é a página principal de administração.</td>
+</tr>
+<tr>
+	<td>choose-device.tmpl</td>
+	<td>Essa é a forma que mostra a lista de dispositivos disponíveis.</td>
+</tr>
+<tr>
+	<td>choose-make.tmpl</td>
+	<td>Essa é a forma que mostra a lista de fabricantes disponíveis.</td>
+</tr>
+<tr>
+	<td>choose-model.tmpl</td>
+	<td>Essa é a forma que mostra a lista de modelos/drivers disponíveis.</td>
+</tr>
+<tr>
+	<td>choose-serial.tmpl</td>
+	<td>Essa é a forma que permite que o usuário escolha uma porta serial e quaisquer opções.</td>
+</tr>
+<tr>
+	<td>choose-uri.tmpl</td>
+	<td>Essa é a forma que permite que o usuário insira a URI de um dispositivo para impressoras de rede.</td>
+</tr>
+<tr>
+	<td>class-added.tmpl</td>
+	<td>Esse modelo mostra a mensagem "class added".</td>
+</tr>
+<tr>
+	<td>class-confirm.tmpl</td>
+	<td>Esse é o modelo usado para confirmar a exclusão de uma classe.</td>
+</tr>
+<tr>
+	<td>class-deleted.tmpl</td>
+	<td>Esse modelo mostra a mensagem "class deleted".</td>
+</tr>
+<tr>
+	<td>class-jobs-header.tmpl</td>
+	<td>Esse modelo mostra o cabeçalho "jobs" para trabalhos em uma classe.</td>
+</tr>
+<tr>
+	<td>class-modified.tmpl</td>
+	<td>Esse modelo mostra a mensagem "class modified".</td>
+</tr>
+<tr>
+	<td>classes.tmpl</td>
+	<td>Esse modelo mostra uma ou mais classes de impressora.</td>
+</tr>
+<tr>
+	<td>classes-header.tmpl</td>
+	<td>Esse modelo mostra o cabeçalho "showing N of M classes" na lista de classes.</td>
+</tr>
+<tr>
+	<td>edit-config.tmpl</td>
+	<td>Essa é a página do editor do cupsd.conf</td>
+</tr>
+<tr>
+	<td>error.tmpl</td>
+	<td>Esse modelo exibe uma mensagem de erro genérico.</td>
+</tr>
+<tr>
+	<td>error-op.tmpl</td>
+	<td>Essa é a página de erro "operação desconhecida".</td>
+</tr>
+<tr>
+	<td>header.tmpl</td>
+	<td>Esse modelo é usado como o cabeçalho padrão em todos os conteúdos dinâmicos.</td>
+</tr>
+<tr>
+	<td>help-header.tmpl</td>
+	<td>Essa é a parte superior da página de ajuda.</td>
+</tr>
+<tr>
+	<td>help-printable.tmpl</td>
+	<td>Essa é o cabeçalho da página padrão para a versão imprimível dos arquivos de ajuda.</td>
+</tr>
+<tr>
+	<td>job-cancel.tmpl</td>
+	<td>Esse modelo mostra "job canceled".</td>
+</tr>
+<tr>
+	<td>job-hold.tmpl</td>
+	<td>Esse modelo mostra "job held".</td>
+</tr>
+<tr>
+	<td>job-move.tmpl</td>
+	<td>Essa mensagem mostra a forma de movimento de trabalho.</td>
+</tr>
+<tr>
+	<td>job-moved.tmpl</td>
+	<td>Esse modelo mostra "job moved".</td>
+</tr>
+<tr>
+	<td>job-release.tmpl</td>
+	<td>Esse modelo mostra "job released".</td>
+</tr>
+<tr>
+	<td>job-restart.tmpl</td>
+	<td>Esse modelo mostra "job reprinted".</td>
+</tr>
+<tr>
+	<td>jobs.tmpl</td>
+	<td>Esse modelo é usado para listas os trabalhos de impressão em um servidor, classe ou impressora.</td>
+</tr>
+<tr>
+	<td>jobs-header.tmpl</td>
+	<td>Esse modelo mostra o cabeçalho "mostrando N ou M trabalhos" na lista de trabalhos.</td>
+</tr>
+<tr>
+	<td>list-available-printers.tmpl</td>
+	<td>Esse modelo mostra uma lista de novas impressoras que foram localizadas.</td>
+</tr>
+<tr>
+	<td>maintenance.tmpl</td>
+	<td>Esse modelo mostra "maintenance commands sent".</td>
+</tr>
+<tr>
+	<td>modify-class.tmpl</td>
+	<td>Esse modelo é usado como a primeira forma ao modificar uma classe.</td>
+</tr>
+<tr>
+	<td>modify-printer.tmpl</td>
+	<td>Esse modelo é usado como a primeira forma ao modificar uma impressora.</td>
+</tr>
+<tr>
+	<td>norestart.tmpl</td>
+	<td>Esse modelo mostra "server not restarted because no changes were made to the configuration".</td>
+</tr>
+<tr>
+	<td>option-boolean.tmpl</td>
+	<td>Esse modelo é usado para selecionar uma opção booleana de PPD.</td>
+</tr>
+<tr>
+	<td>option-conflict.tmpl</td>
+	<td>Esse modelo mostra as opções conflitantes.</td>
+</tr>
+<tr>
+	<td>option-header.tmpl</td>
+	<td>Esse modelo é usado para inciar um grupo de opções PPD.</td>
+</tr>
+<tr>
+	<td>option-pickmany.tmpl</td>
+	<td>Esse modelo é usado para selecionar uma opção multivalorada de PPD.</td>
+</tr>
+<tr>
+	<td>option-pickone.tmpl</td>
+	<td>Esse modelo é usado para selecionar uma opção univalorada de PPD.</td>
+</tr>
+<tr>
+	<td>option-trailer.tmpl</td>
+	<td>Esse modelo é usado para terminar um grupo de opções PPD.</td>
+</tr>
+<tr>
+	<td>pager.tmpl</td>
+	<td>Esse modelo mostra a barra de paginador anterior/seguinte.</td>
+</tr>
+<tr>
+	<td>printer-accept.tmpl</td>
+	<td>Esse modelo mostra "printer now accepting jobs".</td>
+</tr>
+<tr>
+	<td>printer-added.tmpl</td>
+	<td>Esse modelo mostra "printer added".</td>
+</tr>
+<tr>
+	<td>printer-configured.tmpl</td>
+	<td>Esse modelo mostra "printer configured".</td>
+</tr>
+<tr>
+	<td>printer-confirm.tmpl</td>
+	<td>Esse modelo pede que o usuário confirme a exclusão de uma impressora.</td>
+</tr>
+<tr>
+	<td>printer-default.tmpl</td>
+	<td>Esse modelo mostra "default printer set".</td>
+</tr>
+<tr>
+	<td>printer-deleted.tmpl</td>
+	<td>Esse modelo mostra "printer deleted".</td>
+</tr>
+<tr>
+	<td>printer-jobs-header.tmpl</td>
+	<td>Esse modelo mostra o cabeçalho "jobs" para trabalhos em uma impressora.</td>
+</tr>
+<tr>
+	<td>printer-modified.tmpl</td>
+	<td>Esse modelo mostra "printer modified".</td>
+</tr>
+<tr>
+	<td>printer-purge.tmpl</td>
+	<td>Esse modelo mostra "printer has been purged of all jobs".</td>
+</tr>
+<tr>
+	<td>printer-reject.tmpl</td>
+	<td>Esse modelo mostra "printer now rejecting jobs".</td>
+</tr>
+<tr>
+	<td>printer-start.tmpl</td>
+	<td>Esse modelo mostra "printer started".</td>
+</tr>
+<tr>
+	<td>printer-stop.tmpl</td>
+	<td>Esse modelo mostra "printer stopped".</td>
+</tr>
+<tr>
+	<td>printers.tmpl</td>
+	<td>Esse modelo é usado para listar informações em uma ou mais impressoras.</td>
+</tr>
+<tr>
+	<td>printers-header.tmpl</td>
+	<td>Esse modelo mostra o cabeçalho "showing printer N of M" na lista de impressoras.</td>
+</tr>
+<tr>
+	<td>restart.tmpl</td>
+	<td>Esse modelo mostra "server restarting".</td>
+</tr>
+<tr>
+	<td>samba-export.tmpl</td>
+	<td>Esse modelo mostra as impressoras de exportação para forma do Samba.</td>
+</tr>
+<tr>
+	<td>samba-exported.tmpl</td>
+	<td>Esse modelo mostra "printers exported to Samba".</td>
+</tr>
+<tr>
+	<td>search.tmpl</td>
+	<td>Essa mensagem mostra o formulário de pesquisa.</td>
+</tr>
+<tr>
+	<td>set-printer-options-header.tmpl</td>
+	<td>Esse modelo mostra a primeira parte do formulário de opções de impressoras definidas.</td>
+</tr>
+<tr>
+	<td>set-printer-options-trailer.tmpl</td>
+	<td>Esse modelo mostra a última parte do formulário de opções de impressoras definidas.</td>
+</tr>
+<tr>
+	<td>subscription-added.tmpl</td>
+	<td>Esse modelo mostra "subscription ... added".</td>
+</tr>
+<tr>
+	<td>subscription-canceled.tmpl</td>
+	<td>Esse modelo mostra "subscription #NNN canceled".</td>
+</tr>
+<tr>
+	<td>test-page.tmpl</td>
+	<td>Esse modelo mostra "test page printed".</td>
+</tr>
+<tr>
+	<td>trailer.tmpl</td>
+	<td>Esse modelo é usado como o trailer padrão em todos os conteúdos dinâmicos.</td>
+</tr>
+<tr>
+	<td>users.tmpl</td>
+	<td>Essa mensagem mostra o formulário de usuários permitidos definidos.</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3><a name="VARIABLE">Inserindo de atributos e valores</a></h3>
+
+<p>Os arquivos de modelo consistem em HTML com substituições variáveis para o nome dentro de chaves "{name}". Nomes de variáveis geralmente são os nomes de atributo IPP com o hífen ("-") substituído pelo caractere de sublinhado ("_"). Por exemplo, o atributo <tt>job-printer-uri</tt> é renomeado para <tt>job_printer_uri</tt>.</p>
+
+<p>Chaves ("{" e "}") para indicar substituições e o caractere de barra invertida ("\") para colocar entre aspas. Para inserir qualquer um desses caracteres especiais, pois é necessário usar o mecanismo HTML <code>&name;</code> ou prefixar cada caractere especial com a barra invertida ("\").</p>
+
+<p>Você substitui o valor de uma variável usando <code>{NAME}</code> no seu arquivo de modelo. Se a variável estiver indefinida, a string <code>{NAME}</code> será emitida como está.</p>
+
+<p>Para substituir uma string vazia se a variável estiver indefinida, use <code>{?NAME}</code>.</p>
+
+<h3>Substituições de matriz</h3>
+
+<p>O número de elementos da matriz pode ser inserido usando <code>{#NAME}</ code>. Se a matriz estiver indefinida, então será emitido 0. O elemento de matriz atual (começando em 1) é inserido com <code>{#}</code>.</p>
+
+<p>As matrizes são tratadas usando <code>{[NAME]</code> no início de uma seção e <code>}</code> no final. A informação entre o colchete de fechamento ("]") e a chave de fechamento ("}") é repetida para tantos elementos quanto disponíveis na matriz designada. Por exemplo, o seguinte modelo exibirá uma lista de cada trabalho na matriz <code>job_id</code>:</p>
+
+<pre class="command">&lt;TABLE&gt;
+&lt;TR&gt;
+	&lt;TH&gt;ID do Job&lt;/TH&gt;
+	&lt;TH&gt;Destino&lt;/TH&gt;
+	&lt;TH&gt;Título&lt;/TH&gt;
+&lt;/TR&gt;
+
+{[job_id]
+&lt;TR&gt;
+	&lt;TD&gt;{?job_id}&lt;/TD&gt;
+	&lt;TD&gt;{?job_printer_name}&lt;/TD&gt;
+	&lt;TD&gt;{?job_name}&lt;/TD&gt;
+&lt;/TR&gt;
+}
+&lt;/TABLE&gt;
+</pre>
+
+<p>Matrizes podem ser aninhadas, porém todos os elementos dentro das chaves ("{" and "}") são indexadas usando a matriz mais interna.</p>
+
+<h3>Testes condicionais</h3>
+
+<p>Os modelos também podem testar variáveis em relação a valores específicos e incluir condicionalmente texto no modelo. O formato é:</p>
+
+<pre class="command">{<i>variável</i>?<i>verdadeiro</i>:<i>falso</i>}
+{<i>variável</i>=<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}
+{<i>variável</i>!<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}
+{<i>variável</i><<i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}
+{<i>variável</i>><i>valor</i>?<i>verdadeiro</i>:<i>falso</i>}
+</pre>
+
+<p>sendo <var>verdadeiro</var> o texto que é incluído se a condição for verdadeira e <var>falso</var> o texto que é incluído se a condição for falsa. Um valor de <code>#</code> é substituído com o número de elemento atual (iniciando com 1). O caractere após o nome da variável especifica a condição para testar. A Tabela 3 mostra as configurações de teste disponíveis.</p>
+
+<div class="table"><table summary="Template Substitution Conditions">
+<caption>Tabela 3: Condições de substituição de modelo</caption>
+<tbody><tr>
+	<th>Caractere</th>
+	<th>Condição</th>
+</tr>
+<tr>
+	<td>?</td>
+	<td>Verdadeiro se <var>variável</var> existir.</td>
+</tr>
+<tr>
+	<td>=</td>
+	<td>Verdadeiro se <var>variável</var> for igual a <var>valor</var>.</td>
+</tr>
+<tr>
+	<td>!</td>
+	<td>Verdadeiro se <var>variável</var> não for igual a <var>valor</var>.</td>
+</tr>
+<tr>
+	<td><</td>
+	<td>Verdadeiro se <var>variável</var> for menor que <var>valor</var>.</td>
+</tr>
+<tr>
+	<td>></td>
+	<td>Verdadeiro se <var>variável</var> for maior que <var>valor</var>.</td>
+</tr>
+</tbody></table></div>
+
+<h3><a name="CGI">Programas CGI</a></h3>
+
+<p>CUPS usa cinco programas CGI para gerenciar as interfaces web dinâmicas:</p>
+
+<ul>
+
+	<li><code>admin.cgi</code></li>
+	<li><code>classes.cgi</code></li>
+	<li><code>help.cgi</code></li>
+	<li><code>jobs.cgi</code></li>
+	<li><code>printers.cgi</code></li>
+
+</ul>
+
+<p>Cada programa CGI aceita variáveis padrão de formulário, como <code>OP</code> para executar a operação, <code>PRINTER_NAME</code> para a impressora ou o nome da classe para operar, <code>QUERY</code> para qualquer palavra de pesquisa, <code>FIRST</code> para a primeira classe, trabalho ou impressora para exibição e <code>ORDER</code> para controlar a ordem em que as classes, trabalhos ou impressoras são exibidas.</p>
+
+<p>Além disso, os programas <code>classes.cgi</code>, <code>jobs.cgi</code> e <code>printers.cgi</code> oferecem suporte a uma variável <code>WHICH_JOBS</code> para controle de quais trabalhos são exibidos. A Tabela 4 lista os valores aos quais há suporte.</p>
+
+<div class="table"><table summary="WHICH_JOBS Values">
+<caption>Tabela 4: Valores de WHICH_JOBS</caption>
+<thead>
+<tr>
+	<th>Valor de WHICH_JOBS</th>
+	<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+	<td>all</td>
+	<td>Mostra todos os trabalhos</td>
+</tr>
+<tr>
+	<td>completed</td>
+	<td>Mostra trabalhos finalizados</td>
+</tr>
+<tr>
+	<td>not-completed</td>
+	<td>Mostra trabalhos ativos</td>
+</tr>
+</tbody></table></div>
+
+<h4><a name="admin.cgi">admin.cgi</a></h4>
+
+<p>O programa <code>admin.cgi</code> lida com todas as funções de administração de impressora e classe e é executado para todos os acessos diretos ao recurso <var>/admin</var>. Para a maioria das operações, usa as variáveis de formulário <code>PRINTER_NAME</code> e <code>OP</code> para especificar a ação solicitada. A Tabela 5 mostra os valores aos quais <code>OP</ code> possui suporte.</p>
+
+<div class="table"><table summary="admin.cgi OP Values">
+<caption>Tabela 5: Valores de OP do admin.cgi</caption>
+<thead>
+<tr>
+	<th>Valor OP</th>
+	<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>accept-jobs</td>
+	<td>Aceita trabalhos na destino dada.</td>
+</tr>
+<tr>
+	<td>add-class</td>
+	<td>Adiciona uma nova classe de impressora.</td>
+</tr>
+<tr>
+	<td>add-printer</td>
+	<td>Adiciona uma nova impressora.</td>
+</tr>
+<tr>
+	<td>config-server</td>
+	<td>Configura o servidor.</td>
+</tr>
+<tr>
+	<td>delete-class</td>
+	<td>Exclui uma classe de impressora. A variável de formulário <code>CONFIRM</code> pode ser configurada para qualquer valor para ignorar a página de confirmação.</td>
+</tr>
+<tr>
+	<td>delete-printer</td>
+	<td>Exclui uma impressora. A variável de formulário <code>CONFIRM</code> pode ser configurada para qualquer valor para ignorar a página de confirmação.</td>
+</tr>
+<tr>
+	<td>export-samba</td>
+	<td>Exporta impressoras para o Samba.</td>
+</tr>
+<tr>
+	<td>find-new-printers</td>
+	<td>Localiza novas impressoras que ainda não foram adicionadas.</td>
+</tr>
+<tr>
+	<td>modify-class</td>
+	<td>Modifica uma classe de impressora.</td>
+</tr>
+<tr>
+	<td>modify-printer</td>
+	<td>Modifica uma impressora.</td>
+</tr>
+<tr>
+	<td>purge-jobs</td>
+	<td>Apaga todos os trabalhos no destino dado.</td>
+</tr>
+<tr>
+	<td>redirect</td>
+	<td>Redireciona o navegador web para a localização referenciada pela variável de formulário URL.</td>
+</tr>
+<tr>
+	<td>reject-jobs</td>
+	<td>Rejeita trabalhos na destino dada.</td>
+</tr>
+<tr>
+	<td>set-allowed-users</td>
+	<td>Define os usuários permitidos para um destino.</td>
+</tr>
+<tr>
+	<td>set-as-default</td>
+	<td>Define o destino padrão</td>
+</tr>
+<tr>
+	<td>set-printer-options</td>
+	<td>Define as opções padrões para uma impressora.</td>
+</tr>
+<tr>
+	<td>set-sharing</td>
+	<td>Define o atributo printer-is-shared para um destino.</td>
+</tr>
+<tr>
+	<td>start-class</td>
+	<td>Inicia uma classe dada.</td>
+</tr>
+<tr>
+	<td>start-printer</td>
+	<td>Inicia uma impressora dada.</td>
+</tr>
+<tr>
+	<td>stop-class</td>
+	<td>Interrompe uma classe dada.</td>
+</tr>
+<tr>
+	<td>stop-printer</td>
+	<td>Interrompe uma impressora dada.</td>
+</tr>
+</tbody>
+</table></div>
+
+<h4><a name="classes.cgi">classes.cgi</a></h4>
+
+<p>O programa <code>classes.cgi</code> é responsável pela listagem de informações de classe, incluindo trabalhos destinados a essa classe. É para todos os acessos diretos ao recurso <var>/classes</var> e oferece suporte às variáveis de formulário opcionais <code>OP</code> e <code>WHICH_JOBS</code>. Se nenhuma variável de formulário for fornecida, o CGI listará toda ou uma classe específica e os trabalhos ativos em cada classe. A Tabela 6 mostra os valores aos quais <code>OP</code> possui suporte.</p>
+
+<div class="table"><table summary="classes.cgi OP Values">
+<caption>Tabela 6: Valores de OP do classes.cgi</caption>
+<thead>
+<tr>
+	<th>Valor OP</th>
+	<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>move-jobs</td>
+	<td>Move os trabalhos nesta classe para outro destino.</td>
+</tr>
+<tr>
+	<td>print-test-page</td>
+	<td>Imprime a página de teste PostScript padrão.</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h4><a name="help.cgi">help.cgi</a></h4>
+
+<p>O programa <code>help.cgi</code> lida com todas as funções de ajuda on-line e é executado para todos os acessos diretos ao recurso <var>/help</var>.</p>
+
+
+<h4><a name="jobs.cgi">jobs.cgi</a></h4>
+
+<p>O programa <code>jobs.cgi</code> lida com todas as funções do trabalho e é executado para todos os acessos diretos ao recurso <var>/jobs</var>. Para a maioria das operações, usa as variáveis <code>JOB_ID</code>, <code>OP</code> e <code>WHICH_JOBS</code> para especificar a ação solicitada. A Tabela 7 mostra os valores aos quais <code>OP</code> possui suporte.</p>
+
+<div class="table"><table summary="jobs.cgi OP Values">
+<caption>Tabela 7: Valores de OP do jobs.cgi</caption>
+<thead>
+<tr>
+	<th>Valor OP</th>
+	<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>cancel-job</td>
+	<td>Cancela um trabalho.</td>
+</tr>
+<tr>
+	<td>hold-job</td>
+	<td>Retém um trabalho indefinidamente.</td>
+</tr>
+<tr>
+	<td>move-job</td>
+	<td>Move um trabalho para outro destino.</td>
+</tr>
+<tr>
+	<td>release-job</td>
+	<td>Libera um trabalho para impressão.</td>
+</tr>
+<tr>
+	<td>restart-job</td>
+	<td>Reinicia/reimprime um trabalho de impressão parado, cancelado, finalizado ou abortado.</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h4><a name="printers.cgi">printers.cgi</a></h4>
+
+<p>O programa <code>printers.cgi</code> é responsável pela listagem de informações de impressora, incluindo trabalhos destinados a essa impressora. É para todos os acessos diretos ao recurso <var>/printers</var> e oferece suporte às variáveis de formulário opcionais <code>OP</code> e <code>WHICH_JOBS</code>. Se nenhuma variável de formulário for fornecida, o CGI listará todas as impressoras ou uma impressora específica e os trabalhos ativos naquela impressora. A Tabela 8 mostra os valores aos quais <code>OP</code> possui suporte.</p>
+
+<div class="table"><table summary="printers.cgi OP Values">
+<caption>Tabela 8: Valores de OP do printers.cgi</caption>
+<thead>
+<tr>
+	<th>Valor OP</th>
+	<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>clean-print-heads</td>
+	<td>Limpa as cabeças de impressão.</td>
+</tr>
+<tr>
+	<td>move-jobs</td>
+	<td>Move todos os trabalhos para um destino diferente.</td>
+</tr>
+<tr>
+	<td>print-self-test-page</td>
+	<td>Imprime uma página de autoteste da impressora.</td>
+</tr>
+<tr>
+	<td>print-test-page</td>
+	<td>Imprime uma página de teste PostScript.</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+</body></html>

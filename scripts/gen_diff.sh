@@ -101,7 +101,7 @@ inputdir=${inputdir:-$(pwd)}
 cd "$inputdir"
 
 # Make sure what is the current work dir and where are the '.tmpl' files'.
-case $(basename $(pwd)) in
+case $(basename "$inputdir") in
    cups-?.?.?)  srctmpldir="templates" ;;   # for 3-digit versions e.g. 2.1.2
    cups-?.?)    srctmpldir="templates" ;;   # for 2-digit versions e.g. 2.2
    templates)   srctmpldir="." ;;

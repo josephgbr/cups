@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   gen_diff - compare source<->pt_BR tmpl files, and store in a text file
+#   gen_diff - compare source<->translated tmpl files, and store in a text file
 #   Copyright (C) 2016 Rafael Fontenelle
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ verbose=0  # set initial verbose value
 
 help() {
     echo -e "Usage: $(basename $0) [options]"
-    echo -e "Compare source<->pt_BR tmpl files, and store in a text file.\n"
+    echo -e "Compare source<->translated tmpl files, and store in a text file.\n"
     echo -e "Options:\n"
     echo -e "   -i <inputdir>    CUPS source code directory containing both source\n" \
             "                      and translated templates. (default: current dir)"

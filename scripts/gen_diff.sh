@@ -56,12 +56,12 @@ verbose() {
 }
 
 ###########################################
-# Check provided (or not) options, values, directory/file contents
+# Check provided options, values, directory/file contents (if any)
 
 while getopts 'i|o|l|v|h' OPTION; do
     case $OPTION in
         i)  [ ! -z "$OPTARG" ] || die "option -i requires a directory an argument."
-            [ -d "$OPTARG" ] || die "unable to find directory containing translated files."
+            [ -d "$OPTARG" ]   || die "unable to find directory containing translated files."
             inputdir="$OPTARG"
         ;;
         o)  [ ! -z "$OPTARG" ] || die "option -o requires a filename as an argument."
@@ -74,7 +74,8 @@ while getopts 'i|o|l|v|h' OPTION; do
         ;;
         h)  help
         ;;
-        *) die "unknown option $OPTION"
+        *)  echo "unknown option \"$OPTION\""
+            help
         ;;
     esac
 done

@@ -95,6 +95,9 @@ verbose "using locale $locale."
 [ -z "$outputfile" ] && outputfile="review.txt"
 verbose "using outputfile $outputfile."
 
+# set inputdir to current dir, if not provided as command=line argument
+inputdir=${inputdir:-$(pwd)}
+
 cd "$inputdir"
 
 # Make sure what is the current work dir and where are the '.tmpl' files'.

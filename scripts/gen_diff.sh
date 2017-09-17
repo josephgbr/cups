@@ -27,19 +27,21 @@ verbose=0  # set initial verbose value
 # Define some required functions
 
 help() {
-    echo -e "Usage: $(basename $0) [options]"
-    echo -e "Compare source<->translated tmpl files, and store in a text file.\n"
-    echo -e "Options:\n"
-    echo -e "   -i <inputdir>    CUPS source code directory containing both source\n" \
-            "                      and translated templates. (default: current dir)"
-    echo -e "   -o <outputfile>  tarball name that will store the translation files.\n"  \
-            "                      (default: review.txt)"
-    echo -e "   -l <locale>      set locale with a language code, like e.g. pt_BR.\n"   \
-            "                      (default: value of \$LANG environment variable)"
-    echo -e "   -v               enable verbosity, display more information."
-    echo -e "   -h               show help and quit."
-    echo -e ""
-    echo -e "See source code and report bugs in: https://github.com/rffontenelle/cups-pt_BR"
+    cat <<EOF
+Usage: $(basename $0) [options]
+Diff source and translated tmpl files from CUPS, and store in a text file.
+Options:
+   -i <inputdir>    CUPS source code directory containing both source
+                      and translated templates. (default: current dir)
+   -o <outputfile>  tarball name to setor the translation files.
+                      (default: review.txt)
+   -l <locale>      set locale with a language code, like e.g. pt_BR.
+                      (default: value of \$LANG environment variable)
+   -v               enable verbosity, display more information.
+   -h               show help and quit.
+
+Report bugs in: https://github.com/rffontenelle/cups-pt_BR"
+EOF
     exit 2
 }
 

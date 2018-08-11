@@ -43,7 +43,7 @@ O arquivo _index.html_ é um arquivo HTML completo que é exibido quando o usuá
 
 ## Catálogos de mensagens
 
-Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext ".po" que fornecem uma lista de cadeias de mensagens localizadas para o software CUPS. Os catálogos de mensagens são denominados cups_*ll*.po ou _cups_*ll_CC*.po, sendo "ll" a abreviatura padrão de 2 letras para o idioma e "CC" é o padrão de 2 letras abreviatura para o país.
+Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext ".po" que fornecem uma lista de cadeias de mensagens localizadas para o software CUPS. Os catálogos de mensagens são denominados cups_*ll*.po ou cups_*ll_CC*.po, sendo "ll" a abreviatura padrão de 2 letras para o idioma e "CC" é o padrão de 2 letras abreviatura para o país.
 
 Ao traduzir um novo catálogo de mensagens, copie o arquivo de catálogo de mensagens cups.pot no subdiretório _locale_ do código-fonte do CUPS. Por exemplo, para começar a traduzir o catálogo de mensagens para francês canadense, digite os seguintes comandos:
     

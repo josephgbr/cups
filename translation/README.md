@@ -1,29 +1,29 @@
 # Traduzindo e Personalizando o CUPS
 
+> Nota: Esta é uma tradução não oficial do guia de tradução do CUPS. Para o guia de tradução oficial, em inglês, veja [https://www.cups.org/doc/translation.html](https://www.cups.org/doc/translation.html)
+
 Graças ao uso extensivo de modelos, imagens e catálogos de mensagens, o CUPS pode ser facilmente traduzido (ou personalizado!) para atender às suas necessidades. Este arquivo de ajuda irá guiá-lo através dos arquivos de localização CUPS para que você possa aproveitar ao máximo.
 
 ## Primeiros passos
 
 Comece baixando o código-fonte CUPS de [www.cups.org](http://www.cups.org/software.php). Depois de extrair os arquivos do pacote fonte, você vai querer copiar os seguintes arquivos e diretórios:
 
-  * desktop/cups.desktop \- o arquivo desktop do GNOME/KDE apontando para a interface web do CUPS
-  * doc/index.html \- a página inicial da interface web
-  * locale/cups.pot \- o catálogo de mensagens
-  * templates/*.tmpl \- os arquivos modelos da interface web
+  * _desktop\/cups.desktop_ \- o arquivo desktop do GNOME/KDE apontando para a interface web do CUPS
+  * _doc\/index.html_ \- a página inicial da interface web
+  * _locale\/cups.pot_ \- o catálogo de mensagens
+  * _templates\/*.tmpl_ \- os arquivos modelos da interface web
 
-
-
-Com exceção dos catálogos de mensagens e do arquivo desktop, os arquivos de localização são colocados em subdiretórios nos doc e templates usando o nome da localidade. Os nomes das localidades são ll ou ll_CC, sendo "ll" o código de idioma de 2 letras e "CC" o código de país de 2 letras. _CUPS atualmente não usa nem oferece suporte à nova sintaxe ll-região para nomes de localidade_.
+Com exceção dos catálogos de mensagens e do arquivo desktop, os arquivos de localização são colocados em subdiretórios de _doc_ e _templates_ usando o nome da localidade. Os nomes das localidades são ll ou ll_CC, sendo "ll" o código de idioma de 2 letras e "CC" o código de país de 2 letras. _CUPS atualmente não usa nem oferece suporte à nova sintaxe ll-região para nomes de localidade_.
 
 Todos os arquivos não imagem devem ser codificados usando o conjunto de caracteres UTF-8.
 
 ## Enviando uma tradução para o CUPS
 
-Para enviar uma tradução para inclusão no CUPS, traduza o arquivo desktop, todos os arquivos de modelos, o arquivo index.html.in e o catálogo de mensagens. Coloque esses arquivos nos subdiretórios corretos no arquivo de código-fonte do CUPS e execute o seguinte comando para criar um arquivo com seus arquivos:
+Para enviar uma tradução para inclusão no CUPS, traduza o arquivo desktop, todos os arquivos de modelos, o arquivo _index.html.in_ e o catálogo de mensagens. Coloque esses arquivos nos subdiretórios corretos no arquivo de código-fonte do CUPS e execute o seguinte comando para criar um arquivo com seus arquivos:
     
     
-    tar cvf _ll_CC_.tar.gz desktop/cups.desktop doc/_ll_CC_ \
-        locale/cups__ll_CC_.po templates/_ll_CC_
+    tar cvf _ll_CC_.tar.gz desktop/cups.desktop doc/ll_CC \
+        locale/cups_ll_CC.po templates/ll_CC
     
 
 Substitua "ll_CC" pelo nome da localidade para sua tradução. Depois de criar o arquivo, vá para a página [Bugs &amp; Recursos do CUPS](http://www.cups.org/str.php) e envie um relatório de erro, anexando a tradução ao relatório.
@@ -33,47 +33,49 @@ Substitua "ll_CC" pelo nome da localidade para sua tradução. Depois de criar o
 O arquivo desktop/cups.desktop fornece um link para a interface web do CUPS a partir de ambientes de desktop, como o GNOME e o KDE. Para traduzir este arquivo, adicione duas linhas na parte inferior com as chaves `Name` e `Comment`:
     
     
-    Name[_ll_CC_]=_Tradução de "Manage Printing"_
-    Comment[_ll_CC_]=_Tradução de "CUPS Web Interface"_
+    Name[ll_CC]=Tradução de "Manage Printing"
+    Comment[ll_CC]=Tradução de "CUPS Web Interface"
     
 
 ## A página inicial
 
-O arquivo index.html é um arquivo HTML completo que é exibido quando o usuário visita "http://localhost:631/". Edite o doc/index.html existente e guarde-o no subdiretório doc/ll_CC para que o Makefile possa instalá-lo. Execute "make install" no subdiretório doc para testar a nova página inicial.
+O arquivo _index.html_ é um arquivo HTML completo que é exibido quando o usuário visita "http://localhost:631/". Edite o doc/index.html existente e guarde-o no subdiretório _doc/ll_CC_ para que o Makefile possa instalá-lo. Execute "make install" no subdiretório _doc_ para testar a nova página inicial.
 
 ## Catálogos de mensagens
 
-Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext ".po" que fornecem uma lista de cadeias de mensagens localizadas para o software CUPS. Os catálogos de mensagens são denominados cups_ll.po ou cups_ll_CC.po, sendo "ll" a abreviatura padrão de 2 letras para o idioma e "CC" é o padrão de 2 letras abreviatura para o país.
+Os catálogos de mensagens do CUPS são arquivos de texto GNU gettext ".po" que fornecem uma lista de cadeias de mensagens localizadas para o software CUPS. Os catálogos de mensagens são denominados cups_*ll*.po ou _cups_*ll_CC*.po, sendo "ll" a abreviatura padrão de 2 letras para o idioma e "CC" é o padrão de 2 letras abreviatura para o país.
 
-Ao traduzir um novo catálogo de mensagens, copie o arquivo de catálogo de mensagens cups.pot no subdiretório locale do código-fonte do CUPS. Por exemplo, para começar a traduzir o catálogo de mensagens para francês canadense, digite os seguintes comandos:
+Ao traduzir um novo catálogo de mensagens, copie o arquivo de catálogo de mensagens cups.pot no subdiretório _locale_ do código-fonte do CUPS. Por exemplo, para começar a traduzir o catálogo de mensagens para francês canadense, digite os seguintes comandos:
     
     
     cd locale
     cp cups.pot cups_fr_CA.po
     
 
-Alternativamente, você pode copiar o catálogo de mensagens cups_fr.po existente e então fazer quaisquer alterações necessárias.
+Alternativamente, você pode copiar o catálogo de mensagens *cups_fr.po* existente e então fazer quaisquer alterações necessárias.
 
 Depois de ter feito a sua cópia do arquivo, edite-o usando seu editor de texto favorito ou programa de tradução para traduzir o texto para o idioma desejado.
 
-Em seguida, valide sua tradução usando o utilitário locale/checkpo:
+Em seguida, valide sua tradução usando o utilitário *locale/checkpo*:
     
     
     cd locale
     ./checkpo cups_ll_CC.po
     
 
-Depois de corrigir quaisquer erros na sua tradução, adicione a sua localidade à variável `LANGUAGES` no arquivo Makedefs e execute o comando "make install" no subdiretório locale para testar a tradução.
+Depois de corrigir quaisquer erros na sua tradução, adicione a sua localidade à variável `LANGUAGES` no arquivo Makedefs e execute o comando "make install" no subdiretório _locale_ para testar a tradução.
 
 ## Arquivos modelos
 
 O agendador CUPS fornece uma interface web que pode ser usada para fazer muitas tarefas comuns de impressão e administração. O servidor web incorporado oferece suporte a localização de páginas web através do uso de subdiretórios para cada localidade, p.ex. "fr" para francês, "de" para alemão, "fr_ca" para francês no Canadá, e assim por diante.
 
-Os arquivos de modelos são arquivos HTML com caracteres de formatação especial neles que permitem a substituição de variáveis e arrays. Os programas CGI do CUPS (`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi` e `printers.cgi`) usam esses arquivos de modelo para fornecer conteúdo dinâmico para a interface da web. Os arquivos de modelo são instalados no diretório /usr/share/cups/templates por padrão. A tabela 2 lista os vários arquivos de modelo e sua finalidade.
+Os arquivos de modelos _(templates)_ são arquivos HTML com caracteres de formatação especial neles que permitem a substituição de variáveis e arrays. Os programas CGI do CUPS (`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi` e `printers.cgi`) usam esses arquivos de modelo para fornecer conteúdo dinâmico para a interface da web. Os arquivos de modelo são instalados no diretório /usr/share/cups/templates por padrão. A tabela 2 lista os vários arquivos de modelo e sua finalidade.
 
-As versões traduzidas dos arquivos de modelo devem ser salvas no subdiretório templates/ll_CC. Por exemplo, os arquivos de modelo canadense francês devem ser salvos no subdiretório templates/fr_CA. Depois de ter traduzido todos os modelos, adicione a localidade à variável `LANGUAGES` no Makedefs e execute "make install" nos templates subdiretório para testar a tradução.
+As versões traduzidas dos arquivos de modelo devem ser salvas no subdiretório templates/ll_CC. Por exemplo, os arquivos de modelo canadense francês devem ser salvos no subdiretório templates/fr_CA. Depois de ter traduzido todos os modelos, adicione a localidade à variável `LANGUAGES` no Makedefs e execute "make install" no subdiretório _templates_ para testar a tradução.
 
-Tabela 2: Arquivos modelos da interface web Nome de arquivo | Propósito
+_Tabela 2: Arquivos modelos da interface web_
+
+Nome de arquivo | Propósito
 ---|---
 add-class.tmpl | Essa é a forma inicial que é mostrada para adicionar uma nova classe de impressora.
 add-printer.tmpl | Essa é a forma inicial que é mostrada para adicionar uma nova impressora.
@@ -177,23 +179,25 @@ As matrizes são tratadas usando `{[NAME]` no início de uma seção e `}` no fi
     </TABLE>
     
 
-Matrizes podem ser aninhadas, porém todos os elementos dentro das chaves ("{" and "}") são indexadas usando a matriz mais interna.
+Matrizes podem ser aninhadas, porém todos os elementos dentro das chaves ("{" e "}") são indexadas usando a matriz mais interna.
 
 ### Testes condicionais
 
 Os modelos também podem testar variáveis em relação a valores específicos e incluir condicionalmente texto no modelo. O formato é:
     
     
-    {_variable_?_true_:_false_}
-    {_variable_=_value_?_true_:_false_}
-    {_variable_!_value_?_true_:_false_}
-    {_variable_<_value_?_true_:_false_}
-    {_variable_>_value_?_true_:_false_}
+    {variable?true:false}
+    {variable=value?true:false}
+    {variable!value?true:false}
+    {variable<value?true:false}
+    {variable>value?true:false}
     
 
-sendo verdadeiro o texto que é incluído se a condição for verdadeira e falso o texto que é incluído se a condição for falsa. Um valor de `#` é substituído com o número de elemento atual (iniciando com 1). O caractere após o nome da variável especifica a condição para testar. A Tabela 3 mostra as configurações de teste disponíveis.
+sendo _true_ o texto que é incluído se a condição for verdadeira e _false_ o texto que é incluído se a condição for falsa. Um valor de `#` é substituído com o número de elemento atual (iniciando com 1). O caractere após o nome da variável especifica a condição para testar. A Tabela 3 mostra as configurações de teste disponíveis.
 
-Tabela 3: Condições de substituição de modelo Caractere | Condição
+_Tabela 3: Condições de substituição de modelo_
+
+Caractere | Condição
 ---|---
 ? | Verdadeiro se variável existir.
 = | Verdadeiro se variável for igual a valor.
@@ -211,14 +215,14 @@ CUPS usa cinco programas CGI para gerenciar as interfaces web dinâmicas:
   * `jobs.cgi`
   * `printers.cgi`
 
-
-
 Cada programa CGI aceita variáveis padrão de formulário, como `OP` para executar a operação, `PRINTER_NAME` para a impressora ou o nome da classe para operar, `QUERY` para qualquer palavra de pesquisa, `FIRST` para a primeira classe, trabalho ou impressora para exibição e `ORDER` para controlar a ordem em que as classes, trabalhos ou impressoras são exibidas.
 
 Além disso, os programas `classes.cgi`, `jobs.cgi` e `printers.cgi` oferecem suporte a uma variável `WHICH_JOBS` para controle de quais trabalhos são exibidos. A Tabela 4 lista os valores aos quais há suporte.
 
 
-Tabela 4: Valores de WHICH_JOBS Valor de WHICH_JOBS | Descrição
+_Tabela 4: Valores de WHICH_JOBS_
+
+Valor de WHICH_JOBS | Descrição
 ---|---
 all | Mostra todos os trabalhos
 completed | Mostra trabalhos finalizados
@@ -228,7 +232,9 @@ not-completed | Mostra trabalhos ativos
 
 O programa `admin.cgi` lida com todas as funções de administração de impressora e classe e é executado para todos os acessos diretos ao recurso /admin. Para a maioria das operações, usa as variáveis de formulário `PRINTER_NAME` e `OP` para especificar a ação solicitada. A Tabela 5 mostra os valores aos quais `OP` possui suporte.
 
-Tabela 5: Valores de OP do admin.cgi Valor OP | Descrição
+_Tabela 5: Valores de OP do admin.cgi_
+
+Valor de OP | Descrição
 ---|---
 accept-jobs | Aceita trabalhos na destino dada.
 add-class | Adiciona uma nova classe de impressora.
@@ -256,7 +262,9 @@ stop-printer | Interrompe uma impressora dada.
 
 O programa `classes.cgi` é responsável pela listagem de informações de classe, incluindo trabalhos destinados a essa classe. É para todos os acessos diretos ao recurso /classes e oferece suporte às variáveis de formulário opcionais `OP` e `WHICH_JOBS`. Se nenhuma variável de formulário for fornecida, o CGI listará toda ou uma classe específica e os trabalhos ativos em cada classe. A Tabela 6 mostra os valores aos quais `OP` possui suporte.
 
-Tabela 6: Valores de OP do classes.cgi Valor OP | Descrição
+_Tabela 6: Valores de OP do classes.cgi_
+
+Valor de OP | Descrição
 ---|---
 move-jobs | Move os trabalhos nesta classe para outro destino.
 print-test-page | Imprime a página de teste PostScript padrão.
@@ -269,7 +277,9 @@ O programa `help.cgi` lida com todas as funções de ajuda on-line e é executad
 
 O programa `jobs.cgi` lida com todas as funções do trabalho e é executado para todos os acessos diretos ao recurso /jobs. Para a maioria das operações, usa as variáveis `JOB_ID`, `OP` e `WHICH_JOBS` para especificar a ação solicitada. A Tabela 7 mostra os valores aos quais `OP` possui suporte.
 
-Tabela 7: Valores de OP do jobs.cgi Valor OP | Descrição
+_Tabela 7: Valores de OP do jobs.cgi_
+
+Valor de OP | Descrição
 ---|---
 cancel-job | Cancela um trabalho.
 hold-job | Retém um trabalho indefinidamente.
@@ -282,7 +292,9 @@ restart-job | Reinicia/reimprime um trabalho de impressão parado, cancelado, fi
 O programa `printers.cgi` é responsável pela listagem de informações de impressora, incluindo trabalhos destinados a essa impressora. É para todos os acessos diretos ao recurso /printers e oferece suporte às variáveis de formulário opcionais `OP` e `WHICH_JOBS`. Se nenhuma variável de formulário for fornecida, o CGI listará todas as impressoras ou uma impressora específica e os trabalhos ativos naquela impressora. A Tabela 8 mostra os valores aos quais `OP` possui suporte.
 
 
-Tabela 8: Valores de OP do printers.cgi Valor OP | Descrição
+_Tabela 8: Valores de OP do printers.cgi_
+
+Valor de OP | Descrição
 ---|---
 clean-print-heads | Limpa as cabeças de impressão.
 move-jobs | Move todos os trabalhos para um destino diferente.

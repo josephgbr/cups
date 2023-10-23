@@ -1,6 +1,6 @@
 # cups-pt_BR
 
-*Here you will find history and progress of translation of CUPS (https://www.cups.org) for Brazilian Portuguese (pt_BR).*
+> *Here you will find history and progress of translation of CUPS (https://www.cups.org) for Brazilian Portuguese (pt_BR).*
 
 Aqui você encontra histórico e progresso da tradução do CUPS (https://www.cups.org) para português brasileiro (pt_BR). Após concluído, essa tradução é enviada para a Equipe de Desenvolvimento do CUPS para se armazenar no código-fonte e a próxima versão estará traduzido.
 
@@ -29,7 +29,7 @@ Contribuições com tradução são muito bem-vindas. Para traduzir deve-se obse
 Opiniões são bem-vindas. Sinta-se à vontade para contatar outros participantes na grupos de discussão _traducao-cups-pt-br_: https://groups.google.com/forum/#!forum/traducao-cups-pt-br (uma conta Google é necessária para participar)
 
 **Requisitos**:
-* Ler o guia do tradutor, seja a [versão não-oficial traduzida](https://github.com/rffontenelle/cups-pt_BR/tree/master/translation), seja a [versão original em inglês](https://www.cups.org/doc/translation.html).
+* Ler o guia do tradutor, seja [nossa versão não-oficial traduzida](guia-do-tradutor.md), seja a [versão original em inglês](https://www.cups.org/doc/translation.html).
 * Ter conhecimento básico de Git e de tratamento de repositório Git; caso não saiba, por favor consulte a [documentação oficial do Git](https://git-scm.com/doc))
 * Contribuir com arquivos no formato compatível com UNIX, ou seja, que contenham caracteres de nova linhas tipo "\n" em vez de CRLF. Sse você usar outro sistema para traduzir, certifique-se de contribuir com formato compatível com UNIX o seu editor de texto (p.ex.: [Notepad++](https://notepad-plus-plus.org/) é um editor de texto para MS Windows com vários recursos e respeita o formato )
 

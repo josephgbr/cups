@@ -1,357 +1,786 @@
-#. extracted from translation-en.md
-#, fuzzy
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-16 17:09-0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
 
-#: translation-en.md:2
-msgid "# Translating and Customizing CUPS"
+#: translation-en.md:block 1 (header)
+msgid "Translating and Customizing CUPS"
 msgstr ""
 
-#: translation-en.md:4
+#: translation-en.md:block 2 (paragraph)
 msgid ""
-"Thanks to its extensive use of templates, images, and message catalogs, CUPS "
-"can be easily translated (or customized!) to suit your needs. This help file "
-"will guide you through the CUPS localization files so you can get the most "
-"out of it."
+"Thanks to its extensive use of templates, images, and message catalogs, CUPS"
+" can be easily translated (or customized!) to suit your needs. This help "
+"file will guide you through the CUPS localization files so you can get the "
+"most out of it."
 msgstr ""
 
-#: translation-en.md:6
-msgid "## Getting Started"
+#: translation-en.md:block 3 (header)
+msgid "Getting Started"
 msgstr ""
 
-#: translation-en.md:8
+#: translation-en.md:block 4 (paragraph)
 msgid ""
 "Start by downloading the CUPS source code from "
-"[www.cups.org](http://www.cups.org/software.php). After you extract the "
-"files from the source archive, you will want to copy the following files and "
-"directories:"
+"[www.cups.org](https://www.cups.org/). After you extract the files from the "
+"source archive (or clone the Git repository), you will want to copy the "
+"following files and directories:"
 msgstr ""
 
-#: translation-en.md:13
+#: translation-en.md:block 5 (unordered list)
 msgid ""
-"  * desktop/cups.desktop \\- the GNOME/KDE desktop file pointing to the CUPS "
-"web interface\n"
-"  * doc/index.html \\- the web interface home page\n"
-"  * locale/cups.pot \\- the message catalog\n"
-"  * templates/*.tmpl \\- the web interface template files"
+"*desktop/cups.desktop* - the GNOME/KDE desktop file pointing to the CUPS web"
+" interface"
 msgstr ""
 
-#: translation-en.md:17
+#: translation-en.md:block 5 (unordered list)
+msgid "*doc/index.html.in* - the web interface home page"
+msgstr ""
+
+#: translation-en.md:block 5 (unordered list)
+msgid "*locale/cups.pot* - the message catalog"
+msgstr ""
+
+#: translation-en.md:block 5 (unordered list)
+msgid ""
+"*templates/*.tmpl* and *templates/header.tmpl.in* - the web interface "
+"template files"
+msgstr ""
+
+#: translation-en.md:block 6 (paragraph)
 msgid ""
 "With the exception of the message catalogs and desktop file, localization "
-"files are placed in subdirectories under the doc and templates using the "
-"locale name. Locale names are either ll or ll_CC, where \"ll\" is the 2-"
-"letter language code and \"CC\" is the 2-letter country code. _CUPS does not "
-"currently use or support the newer ll-region syntax for locale names._"
+"files are placed in subdirectories under the *doc* and *templates* using the"
+" locale name. Locale names are either *ll* or *ll_CC* , where \"ll\" is the "
+"2-letter language code and \"CC\" is the 2-letter country code. *CUPS does "
+"not currently use or support the newer *ll-region* syntax for locale names.*"
 msgstr ""
 
-#: translation-en.md:19
+#: translation-en.md:block 7 (paragraph)
 msgid "All non-image files must be encoded using the UTF-8 character set."
 msgstr ""
 
-#: translation-en.md:21
-msgid "## Submitting a Translation for CUPS"
+#: translation-en.md:block 8 (header)
+msgid "Submitting a Translation for CUPS"
 msgstr ""
 
-#: translation-en.md:23
+#: translation-en.md:block 9 (paragraph)
 msgid ""
 "To submit a translation for inclusion in CUPS, translate the desktop file, "
-"all of the template files, the index.html.in file, and the message catalog. "
-"Place these files in the correct subdirectories in the CUPS source code "
-"archive and run the following command to create an archive with your files:"
+"all of the template files, the *index.html.in* file, and the message "
+"catalog. Place these files in the correct subdirectories in the CUPS source "
+"code archive and run the following command to create an archive with your "
+"files:"
 msgstr ""
 
-#: translation-en.md:27
-msgid ""
-"    tar cvf _ll_CC_.tar.gz desktop/cups.desktop doc/_ll_CC_ \\\n"
-"        locale/cups__ll_CC_.po templates/_ll_CC_"
-msgstr ""
-
-#: translation-en.md:30
+#: translation-en.md:block 11 (paragraph)
 msgid ""
 "Replace \"ll_CC\" with the locale name for your translation. Once you have "
-"created the archive, go to the [CUPS Bugs &amp; "
-"Features](http://www.cups.org/str.php) page and submit a bug report, "
-"attaching the translation to the report."
+"created the archive, go to the [CUPS project "
+"page](https://github.com/apple/cups) and submit a bug report, attaching the "
+"translation to the report."
 msgstr ""
 
-#: translation-en.md:32
-msgid "## The Desktop File"
-msgstr ""
-
-#: translation-en.md:34
+#: translation-en.md:block 12 (paragraph)
 msgid ""
-"The desktop/cups.desktop file provides a link to the CUPS web interface from "
-"desktop environments such as GNOME and KDE. To translate this file, add two "
-"lines to the bottom with the `Name` and `Comment` keys:"
+"Alternately, you can clone the CUPS project on Github, make your changes, "
+"and submit a pull request from the same link."
 msgstr ""
 
-#: translation-en.md:38
+#: translation-en.md:block 13 (header)
+msgid "The Desktop File"
+msgstr ""
+
+#: translation-en.md:block 14 (paragraph)
 msgid ""
-"    Name[_ll_CC_]=_Translation of \"Manage Printing\"_\n"
-"    Comment[_ll_CC_]=_Translation of \"CUPS Web Interface\"_"
+"The *desktop/cups.desktop* file provides a link to the CUPS web interface "
+"from desktop environments such as GNOME and KDE. To translate this file, add"
+" two lines to the bottom with the `Name` and `Comment` keys:"
 msgstr ""
 
-#: translation-en.md:41
-msgid "## The Home Page"
+#: translation-en.md:block 16 (header)
+msgid "The Home Page"
 msgstr ""
 
-#: translation-en.md:43
+#: translation-en.md:block 17 (paragraph)
 msgid ""
-"The index.html file is a complete HTML file that is displayed when the user "
-"visits \"http://localhost:631/\". Edit the existing doc/index.html and save "
-"it in the doc/ll_CC subdirectory so that the makefile can install it. Run \""
-"make install\" in the doc subdirectory to test the new home page."
+"The *index.html.in* file is a complete HTML file that is displayed when the "
+"user visits \"http://localhost:631/\". Edit the existing *doc/index.html.in*"
+" and save it in the *doc/ll_CC* subdirectory so that the configure script "
+"can generate it. After configuring, run \"make install\" in the *doc* "
+"subdirectory to test the new home page."
 msgstr ""
 
-#: translation-en.md:45
-msgid "## Message Catalogs"
+#: translation-en.md:block 18 (header)
+msgid "Message Catalogs"
 msgstr ""
 
-#: translation-en.md:47
+#: translation-en.md:block 19 (paragraph)
 msgid ""
-"CUPS message catalogs are GNU gettext \".po\" text files that provide a list "
-"of localized message strings for the CUPS software. Message catalogs are "
-"named cups_ll.po or cups_ll_CC.po, where \"ll\" is the standard 2-letter "
-"abbreviation for the language and \"CC\" is the standard 2-letter "
+"CUPS message catalogs are GNU gettext \".po\" text files that provide a list"
+" of localized message strings for the CUPS software. Message catalogs are "
+"named *cups_ll.po* or *cups_ll_CC.po* , where \"ll\" is the standard "
+"2-letter abbreviation for the language and \"CC\" is the standard 2-letter "
 "abbreviation for the country."
 msgstr ""
 
-#: translation-en.md:49
+#: translation-en.md:block 20 (paragraph)
 msgid ""
-"When translating a new message catalog, copy the cups.pot message catalog "
-"file in the locale subdirectory of the CUPS source code. For example, to "
-"start translating the message catalog to Canadian French, you would type the "
-"following commands:"
+"When translating a new message catalog, copy the *cups.pot* message catalog "
+"file in the *locale* subdirectory of the CUPS source code. For example, to "
+"start translating the message catalog to Canadian French, you would type the"
+" following commands:"
 msgstr ""
 
-#: translation-en.md:53
+#: translation-en.md:block 22 (paragraph)
 msgid ""
-"    cd locale\n"
-"    cp cups.pot cups_fr_CA.po"
+"Alternatively, you can copy the existing *cups_fr.po* message catalog and "
+"then make any necessary changes."
 msgstr ""
 
-#: translation-en.md:56
-msgid ""
-"Alternatively, you can copy the existing cups_fr.po message catalog and then "
-"make any necessary changes."
-msgstr ""
-
-#: translation-en.md:58
+#: translation-en.md:block 23 (paragraph)
 msgid ""
 "Once you have make your copy of the file, edit it using your favorite text "
 "editor or translation program to translate the text to the desired language."
 msgstr ""
 
-#: translation-en.md:60
-msgid "Then validate your translation using the locale/checkpo utility:"
+#: translation-en.md:block 24 (paragraph)
+msgid "Then validate your translation using the *locale/checkpo* utility:"
 msgstr ""
 
-#: translation-en.md:64
-msgid ""
-"    cd locale\n"
-"    ./checkpo cups_ll_CC.po"
-msgstr ""
-
-#: translation-en.md:67
+#: translation-en.md:block 26 (paragraph)
 msgid ""
 "After fixing any errors in your translation, add your locale to the "
-"`LANGUAGES` variable in the Makedefs file and run the \"make install\" "
-"command in the locale subdirectory to test the translation."
+"`LANGUAGES` variable in the *Makedefs* file and run the \"make install\" "
+"command in the *locale* subdirectory to test the translation. *This variable"
+" is automatically updated when you run the configure script.*"
 msgstr ""
 
-#: translation-en.md:69
-msgid "## Template Files"
+#: translation-en.md:block 27 (header)
+msgid "Template Files"
 msgstr ""
 
-#: translation-en.md:71
+#: translation-en.md:block 28 (paragraph)
 msgid ""
 "The CUPS scheduler provides a web interface that can be used to do many "
 "common printing and administration tasks. The built-in web server supports "
-"localization of web pages through the use of subdirectories for each locale, "
-"e.g. \"fr\" for French, \"de\" for German, \"fr_ca\" for French in Canada, "
+"localization of web pages through the use of subdirectories for each locale,"
+" e.g. \"fr\" for French, \"de\" for German, \"fr_ca\" for French in Canada, "
 "and so forth."
 msgstr ""
 
-#: translation-en.md:73
+#: translation-en.md:block 29 (paragraph)
 msgid ""
 "Template files are HTML files with special formatting characters in them "
 "that allow substitution of variables and arrays. The CUPS CGI programs "
-"(`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi`, and `printers.cgi`) use "
-"these template file to provide dynamic content for the web interface. "
-"Template files are installed in the /usr/share/cups/templates directory by "
-"default. Table 2 lists the various template files and their purpose."
+"(`admin.cgi`, `classes.cgi`, `help.cgi`, `jobs.cgi`, and `printers.cgi`) use"
+" these template file to provide dynamic content for the web interface. "
+"Template files are installed in the */usr/share/cups/templates* directory by"
+" default. [Table 1](table1) lists the various template files and their "
+"purpose."
 msgstr ""
 
-#: translation-en.md:75
+#: translation-en.md:block 30 (paragraph)
 msgid ""
-"Translated versions of the template files should be saved in the templates/"
-"ll_CC subdirectory. For example, Canadian French template files should be "
-"saved in the templates/fr_CA subdirectory. After you have translated all of "
-"the templates, add the locale to the `LANGUAGES` variable in the Makedefs "
-"file and run \"make install\" in the templates subdirectory to test the "
-"translation."
+"Translated versions of the template files should be saved in the "
+"*templates/ll_CC* subdirectory. For example, Canadian French template files "
+"should be saved in the *templates/fr_CA* subdirectory. After you have "
+"translated all of the templates, add the locale to the `LANGUAGES` variable "
+"in the *Makedefs* file and run \"make install\" in the *templates* "
+"subdirectory to test the translation."
 msgstr ""
 
-#: translation-en.md:145
+#: translation-en.md:block 31 (paragraph)
+msgid "*Table 1: Web Interface Template Files*"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "Filename"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "Purpose"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "add-class.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the initial form that is shown to add a new printer class."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "add-printer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the initial form that is shown to add a new printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "admin.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the main administration page."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "choose-device.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the form that shows the list of available devices."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "choose-make.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the form that shows the list of available manufacturers."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "choose-model.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
 msgid ""
-"Table 2: Web Interface Template Files Filename | Purpose  \n"
-"---|---  \n"
-"add-class.tmpl | This is the initial form that is shown to add a new printer "
-"class.  \n"
-"add-printer.tmpl | This is the initial form that is shown to add a new "
-"printer.  \n"
-"add-rss-subscription.tmpl | This is the form that is shown to add a new RSS "
-"subscription.  \n"
-"admin.tmpl | This is the main administration page.  \n"
-"choose-device.tmpl | This is the form that shows the list of available "
-"devices.  \n"
-"choose-make.tmpl | This is the form that shows the list of available "
-"manufacturers.  \n"
-"choose-model.tmpl | This is the form that shows the list of available "
-"printer models/drivers.  \n"
-"choose-serial.tmpl | This is the form that allows the user to choose a "
-"serial port and any options.  \n"
-"choose-uri.tmpl | This is the form that allows the user to enter a device "
-"URI for network printers.  \n"
-"class-added.tmpl | This template shows the \"class added\" message.  \n"
-"class-confirm.tmpl | This is the template used to confirm the deletion of a "
-"class.  \n"
-"class-deleted.tmpl | This template shows the \"class deleted\" message.  \n"
-"class-jobs-header.tmpl | This template shows the \"jobs\" header for jobs in "
-"a class.  \n"
-"class-modified.tmpl | This template shows the \"class modified\" message.  \n"
-"classes.tmpl | This template shows one or more printer classes.  \n"
-"classes-header.tmpl | This template shows the \"showing N of M classes\" "
-"header in the class list.  \n"
-"edit-config.tmpl | This is the cupsd.conf editor page.  \n"
-"error.tmpl | This template displays a generic error message.  \n"
-"error-op.tmpl | This is the \"unknown operation\" error page.  \n"
-"header.tmpl | This template is used as the standard header on all dynamic "
-"content.  \n"
-"help-header.tmpl | This is the top part of the help page.  \n"
-"help-printable.tmpl | This is the standard page header for the printable "
-"version of help files.  \n"
-"job-cancel.tmpl | This template shows \"job canceled\".  \n"
-"job-hold.tmpl | This template shows \"job held\".  \n"
-"job-move.tmpl | This template shows the move-job form.  \n"
-"job-moved.tmpl | This template shows \"job moved\".  \n"
-"job-release.tmpl | This template shows \"job released\".  \n"
-"job-restart.tmpl | This template shows \"job reprinted\".  \n"
-"jobs.tmpl | This template is used to list the print jobs on a server, class, "
-"or printer.  \n"
-"jobs-header.tmpl | This template shows the \"showing N or M jobs\" header in "
-"the jobs list.  \n"
-"list-available-printers.tmpl | This template shows a list of new printers "
-"that have been found.  \n"
-"maintenance.tmpl | This template shows \"maintenance commands sent\".  \n"
-"modify-class.tmpl | This template is used as the first form when modifying a "
-"class.  \n"
-"modify-printer.tmpl | This template is used as the first form when modifying "
-"a printer.  \n"
-"norestart.tmpl | This template shows \"server not restarted because no "
-"changes were made to the configuration\".  \n"
-"option-boolean.tmpl | This template is used to select a boolean PPD option.  "
-"\n"
-"option-conflict.tmpl | This template shows the conflicting options.  \n"
-"option-header.tmpl | This template is used to start a PPD option group.  \n"
-"option-pickmany.tmpl | This template is used to select a multi-valued PPD "
-"option.  \n"
-"option-pickone.tmpl | This template is used to select a single-valued PPD "
-"option.  \n"
-"option-trailer.tmpl | This template is used to end a PPD option group.  \n"
-"pager.tmpl | This template shows the previous/next pager bar.  \n"
-"printer-accept.tmpl | This template shows \"printer now accepting jobs\".  \n"
-"printer-added.tmpl | This template shows \"printer added\".  \n"
-"printer-configured.tmpl | This template shows \"printer configured\".  \n"
-"printer-confirm.tmpl | This template asks the user to confirm the deletion "
-"of a printer.  \n"
-"printer-default.tmpl | This template shows \"default printer set\".  \n"
-"printer-deleted.tmpl | This template shows \"printer deleted\".  \n"
-"printer-jobs-header.tmpl | This templates shows the \"jobs\" header for jobs "
-"on a printer.  \n"
-"printer-modified.tmpl | This template shows \"printer modified\".  \n"
-"printer-purge.tmpl | This template shows \"printer has been purged of all "
-"jobs\".  \n"
-"printer-reject.tmpl | This template shows \"printer now rejecting jobs\".  \n"
-"printer-start.tmpl | This template shows \"printer started\".  \n"
-"printer-stop.tmpl | This template shows \"printer stopped\".  \n"
-"printers.tmpl | This template is used to list information on one or more "
-"printers.  \n"
-"printers-header.tmpl | This template shows the \"showing printer N of M\" "
-"header in the printers list.  \n"
-"restart.tmpl | This template shows \"server restarting\".  \n"
-"samba-export.tmpl | This template shows the export printers to Samba form.  "
-"\n"
-"samba-exported.tmpl | This template shows \"printers exported to Samba\".  \n"
-"search.tmpl | This template shows the search form.  \n"
-"set-printer-options-header.tmpl | This template shows the first part of the "
-"set printer options form.  \n"
-"set-printer-options-trailer.tmpl | This template shows the last part of the "
-"set printer options form.  \n"
-"subscription-added.tmpl | This template shows \"subscription ... added\".  \n"
-"subscription-canceled.tmpl | This template shows \"subscription #NNN "
-"canceled\".  \n"
-"test-page.tmpl | This template shows \"test page printed\".  \n"
-"trailer.tmpl | This template is used as the standard trailer on all dynamic "
-"content.  \n"
-"users.tmpl | This template shows the set allowed users form.  "
+"This is the form that shows the list of available printer models/drivers."
 msgstr ""
 
-#: translation-en.md:147
-msgid "### Inserting Attributes and Values"
+#: translation-en.md:block 32 (table)
+msgid "choose-serial.tmpl"
 msgstr ""
 
-#: translation-en.md:149
+#: translation-en.md:block 32 (table)
+msgid ""
+"This is the form that allows the user to choose a serial port and any "
+"options."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "choose-uri.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This is the form that allows the user to enter a device URI for network "
+"printers."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows information about a single class."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class-added.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the \"class added\" message."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class-confirm.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the template used to confirm the deletion of a class."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class-deleted.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the \"class deleted\" message."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class-jobs-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the \"jobs\" header for jobs in a class."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "class-modified.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the \"class modified\" message."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "classes.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows one or more printer classes."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "classes-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This template shows the \"showing N of M classes\" header in the class list."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "command.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the status of a command job."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "edit-config.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the cupsd.conf editor page."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "error.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template displays a generic error message."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "error-op.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the \"unknown operation\" error page."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "header.tmpl(.in)"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This template is used as the standard header on all dynamic content. Edit "
+"the *header.tmpl.in* file and let the configure script generate the "
+"*header.tmpl* file."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "help-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the top part of the help page."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "help-printable.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This is the standard page header for the printable version of help files."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "help-trailer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This is the bottom part of the help page."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-cancel.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"job canceled\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-hold.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"job held\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-move.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the move-job form."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-moved.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"job moved\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-release.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"job released\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "job-restart.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"job reprinted\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "jobs.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This template is used to list the print jobs on a server, class, or printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "jobs-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the \"showing N or M jobs\" header in the jobs list."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "list-available-printers.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows a list of new printers that have been found."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "modify-class.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used as the first form when modifying a class."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "modify-printer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used as the first form when modifying a printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "norestart.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This template shows \"server not restarted because no changes were made to "
+"the configuration\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-boolean.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to select a boolean PPD option."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-conflict.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the conflicting options."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to start a PPD option group."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-pickmany.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to select a multi-valued PPD option."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-pickone.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to select a single-valued PPD option."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "option-trailer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to end a PPD option group."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "pager.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the previous/next pager bar."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows information about a single printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-accept.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer now accepting jobs\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-added.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer added\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-cancel-jobs.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"All jobs on printer have been canceled.\""
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-configured.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer configured\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-confirm.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template asks the user to confirm the deletion of a printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-default.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"default printer set\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-deleted.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer deleted\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-jobs-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This templates shows the \"jobs\" header for jobs on a printer."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-modified.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer modified\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-reject.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer now rejecting jobs\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-start.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer started\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printer-stop.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"printer stopped\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printers.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used to list information on one or more printers."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "printers-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid ""
+"This template shows the \"showing printer N of M\" header in the printers "
+"list."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "restart.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"server restarting\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "search.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the search form."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "set-printer-options-header.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the first part of the set printer options form."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "set-printer-options-trailer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the last part of the set printer options form."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "test-page.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows \"test page printed\"."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "trailer.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template is used as the standard trailer on all dynamic content."
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "users.tmpl"
+msgstr ""
+
+#: translation-en.md:block 32 (table)
+msgid "This template shows the set allowed users form."
+msgstr ""
+
+#: translation-en.md:block 33 (header)
+msgid "Inserting Attributes and Values"
+msgstr ""
+
+#: translation-en.md:block 34 (paragraph)
 msgid ""
 "Template files consist of HTML with variable substitutions for named inside "
 "curly braces \"{name}\". Variable names are generally the IPP attribute "
 "names with the hyphen (\"-\") replaced by the underscore (\"_\") character. "
-"For example, the `job-printer-uri` attribute is renamed to `job_printer_uri`."
+"For example, the `job-printer-uri` attribute is renamed to "
+"`job_printer_uri`."
 msgstr ""
 
-#: translation-en.md:151
+#: translation-en.md:block 35 (paragraph)
 msgid ""
-"Curley braces (\"{\" and \"}\") to indicate substitutions, and the backslash "
-"(\"\\\") character for quoting. To insert any of these special characters as-"
+"Curley braces (\"{\" and \"}\") to indicate substitutions, and the backslash"
+" (\"\") character for quoting. To insert any of these special characters as-"
 "is you need to use the HTML `&name;` mechanism or prefix each special "
-"character with the backslash (\"\\\".)"
+"character with the backslash (\"\".)"
 msgstr ""
 
-#: translation-en.md:153
+#: translation-en.md:block 36 (paragraph)
 msgid ""
-"You substitute the value of a variable using `{NAME}` in your template file. "
-"If the variable is undefined then the `{NAME}` string is output as-is."
+"You substitute the value of a variable using `{NAME}` in your template file."
+" If the variable is undefined then the `{NAME}` string is output as-is."
 msgstr ""
 
-#: translation-en.md:155
+#: translation-en.md:block 37 (paragraph)
 msgid ""
 "To substitute an empty string if the variable is undefined, use `{?NAME}` "
 "instead."
 msgstr ""
 
-#: translation-en.md:157
-msgid "### Array Substitutions"
+#: translation-en.md:block 38 (header)
+msgid "Array Substitutions"
 msgstr ""
 
-#: translation-en.md:159
+#: translation-en.md:block 39 (paragraph)
 msgid ""
 "The number of array elements can be inserted using `{#NAME}`. If the array "
 "is undefined then 0 is output. The current array element (starting at 1) is "
 "inserted with `{#}`."
 msgstr ""
 
-#: translation-en.md:161
+#: translation-en.md:block 40 (paragraph)
 msgid ""
 "Arrays are handled using `{[NAME]` at the beginning of a section and `}` at "
 "the end. The information between the closing bracket (\"]\") and closing "
@@ -360,233 +789,505 @@ msgid ""
 "`job_id` array:"
 msgstr ""
 
-#: translation-en.md:169
-msgid ""
-"    <TABLE>\n"
-"    <TR>\n"
-"    \t<TH>Job ID</TH>\n"
-"    \t<TH>Destination</TH>\n"
-"    \t<TH>Title</TH>\n"
-"    </TR>"
-msgstr ""
-
-#: translation-en.md:178
-msgid ""
-"    {[job_id]\n"
-"    <TR>\n"
-"    \t<TD>{?job_id}</TD>\n"
-"    \t<TD>{?job_printer_name}</TD>\n"
-"    \t<TD>{?job_name}</TD>\n"
-"    </TR>\n"
-"    }\n"
-"    </TABLE>"
-msgstr ""
-
-#: translation-en.md:181
+#: translation-en.md:block 42 (paragraph)
 msgid ""
 "Arrays can be nested, however all elements within the curly braces (\"{\" "
 "and \"}\") are indexed using the innermost array."
 msgstr ""
 
-#: translation-en.md:183
-msgid "### Conditional Tests"
+#: translation-en.md:block 43 (header)
+msgid "Conditional Tests"
 msgstr ""
 
-#: translation-en.md:185
+#: translation-en.md:block 44 (paragraph)
 msgid ""
 "Templates can also test variables against specific values and conditionally "
 "include text in the template. The format is:"
 msgstr ""
 
-#: translation-en.md:192
+#: translation-en.md:block 46 (paragraph)
 msgid ""
-"    {_variable_?_true_:_false_}\n"
-"    {_variable_=_value_?_true_:_false_}\n"
-"    {_variable_!_value_?_true_:_false_}\n"
-"    {_variable_<_value_?_true_:_false_}\n"
-"    {_variable_>_value_?_true_:_false_}"
+"where *true* is the text that is included if the condition is true and "
+"*false* is the text that is included if the condition is false. A value of "
+"`#` is replaced with the current element number (starting at 1.) The "
+"character after the variable name specifies the condition to test. Table 2 "
+"shows the available test conditions."
 msgstr ""
 
-#: translation-en.md:195
+#: translation-en.md:block 47 (paragraph)
+msgid "*Table 2: Template Substitution Conditions*"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "Char"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "Condition"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "?"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "True if *variable* exists."
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "="
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "True if *variable* is equal to *value*."
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "!"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "True if *variable* is not equal to *value*."
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "<"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "True if *variable* is less than *value*."
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid ">"
+msgstr ""
+
+#: translation-en.md:block 48 (table)
+msgid "True if *variable* is greater than *value*."
+msgstr ""
+
+#: translation-en.md:block 49 (header)
+msgid "What to Localize in a Template File"
+msgstr ""
+
+#: translation-en.md:block 50 (paragraph)
 msgid ""
-"where true is the text that is included if the condition is true and false "
-"is the text that is included if the condition is false. A value of `#` is "
-"replaced with the current element number (starting at 1.) The character "
-"after the variable name specifies the condition to test. Table 3 shows the "
-"available test conditions."
+"Because HTML contains both markup (that generally is not localized) and text"
+" (which *is* localized), you should carefully avoid changing the markup "
+"unless it contains human-readable text. The following HTML examples show how"
+" to correctly localize template files:"
 msgstr ""
 
-#: translation-en.md:203
-msgid ""
-"Table 3: Template Substitution Conditions Char | Condition  \n"
-"---|---  \n"
-"? | True if variable exists.  \n"
-"= | True if variable is equal to value.  \n"
-"! | True if variable is not equal to value.  \n"
-"&lt; | True if variable is less than value.  \n"
-"&gt; | True if variable is greater than value.  "
+#: translation-en.md:block 52 (header)
+msgid "CGI Programs"
 msgstr ""
 
-#: translation-en.md:205
-msgid "### CGI Programs"
-msgstr ""
-
-#: translation-en.md:207
+#: translation-en.md:block 53 (paragraph)
 msgid "CUPS uses five CGI programs to manage the dynamic web interfaces:"
 msgstr ""
 
-#: translation-en.md:213
-msgid ""
-"  * `admin.cgi`\n"
-"  * `classes.cgi`\n"
-"  * `help.cgi`\n"
-"  * `jobs.cgi`\n"
-"  * `printers.cgi`"
+#: translation-en.md:block 54 (unordered list)
+msgid "`admin.cgi`"
 msgstr ""
 
-#: translation-en.md:217
+#: translation-en.md:block 54 (unordered list)
+msgid "`classes.cgi`"
+msgstr ""
+
+#: translation-en.md:block 54 (unordered list)
+msgid "`help.cgi`"
+msgstr ""
+
+#: translation-en.md:block 54 (unordered list)
+msgid "`jobs.cgi`"
+msgstr ""
+
+#: translation-en.md:block 54 (unordered list)
+msgid "`printers.cgi`"
+msgstr ""
+
+#: translation-en.md:block 55 (paragraph)
 msgid ""
 "Each CGI program accepts standard form variables such as `OP` for the "
 "operation to perform, `PRINTER_NAME` for the printer or class name to "
-"operate on, `QUERY` for any search words, `FIRST` for the first class, job, "
+"operate on, `QUERY` for any search words,`FIRST` for the first class, job, "
 "or printer to display, and `ORDER` to control the order that classes, jobs, "
 "or printers are displayed."
 msgstr ""
 
-#: translation-en.md:219
+#: translation-en.md:block 56 (paragraph)
 msgid ""
 "In addition, the `classes.cgi`, `jobs.cgi`, and `printers.cgi` programs "
-"support a `WHICH_JOBS` variable to control which jobs are displayed. Table 4 "
-"lists the supported values."
+"support a `WHICH_JOBS` variable to control which jobs are displayed. Table 3"
+" lists the supported values."
 msgstr ""
 
-#: translation-en.md:225
-msgid ""
-"Table 4: WHICH_JOBS Values WHICH_JOBS Value | Description  \n"
-"---|---  \n"
-"all | Show all jobs  \n"
-"completed | Show completed jobs  \n"
-"not-completed | Show active jobs  "
+#: translation-en.md:block 57 (paragraph)
+msgid "*Table 3: WHICH_JOBS Values*"
 msgstr ""
 
-#: translation-en.md:227
-msgid "#### admin.cgi"
+#: translation-en.md:block 58 (table)
+msgid "WHICH_JOBS Value"
 msgstr ""
 
-#: translation-en.md:229
+#: translation-en.md:block 58 (table)
+msgid "Description"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "all"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "Show all jobs"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "completed"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "Show completed jobs"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "not-completed"
+msgstr ""
+
+#: translation-en.md:block 58 (table)
+msgid "Show active jobs"
+msgstr ""
+
+#: translation-en.md:block 59 (header)
+msgid "admin.cgi"
+msgstr ""
+
+#: translation-en.md:block 60 (paragraph)
 msgid ""
 "The `admin.cgi` program handles all of the printer and class administration "
-"functions and is run for all direct accesses to the /admin resource. For "
+"functions and is run for all direct accesses to the */admin* resource. For "
 "most operations it uses the `PRINTER_NAME` and `OP` form variables to "
-"specify the action requested. Table 5 shows the supported `OP` values."
+"specify the action requested. Table 4 shows the supported `OP` values."
 msgstr ""
 
-#: translation-en.md:253
+#: translation-en.md:block 61 (paragraph)
+msgid "*Table 4: admin.cgi OP Values*"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "OP Value"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "add-class"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Adds a new printer class."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "add-printer"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Adds a new printer."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "config-server"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Configures the server."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "delete-class"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
 msgid ""
-"Table 5: admin.cgi OP Values OP Value | Description  \n"
-"---|---  \n"
-"accept-jobs | Accepts jobs on the named destination.  \n"
-"add-class | Adds a new printer class.  \n"
-"add-printer | Adds a new printer.  \n"
-"config-server | Configures the server.  \n"
-"delete-class | Deletes a printer class. The form variable `CONFIRM` may be "
-"set to any value to bypass the confirmation page.  \n"
-"delete-printer | Deletes a printer. The form variable `CONFIRM` may be set "
-"to any value to bypass the confirmation page.  \n"
-"export-samba | Exports printers to Samba.  \n"
-"find-new-printers | Find new printers that have not yet been added.  \n"
-"modify-class | Modifies a printer class.  \n"
-"modify-printer | Modifies a printer.  \n"
-"purge-jobs | Purges all jobs on the named destination.  \n"
-"redirect | Redirects the web browser to the location referenced by the URL "
-"form variable.  \n"
-"reject-jobs | Rejects new jobs on the named destination.  \n"
-"set-allowed-users | Sets the allowed users for a destination.  \n"
-"set-as-default | Sets the default destination.  \n"
-"set-printer-options | Sets the default options for a printer.  \n"
-"set-sharing | Sets the printer-is-shared attribute for a destination.  \n"
-"start-class | Starts the named class.  \n"
-"start-printer | Starts the named printer.  \n"
-"stop-class | Stops the named class.  \n"
-"stop-printer | Stops the named printer.  "
+"Deletes a printer class. The form variable `CONFIRM` may be set to any value"
+" to bypass the confirmation page."
 msgstr ""
 
-#: translation-en.md:255
-msgid "#### classes.cgi"
+#: translation-en.md:block 62 (table)
+msgid "delete-printer"
 msgstr ""
 
-#: translation-en.md:257
+#: translation-en.md:block 62 (table)
+msgid ""
+"Deletes a printer. The form variable `CONFIRM` may be set to any value to "
+"bypass the confirmation page."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "find-new-printers"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Find new printers that have not yet been added."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "modify-class"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Modifies a printer class."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "modify-printer"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Modifies a printer."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "redirect"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid ""
+"Redirects the web browser to the location referenced by the URL form "
+"variable."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "set-allowed-users"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Sets the allowed users for a destination."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "set-as-default"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Sets the default destination."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "set-printer-options"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Sets the default options for a printer."
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "set-sharing"
+msgstr ""
+
+#: translation-en.md:block 62 (table)
+msgid "Sets the printer-is-shared attribute for a destination."
+msgstr ""
+
+#: translation-en.md:block 63 (header)
+msgid "classes.cgi"
+msgstr ""
+
+#: translation-en.md:block 64 (paragraph)
 msgid ""
 "The `classes.cgi` program is responsible for listing class information, "
-"including jobs destined for that class. It is for all direct accesses to the "
-"/classes resource and supports the optional form variables `OP` and "
+"including jobs destined for that class. It is for all direct accesses to the"
+" */classes* resource and supports the optional form variables `OP` and "
 "`WHICH_JOBS`. If no form variables are supplied then the CGI lists all or a "
-"specific class and the active jobs on each class. Table 6 shows the "
+"specific class and the active jobs on each class. Table 5 shows the "
 "supported `OP` values."
 msgstr ""
 
-#: translation-en.md:262
-msgid ""
-"Table 6: classes.cgi OP Values OP Value | Description  \n"
-"---|---  \n"
-"move-jobs | Moves the jobs on this class to another destination.  \n"
-"print-test-page | Prints the standard PostScript test page.  "
+#: translation-en.md:block 65 (paragraph)
+msgid "*Table 5: classes.cgi OP Values*"
 msgstr ""
 
-#: translation-en.md:264
-msgid "#### help.cgi"
+#: translation-en.md:block 66 (table)
+msgid "accept-jobs"
 msgstr ""
 
-#: translation-en.md:266
+#: translation-en.md:block 66 (table)
+msgid "Start accepting jobs for a class."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "cancel-jobs"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Cancel all jobs for a class."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "move-jobs"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Move all jobs to a different destination."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "print-test-page"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Print a PostScript test page."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "reject-jobs"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Stop accepting jobs for a class."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "start-class"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Start processing jobs for a class."
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "stop-class"
+msgstr ""
+
+#: translation-en.md:block 66 (table)
+msgid "Stop processing jobs for a class."
+msgstr ""
+
+#: translation-en.md:block 67 (header)
+msgid "help.cgi"
+msgstr ""
+
+#: translation-en.md:block 68 (paragraph)
 msgid ""
 "The `help.cgi` program handles all of the on-line help functions and is run "
-"for all direct accesses to the /help resource."
+"for all direct accesses to the */help* resource."
 msgstr ""
 
-#: translation-en.md:268
-msgid "#### jobs.cgi"
+#: translation-en.md:block 69 (header)
+msgid "jobs.cgi"
 msgstr ""
 
-#: translation-en.md:270
+#: translation-en.md:block 70 (paragraph)
 msgid ""
 "The `jobs.cgi` program handles all of the job functions and is run for all "
-"direct accesses to the /jobs resource. For most operations it uses the "
+"direct accesses to the */jobs* resource. For most operations it uses the "
 "`JOB_ID`, `OP`, and `WHICH_JOBS` form variables to specify the action "
-"requested. Table 7 shows the supported `OP` values."
+"requested. Table 6 shows the supported `OP` values."
 msgstr ""
 
-#: translation-en.md:278
+#: translation-en.md:block 71 (paragraph)
+msgid "*Table 6: jobs.cgi OP Values*"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "cancel-job"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "Cancels a job."
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "hold-job"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "Holds a job indefinitely."
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "move-job"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "Moves a job to another destination."
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "release-job"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "Releases a job for printing."
+msgstr ""
+
+#: translation-en.md:block 72 (table)
+msgid "restart-job"
+msgstr ""
+
+#: translation-en.md:block 72 (table)
 msgid ""
-"Table 7: jobs.cgi OP Values OP Value | Description  \n"
-"---|---  \n"
-"cancel-job | Cancels a job.  \n"
-"hold-job | Holds a job indefinitely.  \n"
-"move-job | Moves a job to another destination.  \n"
-"release-job | Releases a job for printing.  \n"
-"restart-job | Restarts/reprints a stopped, canceled, completed, or aborted "
-"print job.  "
+"Restarts/reprints a stopped, canceled, completed, or aborted print job."
 msgstr ""
 
-#: translation-en.md:280
-msgid "#### printers.cgi"
+#: translation-en.md:block 73 (header)
+msgid "printers.cgi"
 msgstr ""
 
-#: translation-en.md:282
+#: translation-en.md:block 74 (paragraph)
 msgid ""
 "The `printers.cgi` program is responsible for listing printer information, "
 "including jobs destined for that printer. It is for all direct accesses to "
-"the /printers resource and supports the optional form variables `OP` and "
+"the */printers* resource and supports the optional form variables `OP` and "
 "`WHICH_JOBS`. If no form variables are supplied then the CGI lists all "
-"printers or a specific printer and the active jobs on that printer. Table 8 "
+"printers or a specific printer and the active jobs on that printer. Table 7 "
 "shows the supported `OP` values."
 msgstr ""
 
-#: translation-en.md:288
-msgid ""
-"Table 8: printers.cgi OP Values OP Value | Description  \n"
-"---|---  \n"
-"clean-print-heads | Clean the print heads.  \n"
-"move-jobs | Move all jobs to a different destination.  \n"
-"print-self-test-page | Print a printer self-test page.  \n"
-"print-test-page | Print a PostScript test page."
+#: translation-en.md:block 75 (paragraph)
+msgid "*Table 7: printers.cgi OP Values*"
 msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Start accepting jobs for a printer."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Cancel all jobs for a printer."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "clean-print-heads"
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Clean the print heads."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "print-self-test-page"
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Print a printer self-test page."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Stop accepting jobs for a printer."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "start-printer"
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Start processing jobs for a printer."
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "stop-printer"
+msgstr ""
+
+#: translation-en.md:block 76 (table)
+msgid "Stop processing jobs for a printer."
+msgstr ""
+
